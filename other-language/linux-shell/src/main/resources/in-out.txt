@@ -1,0 +1,33 @@
+#!/bin/bash
+#echo cat read tee |
+
+#in--0  < <<
+#out--1 > >>
+#err--2 2>&1
+
+#echo
+echo "display"
+echo -e "display \n"
+echo -n -e "display \t"
+echo -e "display :\c"
+
+echo ""
+
+#read
+echo -e "first name : \c"
+read name
+echo -e "second name :\c"
+read middle
+echo "$name $middle"
+
+#cat
+#cat -v  > cat_read.log
+
+#tee
+who | tee who.out
+
+
+#0 1 2
+echo "`date -d today +"%Y-%m-%d %T"`" 1 >> in_out.log 2>&1
+
+

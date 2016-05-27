@@ -1,0 +1,42 @@
+#查找端口、进程
+netstat -aonp | grep 8080 
+
+kill -9 49228  
+
+#!/bin/sh
+#basename cat cp diff dircmp
+#dirname du file fuser head
+#logname mkdir more nl printf
+#pwd rm rmdir shutdown sleep
+#strings touch tty uname wc
+#wait whereis who whoami
+
+
+tar -zcvf  cat.tar.gz cat1.sh  
+tar -zxvf cat.tar.gz  
+
+#!/bin/sh
+#as line deal 
+#awk -F":" '{if($1~/u1/)print $1}' /etc/passwd
+#awk  '{print NF}' basename.sh
+#awk '{print $1,$2}' OFS='\t' basename.sh
+awk 'BEGIN{math=0;eng=0;com=0;printf "Lineno.   Name    No.    Math   English   Computer    Total\n";printf "------------------------------------------------------------\n"}{math+=$3; eng+=$4; com+=$5;printf "%-8s %-7s %-7s %-7s %-9s %-10s %-7s \n",NR,$1,$2,$3,$4,$5,$3+$4+$5} END{printf "------------------------------------------------------------\n";printf "%-24s %-7s %-9s %-20s \n","Total:",math,eng,com;printf "%-24s %-7s %-9s %-20s \n","Avg:",math/NR,eng/NR,com/NR}' test0
+
+
+
+
+#!/bin/sh
+#grep n--lien number
+#     i--ignore case
+#     want_search_text file
+#cut -d delimiter -f field 1 2 
+#awk -v variable  ' $1 $2'
+#sed s separator $want_text$replace_text$g
+#especially want value to variable, use ``
+fl=`grep -ni dead alertDeadLock.log | cut -d: -f 2 | awk -v 'OFS=*' '{print $1,$2,$3 }' | sed 's$*$-$g'`
+
+
+echo $fl
+
+
+

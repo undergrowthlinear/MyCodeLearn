@@ -1,0 +1,47 @@
+#!/bin/bash
+#comment
+#test while
+if [ $# -ne 1 ]
+then
+	echo "$0: must input a number"
+	exit 1
+fi
+
+i=0
+while [ $i -le 10 ]
+do
+#``--mean calculate expr and output the result
+	echo "$1 * $i =`expr $1 \* $i`"
+	i=`expr $i + 1`
+done
+
+
+#!/bin/bash
+#comments
+#test for
+for ii in 1 2 3
+do
+	echo "weleome $ii times"
+done
+
+for(( i = 1; i <= 5; i++  ))
+do
+         for(( j = 1; j <= 5; ++j ))
+         do
+                 echo -n "$i"
+         done
+
+# print a new line
+         echo ""
+ done
+echo ""
+# nested for
+for(( i = 1; i <= 5; i++ ))
+do
+	for(( j = 1; j <= 5; j++ ))
+	do
+		echo -n "$i"
+	done
+#
+	echo ""
+done

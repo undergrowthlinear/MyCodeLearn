@@ -1,0 +1,21 @@
+#!/bin/bash
+#comments
+# test function
+function demo(){
+	echo "shell name args:$0"
+	echo "all function args:$*"
+	echo "all function agrs_num $#"
+	echo "the first arg : $1"
+	echo "the second arg : $2:"
+	shift
+	echo "shell name args:$0"
+	echo "all function args:$*"
+	echo "all function agrs_num $#"
+	echo "the first arg : $1"
+	echo "the second arg : $2:"
+}
+
+#call the function
+
+demo -f foo bar
+

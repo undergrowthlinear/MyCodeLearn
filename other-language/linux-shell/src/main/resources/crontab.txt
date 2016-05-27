@@ -1,0 +1,14 @@
+#!/bin/bash
+#cron crontab at & nohup
+#crontab [-u user] -e -l -r
+#crontab <filename>
+#example
+#0-59 0-23 1-31 1-12 0-6
+#minute hour day month week shell_name
+#1-3 1,3 *
+#in shell_name ,the path use absolute path,not relative path
+
+#crontab--需要注意，提交到crontab中的脚本，需要使用绝对路径，因为crontab调度程序是不识别用户的环境变量的
+
+#每分钟都执行date.sh脚本
+* * * * * /home/u1/shell_learn/cmd_learn/date.sh

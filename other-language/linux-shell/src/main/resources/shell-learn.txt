@@ -1,0 +1,22 @@
+just for record some detail
+like
+sh -n ifshell.sh
+sh -v ifshell.sh
+sh -x ifshell.sh
+``--get the command then execute ,output the result
+expr--mean a expression
+\*--translate
+$*--all parameter,not include the shell name
+$#--count the parameter number,not include the shell 
+$0--the shell name
+$1--the first parameter 
+$2
+-eq -ne -lt -le -gt -ge
+! -a -o
+= != str
+for-- if use ; then
+	if no ; 
+	then
+
+
+	

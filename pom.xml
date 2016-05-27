@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>mycodelearn.undergrowth</groupId>
 	<artifactId>mycodelearn</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>${project.version}</version>
 	<packaging>pom</packaging>
 	<name>mycodelearn</name>
 	<description>assemble mycode</description>
@@ -134,12 +134,14 @@
 	<modules>
 		<module>web</module>
 		<module>component</module>
+		<module>other-language</module>
 	</modules>
 	<properties>
 		<spring.version>4.2.6.RELEASE</spring.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.7</java.version>
 		<project.deploy>deploy</project.deploy>
+		<project.version>0.0.1-SNAPSHOT</project.version>
 	</properties>
 	<distributionManagement>
 		<repository>

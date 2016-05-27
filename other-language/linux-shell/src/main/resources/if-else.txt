@@ -1,0 +1,17 @@
+#if then else
+#!/bin/bash
+#comments
+#$# get the input parameter , not include the command
+if [ $# -ne 1 ]
+#then must seperate if
+then
+	echo "$0 : you must input a number"
+	exit 1
+fi
+#test like [ ] 
+if test $1 -gt 0 
+then
+	echo "$1 number is postive"
+else
+	echo "$1 number is negative"
+fi

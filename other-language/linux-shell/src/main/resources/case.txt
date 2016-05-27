@@ -1,0 +1,23 @@
+#!/bin/bash
+#comments
+# test case
+if [ $# -ne 1 ]
+then 
+	echo "$0: must input a command"
+	exit 1
+fi
+action=$1
+case $action in
+	"update")
+		echo "update the db"
+		;;
+	"select")
+		echo "select the db"
+		;;
+	"delete")
+		echo "delete the db"
+		;;
+	*)
+		echo "$action is not a valid command"
+		;;
+esac
