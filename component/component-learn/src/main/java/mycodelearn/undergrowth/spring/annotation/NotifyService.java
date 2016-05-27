@@ -1,4 +1,4 @@
-package mycodelearn.undergrowth.spring.easy;
+package mycodelearn.undergrowth.spring.annotation;
 
 /**
  * 

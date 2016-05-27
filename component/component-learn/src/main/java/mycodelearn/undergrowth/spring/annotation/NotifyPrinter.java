@@ -1,4 +1,4 @@
-package mycodelearn.undergrowth.spring.easy;
+package mycodelearn.undergrowth.spring.annotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -11,17 +11,19 @@ import org.springframework.stereotype.Component;
  * @Version 1.0.0
  */
 @Component
-public class MessagePrinter {
+public class NotifyPrinter {
 
-	private MessageService service;
+	private NotifyService service;
 
 	@Autowired
-	public MessagePrinter(MessageService service) {
+	public NotifyPrinter(NotifyService service) {
 		this.service = service;
 	}
 
-	public void printMessage() {
-		System.out.println(this.service.getMessage());
+	public void printNotify() {
+		System.out.println(this.service.getNotify());
 	}
+	
+	
 
 }

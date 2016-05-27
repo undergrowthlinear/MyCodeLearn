@@ -1,4 +1,4 @@
-package mycodelearn.undergrowth.spring.easy;
+package mycodelearn.undergrowth.spring.annotation;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -13,8 +13,8 @@ import org.springframework.context.annotation.Configuration;
  * @Date 2016年5月27日
  * @Version 1.0.0
  */
-@Configuration
-@ComponentScan(basePackages = "mycodelearn.undergrowth.spring")
+//@Configuration
+//@ComponentScan(basePackages = "mycodelearn.undergrowth.spring")
 public class Application {
 
 	@Bean
