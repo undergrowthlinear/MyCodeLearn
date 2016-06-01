@@ -17,6 +17,10 @@
 	<context:component-scan base-package="mycodelearn"></context:component-scan>
 
 
+	<mvc:resources mapping="/css/**" location="/css/" cache-period="86400" />
+	<mvc:resources mapping="/images/**" location="/images/" cache-period="86400" />
+	<mvc:resources mapping="/scripts/**" location="/scripts/" cache-period="86400" />
+
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/views/" />
