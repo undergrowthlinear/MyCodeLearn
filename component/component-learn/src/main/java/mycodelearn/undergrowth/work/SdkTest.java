@@ -74,7 +74,7 @@ public class SdkTest {
 		public void run() {
 			// TODO Auto-generated method stub
 			try {
-				MTPack mtPack = createMTPack(MsgType.VOICE_CODE,SendType.MASS,"rt22");
+				MTPack mtPack = createMTPack(MsgType.SMS,SendType.MASS,"rt22");
 				GsmsResponse mtResponse = postServer.getPostMsg().post(account,
 						mtPack);
 				System.out.println(mtResponse);

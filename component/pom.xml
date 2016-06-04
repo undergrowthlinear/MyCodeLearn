@@ -10,13 +10,13 @@
 	<packaging>pom</packaging>
 	<name>component-pom</name>
 	<description>mycodelearn undergrowth component pom</description>
-	<dependencies>
+	<!-- <dependencies>
 		<dependency>
 			<groupId>org.apache.activemq</groupId>
 			<artifactId>activemq-all</artifactId>
 			<version>5.13.0</version>
 		</dependency>
-	</dependencies>
+	</dependencies> -->
 	<modules>
 		<module>component-learn</module>
 		<module>common-util</module>
