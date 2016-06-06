@@ -21,6 +21,7 @@
 		<module>component-learn</module>
 		<module>common-util</module>
 		<module>sqlmapper</module>
+		<module>redis-mw</module>
 	</modules>
 	<build>
 		<plugins>
