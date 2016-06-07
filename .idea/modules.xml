@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/component/common-util/common-util.iml" filepath="$PROJECT_DIR$/component/common-util/common-util.iml" group="mycodelearn and modules/component and modules" />
-      <module fileurl="file://$PROJECT_DIR$/component/component.iml" filepath="$PROJECT_DIR$/component/component.iml" group="mycodelearn and modules/component and modules" />
-      <module fileurl="file://$PROJECT_DIR$/component/component-learn/component-learn.iml" filepath="$PROJECT_DIR$/component/component-learn/component-learn.iml" group="mycodelearn and modules/component and modules" />
-      <module fileurl="file://$PROJECT_DIR$/other-language/linux-shell/linux-shell.iml" filepath="$PROJECT_DIR$/other-language/linux-shell/linux-shell.iml" group="mycodelearn and modules/other-language and modules" />
-      <module fileurl="file://$PROJECT_DIR$/mycodelearn.iml" filepath="$PROJECT_DIR$/mycodelearn.iml" group="mycodelearn and modules" />
-      <module fileurl="file://$PROJECT_DIR$/other-language/other-language.iml" filepath="$PROJECT_DIR$/other-language/other-language.iml" group="mycodelearn and modules/other-language and modules" />
-      <module fileurl="file://$PROJECT_DIR$/component/sqlmapper/sqlmapper.iml" filepath="$PROJECT_DIR$/component/sqlmapper/sqlmapper.iml" group="mycodelearn and modules/component and modules" />
-      <module fileurl="file://$PROJECT_DIR$/web/web.iml" filepath="$PROJECT_DIR$/web/web.iml" group="mycodelearn and modules/web and modules" />
-      <module fileurl="file://$PROJECT_DIR$/web/web-learn/web-learn (1).iml" filepath="$PROJECT_DIR$/web/web-learn/web-learn (1).iml" group="mycodelearn and modules/web and modules" />
-      <module fileurl="file://$PROJECT_DIR$/web/web-learn/target/m2e-wtp/web-resources/META-INF/maven/mycodelearn.undergrowth/web-learn/web-learn (2).iml" filepath="$PROJECT_DIR$/web/web-learn/target/m2e-wtp/web-resources/META-INF/maven/mycodelearn.undergrowth/web-learn/web-learn (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/component/common-util/common-util.iml" filepath="$PROJECT_DIR$/component/common-util/common-util.iml" group="component and modules" />
+      <module fileurl="file://$PROJECT_DIR$/component/component.iml" filepath="$PROJECT_DIR$/component/component.iml" group="component and modules" />
+      <module fileurl="file://$PROJECT_DIR$/component/component-learn/component-learn.iml" filepath="$PROJECT_DIR$/component/component-learn/component-learn.iml" group="component and modules" />
+      <module fileurl="file://$PROJECT_DIR$/other-language/linux-shell/linux-shell.iml" filepath="$PROJECT_DIR$/other-language/linux-shell/linux-shell.iml" group="other-language and modules" />
+      <module fileurl="file://$PROJECT_DIR$/mycodelearn.iml" filepath="$PROJECT_DIR$/mycodelearn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/other-language/other-language.iml" filepath="$PROJECT_DIR$/other-language/other-language.iml" group="other-language and modules" />
+      <module fileurl="file://$PROJECT_DIR$/component/sqlmapper/sqlmapper.iml" filepath="$PROJECT_DIR$/component/sqlmapper/sqlmapper.iml" group="component and modules" />
+      <module fileurl="file://$PROJECT_DIR$/web/web.iml" filepath="$PROJECT_DIR$/web/web.iml" group="web and modules" />
+      <module fileurl="file://$PROJECT_DIR$/web/web-learn/web-learn (1).iml" filepath="$PROJECT_DIR$/web/web-learn/web-learn (1).iml" group="web and modules" />
     </modules>
   </component>
 </project>

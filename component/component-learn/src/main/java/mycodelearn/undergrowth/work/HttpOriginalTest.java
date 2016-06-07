@@ -23,7 +23,7 @@ public class HttpOriginalTest {
 
 	private static final String HOST = "172.16.22.243";
 	private static final int PORT = 8086;
-	String testText = "username=admin@ent03&password=123456&to=18287131062&msgtype=9&text=@<>qw&biztype=22";
+	String testText = "username=admin@ent02&password=123456&to=18287131062&msgtype=1&text=@<>qw";
 	private static final String ENCODE = "UTF-8";
 
 	@Test
@@ -127,7 +127,7 @@ public class HttpOriginalTest {
 		StringBuilder builder = new StringBuilder();
 		String protocal = "http://";
 		String path = "cgi-bin/sendsms?";
-		String userName = "admin@ent03";
+		String userName = "admin@ent02";
 		String password = "123456";
 		String to = "18287131062";
 		String msgtype = "1";
