@@ -32,7 +32,6 @@ public class HttpOriginalTest {
 		@SuppressWarnings("deprecation")
 		DefaultHttpClient httpClient = new DefaultHttpClient();
 		HttpGet httpGet = new HttpGet(createUrl());
-		HttpHost httpHost = new HttpHost(HOST, PORT);
 		StringBuffer sb = new StringBuffer();
 		try {
 			HttpResponse response = httpClient.execute(httpGet);
