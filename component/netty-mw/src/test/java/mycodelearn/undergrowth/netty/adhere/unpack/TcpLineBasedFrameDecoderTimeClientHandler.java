@@ -12,7 +12,7 @@ import io.netty.channel.ChannelHandlerContext;
 
 /**
  * @author u1
- * @Date  2015-7-6
+ * date  2015-7-6
  */
 public class TcpLineBasedFrameDecoderTimeClientHandler extends ChannelHandlerAdapter {
 

@@ -11,7 +11,7 @@ import org.junit.Test;
 
 /**
  * 
- * @Description: TODO(这里用一句话描述这个类的作用)
+ * Description: TODO(这里用一句话描述这个类的作用)
  *               Class类---Class类是反射的基石，Class类的实例表示正在运行的java应用程序中的接口或类。换句话说，
  *               Class类是用来描述java类的。
  *               Class类没有公共构造函数，所以有三种方式获取Class对象(Class对象代表内存中的一个字节码)： 1.类名.class
@@ -35,9 +35,9 @@ import org.junit.Test;
  *               类加载器加载的
  * 
  *               总之：只要是在源程序中出现的类型，都有各自的Class类的实例对象。
- * @Author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
- * @Date 2016年6月7日
- * @Version 1.0.0
+ * @author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
+ * Date 2016年6月7日
+ * @version 1.0.0
  */
 public class ReflectTest {
 

@@ -2,7 +2,7 @@ package mycodelearn.undergrowth.redis.redisson;
 
 /**
  * 
-* @Description: TODO(这里用一句话描述这个类的作用)
+* Description: TODO(这里用一句话描述这个类的作用)
 *  Redis client的辅助工具类
 * 用于连接Redis服务器 创建不同的Redis Server对应的客户端对象
 * redis是一个开源的，C语言编写、bsd协议的，键值对的缓存和存储的、通常被作为NoSql的内存数据库
@@ -54,9 +54,9 @@ Set
 Bucket
 List
 
-* @Author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
-* @Date 2016年6月7日
-* @Version 1.0.0
+* @author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
+* Date 2016年6月7日
+* @version 1.0.0
  */
 
 import org.redisson.Config;
@@ -83,7 +83,7 @@ public class RedisUtils {
 	/**
 	 * 提供单例模式
 	 * 
-	 * @return
+	 * @return RedisUtils
 	 */
 	public static RedisUtils getInstance() {
 		if (redisUtils == null)
@@ -93,12 +93,12 @@ public class RedisUtils {
 			}
 		return redisUtils;
 	}
-
+	
+	
 	/**
 	 * 使用config创建Redisson Redisson是用于连接Redis Server的基础类
-	 * 
-	 * @param config
-	 * @return
+	* @param  config 使用配置器创建
+	* @return  Redisson
 	 */
 	public Redisson getRedisson(Config config) {
 		Redisson redisson = Redisson.create(config);
@@ -109,9 +109,9 @@ public class RedisUtils {
 	/**
 	 * 使用ip地址和端口创建Redisson
 	 * 
-	 * @param ip
-	 * @param port
-	 * @return
+	 * @param  ip	主机ip
+	 * @param  port 主机端口
+	 * @return Redisson
 	 */
 	public Redisson getRedisson(String ip, String port) {
 		Config config = new Config();
@@ -124,7 +124,7 @@ public class RedisUtils {
 	/**
 	 * 关闭Redisson客户端连接
 	 * 
-	 * @param redisson
+	 * @param  redisson redisson
 	 */
 	public void closeRedisson(Redisson redisson) {
 		redisson.shutdown();
@@ -134,10 +134,9 @@ public class RedisUtils {
 	/**
 	 * 获取字符串对象
 	 * 
-	 * @param redisson
-	 * @param t
-	 * @param objectName
-	 * @return
+	 * @param  redisson redisson
+	 * @param  objectName objectName
+	 * @return T
 	 */
 	public <T> RBucket<T> getRBucket(Redisson redisson, String objectName) {
 		RBucket<T> bucket = redisson.getBucket(objectName);
@@ -147,9 +146,9 @@ public class RedisUtils {
 	/**
 	 * 获取Map对象
 	 * 
-	 * @param redisson
-	 * @param objectName
-	 * @return
+	 * @param  redisson redisson
+	 * @param  objectName objectName
+	 * @return RMap
 	 */
 	public <K, V> RMap<K, V> getRMap(Redisson redisson, String objectName) {
 		RMap<K, V> map = redisson.getMap(objectName);
@@ -159,9 +158,9 @@ public class RedisUtils {
 	/**
 	 * 获取有序集合
 	 * 
-	 * @param redisson
-	 * @param objectName
-	 * @return
+	 * @param  redisson redisson
+	 * @param  objectName objectName
+	 * @return RSortedSet
 	 */
 	public <V> RSortedSet<V> getRSortedSet(Redisson redisson, String objectName) {
 		RSortedSet<V> sortedSet = redisson.getSortedSet(objectName);
@@ -171,9 +170,9 @@ public class RedisUtils {
 	/**
 	 * 获取集合
 	 * 
-	 * @param redisson
-	 * @param objectName
-	 * @return
+	 * @param  redisson redisson
+	 * @param  objectName objectName
+	 * @return RSet
 	 */
 	public <V> RSet<V> getRSet(Redisson redisson, String objectName) {
 		RSet<V> rSet = redisson.getSet(objectName);
@@ -183,9 +182,9 @@ public class RedisUtils {
 	/**
 	 * 获取列表
 	 * 
-	 * @param redisson
-	 * @param objectName
-	 * @return
+	 * @param  redisson redisson
+	 * @param  objectName objectName
+	 * @return RList
 	 */
 	public <V> RList<V> getRList(Redisson redisson, String objectName) {
 		RList<V> rList = redisson.getList(objectName);
@@ -195,9 +194,9 @@ public class RedisUtils {
 	/**
 	 * 获取队列
 	 * 
-	 * @param redisson
-	 * @param objectName
-	 * @return
+	 * @param  redisson redisson
+	 * @param  objectName objectName
+	 * @return RQueue
 	 */
 	public <V> RQueue<V> getRQueue(Redisson redisson, String objectName) {
 		RQueue<V> rQueue = redisson.getQueue(objectName);
@@ -207,9 +206,9 @@ public class RedisUtils {
 	/**
 	 * 获取双端队列
 	 * 
-	 * @param redisson
-	 * @param objectName
-	 * @return
+	 * @param  redisson redisson
+	 * @param  objectName objectName
+	 * @return RDeque
 	 */
 	public <V> RDeque<V> getRDeque(Redisson redisson, String objectName) {
 		RDeque<V> rDeque = redisson.getDeque(objectName);
@@ -219,9 +218,9 @@ public class RedisUtils {
 	/**
 	 * 此方法不可用在Redisson 1.2 中 在1.2.2版本中 可用
 	 * 
-	 * @param redisson
-	 * @param objectName
-	 * @return
+	 * @param  redisson redisson
+	 * @param  objectName objectName
+	 * @return RBlockingQueue
 	 */
 	/**
 	 * public <V> RBlockingQueue<V> getRBlockingQueue(Redisson redisson,String
@@ -232,9 +231,9 @@ public class RedisUtils {
 	/**
 	 * 获取锁
 	 * 
-	 * @param redisson
-	 * @param objectName
-	 * @return
+	 * @param  redisson redisson
+	 * @param  objectName objectName
+	 * @return RLock
 	 */
 	public RLock getRLock(Redisson redisson, String objectName) {
 		RLock rLock = redisson.getLock(objectName);
@@ -244,9 +243,9 @@ public class RedisUtils {
 	/**
 	 * 获取原子数
 	 * 
-	 * @param redisson
-	 * @param objectName
-	 * @return
+	 * @param  redisson redisson
+	 * @param  objectName objectName
+	 * @return RAtomicLong
 	 */
 	public RAtomicLong getRAtomicLong(Redisson redisson, String objectName) {
 		RAtomicLong rAtomicLong = redisson.getAtomicLong(objectName);
@@ -256,9 +255,9 @@ public class RedisUtils {
 	/**
 	 * 获取记数锁
 	 * 
-	 * @param redisson
-	 * @param objectName
-	 * @return
+	 * @param  redisson redisson
+	 * @param  objectName objectName
+	 * @return RCountDownLatch
 	 */
 	public RCountDownLatch getRCountDownLatch(Redisson redisson, String objectName) {
 		RCountDownLatch rCountDownLatch = redisson.getCountDownLatch(objectName);
@@ -268,9 +267,9 @@ public class RedisUtils {
 	/**
 	 * 获取消息的Topic
 	 * 
-	 * @param redisson
-	 * @param objectName
-	 * @return
+	 * @param  redisson redisson
+	 * @param  objectName objectName
+	 * @return RTopic
 	 */
 	public <M> RTopic<M> getRTopic(Redisson redisson, String objectName) {
 		RTopic<M> rTopic = redisson.getTopic(objectName);

@@ -2,13 +2,13 @@ package mycodelearn.undergrowth.common.key;
 
 
 /**
- * 
-* @Description: TODO(用于系统的键值映射)
+* Description: 
+* (用于系统的键值映射)
 * 	例如Controller的入口、出口
-* @Author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
-* @Date 2016年6月4日
-* @Version 1.0.0
- */
+* @author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
+* Date 2016年6月4日
+* @version 1.0.0
+*/
 public interface KeysMapping {
 
 	//用于jquery测试的配置项

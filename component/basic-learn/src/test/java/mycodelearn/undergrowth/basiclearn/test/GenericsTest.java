@@ -14,7 +14,7 @@ import org.junit.Test;
 
 /**
  * 
- * @Description: TODO(泛型--匹配任何类型)
+ * Description: TODO(泛型--匹配任何类型)
  *              * 泛型学习测试代码 
  * 泛型-->类或者接口的声明中拥有一个或多个类型参数时，称为泛型类/泛型接口，简称泛型  
  * 泛型在安全性和表述性上都比原生态类型更具有优势 
@@ -49,9 +49,9 @@ import org.junit.Test;
  * 泛型编译器维护类型信息，运行时舍弃-->testEraseGenericsInfo 
  * 递归类型参数调用-->testRecursionTypeRestri 
  * 测试多个类型参数-->testDoubleType 
- * @Author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
- * @Date 2016年6月7日
- * @Version 1.0.0
+ * @author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
+ * Date 2016年6月7日
+ * @version 1.0.0
  */
 public class GenericsTest {
 
@@ -71,7 +71,7 @@ public class GenericsTest {
 	 * 
 	 * @author Administrator
 	 * 
-	 * @param <T>
+	 * @param  <T>
 	 */
 	private static class GenericeClass<T> {
 		private final T t;
@@ -84,8 +84,8 @@ public class GenericsTest {
 		/**
 		 * 获取对象后 添加附加信息
 		 * 
-		 * @param t
-		 * @return
+		 * @param  t
+		 * @return 
 		 */
 		public <E> E getAddSome(E t) {
 			if (t instanceof String) {
@@ -127,7 +127,7 @@ public class GenericsTest {
 	/**
 	 * 创建测试集合
 	 * 
-	 * @return
+	 * @return 
 	 */
 	private <E> Collection<E> createCollection(E t) {
 		// TODO Auto-generated method stub
@@ -146,7 +146,7 @@ public class GenericsTest {
 	/**
 	 * 创建Number集合 此方法不推荐使用 这里只是测试使用
 	 * 
-	 * @return
+	 * @return 
 	 */
 	@Deprecated
 	private <E> Collection<E> createNumber() {
@@ -162,7 +162,7 @@ public class GenericsTest {
 	/**
 	 * 迭代实现了Iterable接口的可迭代子类
 	 * 
-	 * @param src
+	 * @param  src
 	 */
 	public <E> void iterator(Iterable<E> src) {
 		for (E e : src) { // 内部通过迭代器来遍历元素
@@ -247,8 +247,8 @@ public class GenericsTest {
 	/**
 	 * 找到列表中的最大值
 	 * 
-	 * @param list
-	 * @return
+	 * @param  list
+	 * @return 
 	 */
 	private <T extends Comparable<T>> T recurType(List<T> list) {
 		T to = list.get(0);

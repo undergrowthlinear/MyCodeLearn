@@ -15,11 +15,11 @@ import org.junit.Test;
 
 /**
  * 
- * @Description: TODO(这里用一句话描述这个类的作用) 标准输入、输出、错误流 环境信息访问、设置、系统属性 加载文件和类库
+ * Description: TODO(这里用一句话描述这个类的作用) 标准输入、输出、错误流 环境信息访问、设置、系统属性 加载文件和类库
  *               复制数组方法、调用垃圾回收器、java虚拟机、信道、安全管理器
- * @Author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
- * @Date 2016年6月7日
- * @Version 1.0.0
+ * @author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
+ * Date 2016年6月7日
+ * @version 1.0.0
  */
 public class SystemTest {
 

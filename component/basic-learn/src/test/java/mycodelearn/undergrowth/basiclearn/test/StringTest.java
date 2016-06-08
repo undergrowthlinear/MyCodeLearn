@@ -11,10 +11,10 @@ import org.junit.Test;
 
 /**
  * 
- * @Description: TODO(用于测试String StringBuffer StringBuilder)
- * @Author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
- * @Date 2016年6月7日
- * @Version 1.0.0
+ * Description: TODO(用于测试String StringBuffer StringBuilder)
+ * @author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
+ * Date 2016年6月7日
+ * @version 1.0.0
  */
 public class StringTest {
 

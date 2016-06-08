@@ -12,7 +12,7 @@ import io.netty.channel.ChannelHandlerContext;
 
 /**
  * @author u1
- * @Date  2015-7-1
+ * date  2015-7-1
  */
 public class ProtoTimeServerHandler extends ChannelHandlerAdapter {
 
@@ -29,8 +29,8 @@ public class ProtoTimeServerHandler extends ChannelHandlerAdapter {
 
 	/**
 	 * 
-	 * @param reqId
-	 * @return
+	 * @param  reqId
+	 * @return 
 	 */
 	private MessageRespProto.MessageResp resp(int reqId) {
 		// TODO Auto-generated method stub

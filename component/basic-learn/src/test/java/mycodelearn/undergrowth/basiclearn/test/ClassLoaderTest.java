@@ -14,12 +14,12 @@ import org.junit.Test;
 
 /**
  * 
- * @Description: TODO(这里用一句话描述这个类的作用) 类加载器负载加载类对象、资源
+ * Description: TODO(这里用一句话描述这个类的作用) 类加载器负载加载类对象、资源
  *               一般策略是将给定名称转为文件名，然后从文件系统中进行加载
  *               类加载器采用委托机制进行加载类和资源-->在加载类或者资源之前将操作委托给父加载器进行加载
- * @Author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
- * @Date 2016年6月7日
- * @Version 1.0.0
+ * @author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
+ * Date 2016年6月7日
+ * @version 1.0.0
  */
 public class ClassLoaderTest {
 
@@ -35,7 +35,7 @@ public class ClassLoaderTest {
 	/**
 	 * 迭代类加载器
 	 * 
-	 * @param classLoader
+	 * @param  classLoader
 	 */
 	private void iteratorClassLoader(ClassLoader classLoader) {
 		while (classLoader != null) {
@@ -68,7 +68,7 @@ public class ClassLoaderTest {
 	/**
 	 * 利用反射获取方法名进行 显示 显示资源定位符的信息
 	 * 
-	 * @param url
+	 * @param  url
 	 * @throws IOException
 	 * @throws URISyntaxException
 	 * @throws InvocationTargetException
@@ -208,7 +208,7 @@ public class ClassLoaderTest {
 	/**
 	 * 迭代类字节码方法
 	 * 
-	 * @param mathLearn
+	 * @param  mathLearn
 	 */
 	private void iteratorClassMethod(Class<MathLearnTest> mathLearn) {
 		for (Method method : mathLearn.getDeclaredMethods()) {
@@ -244,7 +244,7 @@ public class ClassLoaderTest {
 	/**
 	 * 显示包相关信息
 	 * 
-	 * @param package1
+	 * @param  package1
 	 * @throws InvocationTargetException
 	 * @throws IllegalArgumentException
 	 * @throws IllegalAccessException

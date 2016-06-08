@@ -7,7 +7,7 @@ import java.util.Date;
 
 /**
  * @author u1
- * @Date  2015-6-29
+ * date  2015-6-29
  */
 public class UnixTime {
     private int value;
@@ -17,7 +17,7 @@ public class UnixTime {
     }
 
 	/**
-	 * @param i
+	 * @param  i
 	 */
 	public UnixTime(int value) {
 		// TODO Auto-generated constructor stub

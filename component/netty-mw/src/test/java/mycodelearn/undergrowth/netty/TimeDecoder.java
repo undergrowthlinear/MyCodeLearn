@@ -13,7 +13,7 @@ import mycodelearn.undergrowth.netty.po.UnixTime;
 
 /**
  * @author u1
- * @Date  2015-6-29
+ * date  2015-6-29
  */
 public class TimeDecoder extends ByteToMessageDecoder {
 

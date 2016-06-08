@@ -23,14 +23,14 @@ import io.netty.handler.codec.string.StringDecoder;
 		//4��ͬ���ȴ��ر�ͨ��,��ֹmain�����˳�
 		//5���ر��̳߳���Դ
  * @author u1
- * @Date  2015-7-6
+ * date  2015-7-6
  */
 public class TcpAdhereTimeServer {
 
 	private int port;
 	
 	/**
-	 * @param i
+	 * @param  i
 	 */
 	public TcpAdhereTimeServer(int port) {
 		// TODO Auto-generated constructor stub
@@ -39,7 +39,7 @@ public class TcpAdhereTimeServer {
 
 
 	/**
-	 * @param args
+	 * @param  args
 	 * @throws InterruptedException 
 	 */
 	public static void main(String[] args) throws InterruptedException {

@@ -11,7 +11,7 @@ import io.netty.handler.codec.MessageToByteEncoder;
 
 /**
  * @author u1
- * @Date  2015-6-29
+ * date  2015-6-29
  */
 public class TimeEncoder extends MessageToByteEncoder<UnixTime> {
 

@@ -10,7 +10,7 @@ import mycodelearn.undergrowth.netty.protobuf.message.MessageReqProto;
 
 /**
  * @author u1
- * @Date  2015-7-1
+ * date  2015-7-1
  */
 public class ProtoTimeClientHandler extends ChannelHandlerAdapter {
 
@@ -22,7 +22,7 @@ public class ProtoTimeClientHandler extends ChannelHandlerAdapter {
 
 	/**
 	 * 
-	 * @return
+	 * @return 
 	 */
 	private MessageReqProto.MessageReq req() {
 		// TODO Auto-generated method stub

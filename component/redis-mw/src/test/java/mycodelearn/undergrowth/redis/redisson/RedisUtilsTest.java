@@ -2,10 +2,10 @@ package mycodelearn.undergrowth.redis.redisson;
 
 /**
  * 
-* @Description: TODO(这里用一句话描述这个类的作用)
-* @Author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
-* @Date 2016年6月7日
-* @Version 1.0.0
+* Description: TODO(这里用一句话描述这个类的作用)
+* @author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
+* Date 2016年6月7日
+* @version 1.0.0
  */
 import io.netty.util.concurrent.Future;
 
