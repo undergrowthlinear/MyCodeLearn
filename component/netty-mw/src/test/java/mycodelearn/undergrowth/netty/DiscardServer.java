@@ -1,5 +1,4 @@
 package mycodelearn.undergrowth.netty;
-
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -10,18 +9,18 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 /**
- * ��������������Ϣ
+ * 抛弃接收来的消息
  * 
  * @author Administrator
  * 
  */
 public class DiscardServer {
 
-	// ͨ����صķ���˿�
+	// 通道相关的服务端口
 	private int port;
 
 	/**
-	 * @param  args
+	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -33,7 +32,7 @@ public class DiscardServer {
 	}
 
 	/**
-	 * ��������ͨ�������
+	 * 用于配置通道与服务
 	 */
 	public void run() {
 		EventLoopGroup boss = new NioEventLoopGroup();

@@ -1,25 +1,34 @@
 package mycodelearn.undergrowth.netty;
+import java.net.SocketAddress;
 
 import io.netty.buffer.ByteBuf;
+import io.netty.channel.ChannelFuture;
+import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelPromise;
 import io.netty.util.ReferenceCountUtil;
+import mycodelearn.undergrowth.netty.po.UnixTime;
 
 /**
- * ���������������Э��
+ * 处理服务器端抛弃协议
  * 
  * @author Administrator
  * 
  */
 public class DiscardServerHandler extends ChannelHandlerAdapter {
 
+	
+	
+	
+
 	@Override
 	public void channelRead(ChannelHandlerContext ctx, Object msg) { // (2)
 
 		// Discard the received data silently.
-		//1���������յ�����Ϣ
+		//1、抛弃接收到的消息
 		//((ByteBuf) msg).release(); // (3)
-		//2�������յ�����Ϣ���������̨
+		//2、将接收到的消息输出到控制台
 		/*ByteBuf buf=(ByteBuf) msg;
 		try {
 			while(buf.isReadable()){
@@ -32,7 +41,7 @@ public class DiscardServerHandler extends ChannelHandlerAdapter {
 		}finally{
 			ReferenceCountUtil.release(msg);
 		}*/
-		//3�������յ�����Ϣд�ظ��ͻ���
+		//3、将接收到的消息写回给客户端
 		ctx.writeAndFlush(msg);
 
 	}

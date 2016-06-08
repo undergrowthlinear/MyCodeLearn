@@ -21,3 +21,29 @@
  * 3、绑定端口服务
  * 4、等待操作完成
  * 5、关闭事件处理池
+ 
+ netty是NIO的反应器模式，基于事件驱动
+ 在管道流上注册处理器，处理不同的通道事件
+ ChannelPipeline
+ ChannelHandler
+ ChannelEvent
+ 
+ 
+ 流程：
+在ChannelPipeline中注册ChannelHandler放入到ChannelHandlerContext中，在ChannelPipeline中根据ChannelHandlerContext的next构成处理器链
+在ChannelHandler处理完上下行事件后，会通过ChannelHandlerContext /ChannelPipeline将上下行事件发出来，供ChannelPipeline的其他处理器进行处理
+ 
+ 
+All I/O operations in Netty are asynchronous
+ 
+ 
+Netty服务端三步骤:
+1、建立启动类(ServerBootstrap)，使用通道工厂(ChannelFactory)/通道管道工厂(ChannelPipelineFactory)进行创建
+2、在使用ChannelPipelineFactory创建ChannelPipeline的时候，将处理器绑定到通道管道上
+3、设置子通道连接参数、启动服务
+ 
+ 
+Netty客户端三步骤:
+1、建立启动类(ClientBootstrap)，使用通道工厂(ChannelFactory)/通道管道工厂(ChannelPipelineFactory)进行创建
+2、在使用ChannelPipelineFactory创建ChannelPipeline的时候，将处理器绑定到通道管道上
+3、设置通道连接参数
