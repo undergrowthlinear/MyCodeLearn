@@ -12,8 +12,10 @@
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
 	
+	<link rel="stylesheet" type="text/css" href="<%=css_path%>">
 	
 	<script type="text/javascript" src="<%=jquery_js%>"></script>
+	
 	<script type="text/javascript">
 		$(function(){
 		//绑定鼠标进入添加样式
@@ -26,13 +28,13 @@
 			});
 			//移动元素
 			//移动到元素之后
-			$("p").insertAfter($("#content"));
+			//$("p").insertAfter($("#content"));
 			//移动到元素之前
 			$("#spanCon").insertBefore($("#content"));
 			//移动到内容之中
 			$("#spanMov").appendTo($("#content"));
 			//复制元素
-			$("#spanCon").clone().appendTo($("#content"));
+			//$("#spanCon").clone().appendTo($("#content"));
 			//清除内容
 			//$("#content").empty();
 			$("<p>插入的内容</p>").insertAfter($("#content"));
@@ -41,7 +43,7 @@
 			$("<a/>",{
 				href:"http://www.baidu.com",
 				html:"插入的超链接",
-				"class":"test"
+				"class":"testA"
 			}).insertAfter($("#content"));
 			
 			//数组操作
@@ -74,7 +76,7 @@
   <span id="spanCon">this  is span.</span>
     <p>This is my JSP page. </p>
     <hr/>
-    <div id="content" style="border:1px solid red">
+    <div id="content" style="border:2px solid red">
       我是内容选择区
     </div>
     <ul id="testUl">
