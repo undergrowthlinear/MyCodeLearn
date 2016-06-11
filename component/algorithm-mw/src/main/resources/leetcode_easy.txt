@@ -1,0 +1,388 @@
+Count and Say
+The count-and-say sequence is the sequence of integers beginning as follows:
+1, 11, 21, 1211, 111221, ...
+1 is read off as "one 1" or 11.
+11 is read off as "two 1s" or 21.
+21 is read off as "one 2, then one 1" or 1211.
+Given an integer n, generate the nth sequence.
+Note: The sequence of integers will be represented as a string.
+
+
+
+Compare Version Numbers
+Compare two version numbers version1 and version2.
+If version1 > version2 return 1, if version1 < version2 return -1, otherwise return 0.
+You may assume that the version strings are non-empty and contain only digits and the . character.
+The . character does not represent a decimal point and is used to separate number sequences.
+For instance, 2.5 is not "two and a half" or "half way to version three", it is the fifth second-level revision of the second first-level revision.
+Here is an example of version numbers ordering:
+0.1 < 1.1 < 1.2 < 13.37
+
+
+
+Intersection of Two Linked Lists
+Write a program to find the node at which the intersection of two singly linked lists begins.
+For example, the following two linked lists:
+
+A:          a1 ¡ú a2
+                   ¨K
+                     c1 ¡ú c2 ¡ú c3
+                   ¨J            
+B:     b1 ¡ú b2 ¡ú b3
+begin to intersect at node c1.
+Notes:
+If the two linked lists have no intersection at all, return null.
+The linked lists must retain their original structure after the function returns.
+You may assume there are no cycles anywhere in the entire linked structure.
+Your code should preferably run in O(n) time and use only O(1) memory.
+
+
+
+ZigZag Conversion
+The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
+P   A   H   N
+A P L S I I G
+Y   I   R
+And then read line by line: "PAHNAPLSIIGYIR"
+Write the code that will take a string and make this conversion given a number of rows:
+string convert(string text, int nRows);
+convert("PAYPALISHIRING", 3) should return "PAHNAPLSIIGYIR".
+
+
+
+Reverse Integer
+Reverse digits of an integer.
+Example1: x = 123, return 321
+Example2: x = -123, return -321
+click to show spoilers.
+Have you thought about this?
+Here are some good questions to ask before coding. Bonus points for you if you have already thought through this!
+If the integer's last digit is 0, what should the output be? ie, cases such as 10, 100.
+Did you notice that the reversed integer might overflow? Assume the input is a 32-bit integer, then the reverse of 1000000003 overflows. How should you handle such cases?
+For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
+Update (2014-11-10):
+Test cases had been added to test the overflow behavior.
+
+
+
+Min Stack
+Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+push(x) -- Push element x onto stack.
+pop() -- Removes the element on top of the stack.
+top() -- Get the top element.
+getMin() -- Retrieve the minimum element in the stack.
+
+
+
+String to Integer (atoi) 
+Implement atoi to convert a string to an integer.
+Hint: Carefully consider all possible input cases. If you want a challenge, please do not see below and ask yourself what are the possible input cases.
+Notes: It is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to gather all the input requirements up front.
+Update (2015-02-10):
+The signature of the C++ function had been updated. If you still see your function signature accepts a const char * argument, please click the reload button  to reset your code definition.
+spoilers alert... click to show requirements for atoi.
+Requirements for atoi:
+The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical digits as possible, and interprets them as a numerical value.
+The string can contain additional characters after those that form the integral number, which are ignored and have no effect on the behavior of this function.
+If the first sequence of non-whitespace characters in str is not a valid integral number, or if no such sequence exists because either str is empty or it contains only whitespace characters, no conversion is performed.
+If no valid conversion could be performed, a zero value is returned. If the correct value is out of the range of representable values, INT_MAX (2147483647) or INT_MIN (-2147483648) is returned.
+
+
+
+Palindrome Number 
+Determine whether an integer is a palindrome. Do this without extra space.
+click to show spoilers.
+Some hints:
+Could negative integers be palindromes? (ie, -1)
+If you are thinking of converting the integer to string, note the restriction of using extra space.
+You could also try reversing an integer. However, if you have solved the problem "Reverse Integer", you know that the reversed integer might overflow. How would you handle such case?
+There is a more generic way of solving this problem.
+
+
+
+Roman to Integer 
+Given a roman numeral, convert it to an integer.
+Input is guaranteed to be within the range from 1 to 3999.
+
+
+
+Longest Common Prefix 
+Write a function to find the longest common prefix string amongst an array of strings.
+
+
+
+Remove Nth Node From End of List
+Given a linked list, remove the nth node from the end of list and return its head.
+For example,
+   Given linked list: 1->2->3->4->5, and n = 2.
+   After removing the second node from the end, the linked list becomes 1->2->3->5.
+Note:
+Given n will always be valid.
+Try to do this in one pass.
+
+
+
+Valid Parentheses 
+Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.
+
+
+
+Pascal's Triangle II
+Given an index k, return the kth row of the Pascal's triangle.
+For example, given k = 3,
+Return [1,3,3,1].
+Note:
+Could you optimize your algorithm to use only O(k) extra space?
+
+
+
+Pascal's Triangle 
+Given numRows, generate the first numRows of Pascal's triangle.
+For example, given numRows = 5,
+Return
+[
+     [1],
+    [1,1],
+   [1,2,1],
+  [1,3,3,1],
+ [1,4,6,4,1]
+]
+
+
+
+Merge Two Sorted Lists 
+Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
+
+
+
+Path Sum
+Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
+For example:
+Given the below binary tree and sum = 22,
+              5
+             / \
+            4   8
+           /   / \
+          11  13  4
+         /  \      \
+        7    2      1
+return true, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
+
+
+
+Minimum Depth of Binary Tree
+Given a binary tree, find its minimum depth.
+The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
+
+
+
+Balanced Binary Tree
+Given a binary tree, determine if it is height-balanced.
+For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
+
+
+
+Binary Tree Level Order Traversal II 
+Given a binary tree, return the bottom-up level order traversal of its nodes' values. (ie, from left to right, level by level from leaf to root).
+
+For example:
+Given binary tree {3,9,20,#,#,15,7},
+    3
+   / \
+  9  20
+    /  \
+   15   7
+return its bottom-up level order traversal as:
+[
+  [15,7],
+  [9,20],
+  [3]
+]
+confused what "{1,#,2,3}" means? > read more on how binary tree is serialized on OJ.
+
+
+
+Maximum Depth of Binary Tree
+Given a binary tree, find its maximum depth.
+The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+
+
+
+Binary Tree Level Order Traversal
+Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
+For example:
+Given binary tree {3,9,20,#,#,15,7},
+    3
+   / \
+  9  20
+    /  \
+   15   7
+return its level order traversal as:
+[
+  [3],
+  [9,20],
+  [15,7]
+]
+confused what "{1,#,2,3}" means? > read more on how binary tree is serialized on OJ.
+
+
+
+Symmetric Tree 
+Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
+For example, this binary tree is symmetric:
+
+    1
+   / \
+  2   2
+ / \ / \
+3  4 4  3
+But the following is not:
+    1
+   / \
+  2   2
+   \   \
+   3    3
+Note:
+Bonus points if you could solve it both recursively and iteratively.
+confused what "{1,#,2,3}" means? > read more on how binary tree is serialized on OJ.
+
+
+Same Tree 
+Given two binary trees, write a function to check if they are equal or not.
+Two binary trees are considered equal if they are structurally identical and the nodes have the same value.
+
+
+
+Remove Duplicates from Sorted Array 
+Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length.
+Do not allocate extra space for another array, you must do this in place with constant memory.
+For example,
+Given input array nums = [1,1,2],
+Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. It doesn't matter what you leave beyond the new length.
+
+
+
+Merge Sorted Array 
+Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
+Note:
+You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2. The number of elements initialized in nums1 and nums2 are m and n respectively.
+
+
+
+Remove Element 
+Given an array and a value, remove all instances of that value in place and return the new length.
+The order of elements can be changed. It doesn't matter what you leave beyond the new length.
+
+
+
+Implement strStr() 
+Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+Update (2014-11-02):
+The signature of the function had been updated to return the index instead of the pointer. If you still see your function signature returns a char * or String, please click the reload button  to reset your code definition.
+
+
+
+Remove Duplicates from Sorted List 
+Given a sorted linked list, delete all duplicates such that each element appear only once.
+For example,
+Given 1->1->2, return 1->2.
+Given 1->1->2->3->3, return 1->2->3.
+
+
+
+Climbing Stairs 
+You are climbing a stair case. It takes n steps to reach to the top.
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+
+
+
+Add Binary 
+Given two binary strings, return their sum (also a binary string).
+For example,
+a = "11"
+b = "1"
+Return "100".
+
+
+
+Plus One
+Given a non-negative number represented as an array of digits, plus one to the number.
+The digits are stored such that the most significant digit is at the head of the list.
+
+
+
+Valid Sudoku 
+Determine if a Sudoku is valid, according to: Sudoku Puzzles - The Rules.
+The Sudoku board could be partially filled, where empty cells are filled with the character '.'.
+A partially filled sudoku which is valid.
+
+
+
+Length of Last Word
+Given a string s consists of upper/lower-case alphabets and empty space characters ' ', return the length of last word in the string.
+If the last word does not exist, return 0.
+Note: A word is defined as a character sequence consists of non-space characters only.
+For example, 
+Given s = "Hello World",
+return 5.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -21,6 +21,8 @@
 		<module>basic-learn</module>
 		<module>netty-mw</module>
 		<module>interview-mw</module>
+		<module>designmode-mw</module>
+		<module>algorithm-mw</module>
 	</modules>
 	<build>
 		<plugins>
