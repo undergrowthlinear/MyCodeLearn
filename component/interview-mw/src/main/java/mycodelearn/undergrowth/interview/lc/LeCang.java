@@ -19,10 +19,20 @@ public class LeCang {
 	
 	/**
 	 * GC的算法----分代收集
-	 * YoungArea----新生的对象----频繁回收
+	 * YoungArea----新生的对象----频繁回收----年轻代被分为3个部分——Enden区和两个Survivor区（From和to）
 	 * OldArea----应用程序中生命周期较长的对象----较少回收
 	 * PermanentArea----Class和Meta信息----基本不回收
+	 * JVM Heap包括YoungArea、OldArea
 	 */
+	
+	/**
+	 * Java OutofMemory----hprof
+	 * Permanent OutOfMemory----Class和Meta信息----XX:PermSize
+	 * Heap OutOfMemory----new 的对象实例----set JAVA_OPTS= -Xms256m -Xmx1024m
+	 * Stack OutOfMemory----基本类型、方法输入输出----Xss 
+	 * -XX:+HeapDumpOnOutOfMemoryError----生成hprof文件
+	 */
+	
 	
 	
 }
