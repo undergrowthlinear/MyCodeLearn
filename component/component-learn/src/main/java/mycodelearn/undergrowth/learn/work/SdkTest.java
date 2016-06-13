@@ -1,4 +1,4 @@
-package mycodelearn.undergrowth.learn.work;
+/*package mycodelearn.undergrowth.learn.work;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,14 +27,14 @@ import com.esms.common.entity.Ticket;
 import com.esms.common.entity.TicketInfo;
 
 
-/**
+*//**
  * 支持SOCKET、HTTP、SOCKET4、SOCKET5
  * 
  * Description: TODO(测试SDK)
  * @author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
  * date 2015年11月12日
  * @version 1.0.0
- */
+ *//*
 public class SdkTest {
 
 	private static PostServer postServer = null;
@@ -88,11 +88,11 @@ public class SdkTest {
 	}
 	
 	
-	/**
+	*//**
 	 * 
 	 * @return 
 	 * @throws Exception 
-	 */
+	 *//*
 	private  static MTPack createMTPack(MsgType msgType,SendType sendType,String content) throws Exception {
 		// TODO Auto-generated method stub
 		MTPack mtPack = new MTPack();
@@ -116,16 +116,16 @@ public class SdkTest {
 		for (int i = 0; i < num; i++) {
 			msgs.add(new MessageData("18287" + String.format("%06d", i),
 					content));
-			/*msgs.add(new MessageData("18087131" + String.format("%03d", i),
+			msgs.add(new MessageData("18087131" + String.format("%03d", i),
 					content));
 			msgs.add(new MessageData("18587131" + String.format("%03d", i),
-					content));*/
+					content));
 		}
-		/*msgs.add(new MessageData("18287131061","a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582"));
+		msgs.add(new MessageData("18287131061","a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582"));
 		msgs.add(new MessageData("18520045892","a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582"));
-		msgs.add(new MessageData("18047582654","a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582"));*/
-		/*msgs.add(new MessageData("18287131061",content));
-		msgs.add(new MessageData("18520045892",content));*/
+		msgs.add(new MessageData("18047582654","a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582a$1%!~@#5582"));
+		msgs.add(new MessageData("18287131061",content));
+		msgs.add(new MessageData("18520045892",content));
 		//msgs.add(new MessageData("18287131061",content));
 		return msgs;
 	}
@@ -209,4 +209,4 @@ public class SdkTest {
 			e.printStackTrace();
 		}
 	}
-}
+}*/

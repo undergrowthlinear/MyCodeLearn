@@ -1,4 +1,4 @@
-package mycodelearn.undergrowth.learn.work.entity;
+/*package mycodelearn.undergrowth.learn.work.entity;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -95,3 +95,4 @@ public class PostServer{
 	}
 
 }
+*/
