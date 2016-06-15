@@ -1,0 +1,82 @@
+127.0.0.1:6379> set test qq 
+OK
+127.0.0.1:6379> get test
+"qq"
+127.0.0.1:6379> lset lset
+(error) ERR wrong number of arguments for 'lset' command
+127.0.0.1:6379> lset lset 0 lset
+(error) ERR no such key
+127.0.0.1:6379> help lpush
+
+  LPUSH key value [value ...]
+  summary: Prepend one or multiple values to a list
+  since: 1.0.0
+  group: list
+
+127.0.0.1:6379> lpush ltest test
+(integer) 1
+127.0.0.1:6379> help lpop
+
+  LPOP key
+  summary: Remove and get the first element in a list
+  since: 1.0.0
+  group: list
+
+127.0.0.1:6379> lpop ltest
+"test"
+127.0.0.1:6379> help hset
+
+  HSET key field value
+  summary: Set the string value of a hash field
+  since: 2.0.0
+  group: hash
+
+127.0.0.1:6379> hset htest k1 v1
+(integer) 1
+127.0.0.1:6379> hget htest k1
+"v1"
+127.0.0.1:6379> hget htest k1
+"v1"
+127.0.0.1:6379> help sadd
+
+  SADD key member [member ...]
+  summary: Add one or more members to a set
+  since: 1.0.0
+  group: set
+
+127.0.0.1:6379> sadd stest 1
+(integer) 1
+127.0.0.1:6379> smembers stest
+1) "1"
+127.0.0.1:6379> smembers stest
+1) "1"
+127.0.0.1:6379> help zsadd
+
+127.0.0.1:6379> help zadd
+
+  ZADD key [NX|XX] [CH] [INCR] score member [score member ...]
+  summary: Add one or more members to a sorted set, or update its score if it already exists
+  since: 1.2.0
+  group: sorted_set
+
+127.0.0.1:6379> zadd ztest 100 z1
+(integer) 1
+127.0.0.1:6379> zadd ztest 90 z2
+(integer) 1
+127.0.0.1:6379> zscore ztest z2
+"90"
+127.0.0.1:6379> zrangebyscore ztest 90 100
+1) "z2"
+2) "z1"
+127.0.0.1:6379> zrangebyscore ztest 90 100 withscores
+1) "z2"
+2) "90"
+3) "z1"
+4) "100"
+127.0.0.1:6379> 
+redis-cli -h 127.0.0.1 -p 6379
+select 1
+keys *
+exists key
+del key
+type key

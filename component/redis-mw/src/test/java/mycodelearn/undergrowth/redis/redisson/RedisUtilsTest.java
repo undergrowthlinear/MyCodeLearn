@@ -40,7 +40,7 @@ public class RedisUtilsTest {
 	 */
 	@Before
 	public void before() {
-		String ip = "192.168.1.160";
+		String ip = "172.16.22.249";
 		String port = "6379";
 		redisson = RedisUtils.getInstance().getRedisson(ip, port);
 	}
@@ -153,6 +153,14 @@ public class RedisUtilsTest {
 		// 输出结果集
 		System.out.println(Arrays.toString(rList.toArray()));
 	}
+	
+	@Test
+	public void testGetRList1() {
+		RList<Integer> rList = RedisUtils.getInstance().getRList(redisson, "testList");
+		// 输出结果集
+		System.out.println(Arrays.toString(rList.toArray()));
+	}
+	
 
 	/**
 	 * RQueue 映射为 redis server的list类型 队列--先入先出 redis server 命令: 查看所有键---->keys *

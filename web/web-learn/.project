@@ -3,6 +3,7 @@
 	<name>web-learn</name>
 	<comment></comment>
 	<projects>
+		<project>redis-mw</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

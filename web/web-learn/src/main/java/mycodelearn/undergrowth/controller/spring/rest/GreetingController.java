@@ -1,4 +1,4 @@
-package mycodelearn.undergrowth.spring.rest;
+package mycodelearn.undergrowth.controller.spring.rest;
 
 import java.util.concurrent.atomic.AtomicLong;
 

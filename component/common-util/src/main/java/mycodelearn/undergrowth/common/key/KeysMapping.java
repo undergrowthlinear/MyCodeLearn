@@ -36,5 +36,12 @@ public interface KeysMapping {
 	public static final String REST_GREETING="/greet";
 	public static final String REST_GREETING_VIEW="/greet/greetTest";
 	
+	//redis测试
+	public static final String REDIS_NAME="/redisName";
+	public static final String REDIS_INDEX="/redisIndex";
+	public static final String REDIS_INDEX_VIEW="/redis/redisNameTest";
+	
+	//public
+	public static final String PUBLIC_JSON_VIEW="/public/jsonData";
 	
 }

@@ -75,7 +75,7 @@ import org.redisson.core.RTopic;
 
 public class RedisUtils {
 
-	private static RedisUtils redisUtils;
+	private volatile static  RedisUtils redisUtils;
 
 	private RedisUtils() {
 	}
@@ -117,7 +117,7 @@ public class RedisUtils {
 		Config config = new Config();
 		config.useSingleServer().setAddress(ip + ":" + port);
 		Redisson redisson = Redisson.create(config);
-		System.out.println("成功连接Redis Server" + "\t" + "连接" + ip + ":" + port + "服务器");
+		//System.out.println("成功连接Redis Server" + "\t" + "连接" + ip + ":" + port + "服务器");
 		return redisson;
 	}
 
@@ -128,7 +128,7 @@ public class RedisUtils {
 	 */
 	public void closeRedisson(Redisson redisson) {
 		redisson.shutdown();
-		System.out.println("成功关闭Redis Client连接");
+		//System.out.println("成功关闭Redis Client连接");
 	}
 
 	/**
