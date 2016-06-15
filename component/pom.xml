@@ -23,6 +23,7 @@
 		<module>interview-mw</module>
 		<module>designmode-mw</module>
 		<module>algorithm-mw</module>
+		<module>mail-mw</module>
 	</modules>
 	<build>
 		<plugins>
