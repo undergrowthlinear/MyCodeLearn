@@ -17,7 +17,7 @@ public class BIOTimeClient {
 	 */
 	public static void main(String[] args) throws UnknownHostException, IOException {
 		// TODO Auto-generated method stub
-		Socket socket = new Socket(InetAddress.getLocalHost(), 5555);
+		Socket socket = new Socket(InetAddress.getLocalHost(), 7777);
 		BufferedReader in = null;
 		PrintWriter out = null;
 		// 获取输入、输出流
