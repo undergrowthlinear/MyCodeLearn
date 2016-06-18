@@ -5,6 +5,9 @@ import java.security.InvalidKeyException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -50,6 +53,10 @@ public class GDShuZiZhengShu {
 	 *   RSA(1024)----
 	 * 对称加密----双方使用相同的密钥加解密,DES(56bit)----3DES----AES
 	 * SHA1,MD5是一种加密算法,用于计算一段不可逆的值,验证文件是否被修改
+	 * 
+	 * 什么是缓存,一般有什么用?
+	 * 
+	 * 
 	 */
 	
 	String content="测试加解密";
@@ -231,6 +238,66 @@ public class GDShuZiZhengShu {
 	public static String encryptBASE64(String key) {
 
 		return "";
+	}
+	
+	/**
+	 * 插入排序
+	 */
+	@Test
+	public void insertTest(){
+		List<Integer> list=new ArrayList<>();
+		list.addAll(Arrays.asList(12,6,18,2,20));
+		System.out.println("排序前,"+list);
+		insertSort(list);
+		System.out.println("排序后,"+list);
+		list.clear();
+		list.addAll(Arrays.asList(12,6,18,2,20));
+		mpSort(list);
+		System.out.println("冒泡排序后,"+list);
+	}
+
+	/**
+	 * 两个数两两比较,将较小的交互到最前面
+	 * @param list
+	 */
+	private void mpSort(List<Integer> list) {
+		// TODO Auto-generated method stub
+		int tmp=0;
+		int num = list.size();
+		for (int i = 0; i < num; i++) {
+			for (int j = i; j < num; j++) {
+				if (list.get(i) > list.get(j)) {
+					tmp=list.get(i);
+					list.set(i, list.get(j));
+					list.set(j, tmp);
+				}
+			}
+			System.out.println(i+"次排序,"+list);
+		}
+	}
+
+	/**
+	 * 插入排序
+	 * 将待排序的数据插入到已排序的数组中
+	 * @param list
+	 */
+	private void insertSort(List<Integer> list) {
+		// TODO Auto-generated method stub
+		int tmp=0,j=0;
+		int num=list.size();
+		for (int i = 1; i < num; i++) {
+			if(list.get(i-1)>list.get(i)){
+				//存储要被替换的值
+				tmp=list.get(i);
+				j=i;
+				while(j>0 && list.get(j-1)>tmp){
+					list.set(j, list.get(j-1));
+					j--;
+				}
+				list.set(j,tmp);
+			}
+			System.out.println(i+"次排序,"+list);
+		}
 	}
 }
 

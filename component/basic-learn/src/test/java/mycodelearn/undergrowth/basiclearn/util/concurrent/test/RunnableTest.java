@@ -1,4 +1,4 @@
-package mycodelearn.undergrowth.basiclearn.util.test;
+package mycodelearn.undergrowth.basiclearn.util.concurrent.test;
 
 
 import org.junit.Test;

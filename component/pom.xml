@@ -10,9 +10,7 @@
 	<packaging>pom</packaging>
 	<name>component-pom</name>
 	<description>mycodelearn undergrowth component pom</description>
-	<!-- <dependencies> <dependency> <groupId>org.apache.activemq</groupId> 
-		<artifactId>activemq-all</artifactId> <version>5.13.0</version> </dependency> 
-		</dependencies> -->
+	
 	<modules>
 		<module>component-learn</module>
 		<module>common-util</module>
@@ -24,6 +22,7 @@
 		<module>designmode-mw</module>
 		<module>algorithm-mw</module>
 		<module>mail-mw</module>
+		<module>ms-mw</module>
 	</modules>
 	<build>
 		<plugins>
