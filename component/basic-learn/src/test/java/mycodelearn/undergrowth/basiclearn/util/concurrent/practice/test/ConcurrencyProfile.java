@@ -49,6 +49,14 @@ import org.junit.Test;
 * CountDownLatch--为同步工具类之Latch(闭锁)--多个线程等待一个任务/一个线程等待多个任务
 * 	FutureTask
 * 
+* ThreadDump分析:
+* http://blog.csdn.net/rachel_luo/article/details/8920596
+* 线程的状态
+* new(创建)--start-->Runnable(就绪)--调度器调度-->Running(运行)--run-->Dead(死亡)
+* Running(运行)--synchronized--Block(锁池/entry set)--获得锁-->Runnable(就绪)
+* Running(运行)--wait--Block(等待池/wait set)--notify/notifyAll-->Block(锁池/entry set)--获得锁-->Runnable(就绪)
+* Running(运行)--sleep/join--Block(其他等待)--条件达到-->Runnable(就绪)
+* 
 * @Author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
 * @Date 2016年3月15日
 * @Version 1.0.0

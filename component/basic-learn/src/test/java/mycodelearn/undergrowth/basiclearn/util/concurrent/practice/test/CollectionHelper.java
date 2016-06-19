@@ -17,10 +17,15 @@ import java.util.concurrent.Future;
  */
 public class CollectionHelper<T> {
 
-	public static <T> void iteratorResult(List<Future<T>> results) throws InterruptedException, ExecutionException {
+	public static <T> void iteratorResult(List<Future<T>> results){
 		// TODO Auto-generated method stub
 		for (Future<T> future : results) {
-			System.out.println(future.isDone()+","+future.get());
+			try {
+				System.out.println(future.isDone()+","+future.get());
+			} catch (InterruptedException | ExecutionException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 

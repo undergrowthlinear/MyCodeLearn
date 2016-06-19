@@ -8,8 +8,8 @@ package mycodelearn.undergrowth.interview.lc;
  -XX:+PrintGCDetails -Xloggc:D:\OutOfMemoryTest.log
  
  另一种描述:
- jmap -dump:file=D:/javaDump.hprof,format=b 3614
- jhat -J-Xmx1024m D:/OutOfMemoryTest.hprof  
+ jmap -dump:file=D:/javaDump.hprof,format=b 35492
+ jhat -J-Xmx1024m D:/javaDump.hprof  
  http://localhost:7000/
  
  更多:
