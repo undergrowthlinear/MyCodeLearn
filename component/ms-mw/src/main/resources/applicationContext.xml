@@ -14,15 +14,14 @@
 			   http://www.springframework.org/schema/util 
 			   http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
-	
+	<import resource="classpath:activemq.xml" />
 	<!-- Activates scanning of @Autowired -->
 	<context:annotation-config />
 
 	<!--spring component scan -->
 	<context:component-scan base-package="mycodelearn" />
 
-    <context:property-placeholder location="classpath*:/system.properties,classpath*:/jdbc.properties"/>
-
+    
 	
 
 </beans>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:jms="http://www.springframework.org/schema/jms"
+	xmlns:amq="http://activemq.apache.org/schema/core"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+               http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
+			   http://www.springframework.org/schema/context
+			   http://www.springframework.org/schema/context/spring-context-4.0.xsd 
+               http://www.springframework.org/schema/tx
+               http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+			   http://activemq.apache.org/schema/core 
+			   http://activemq.apache.org/schema/core/activemq-core-5.5.0.xsd
+			   http://www.springframework.org/schema/jms
+			   http://www.springframework.org/schema/jms/spring-jms-3.0.xsd">
+
+	<!-- a pooling based JMS provider -->
+	<bean id="jmsFactory"
+		class="org.springframework.jms.connection.SingleConnectionFactory">
+		<property name="targetConnectionFactory">
+			<bean class="org.apache.activemq.ActiveMQConnectionFactory">
+				<property name="brokerURL">
+					<value>tcp://localhost:61616</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<!-- Spring JMS Template -->
+	<bean id="myJmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="jmsFactory" />
+	</bean>
+
+	<bean id="queueDestination" class="org.apache.activemq.command.ActiveMQQueue">
+		<constructor-arg>
+			<value>testQueue</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="jmsQueueConsumerListener"
+		class="mylearncode.undergrowth.ms.activemq.test.JmsQueueConsumer" />
+		
+	<!-- 消息监听容器 -->
+	<bean id="jmsContainer"
+		class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+		<property name="connectionFactory" ref="jmsFactory" />
+		<property name="destination" ref="queueDestination" />
+		<property name="messageListener" ref="jmsQueueConsumerListener" />
+	</bean>
+
+
+
+</beans>
