@@ -78,8 +78,8 @@ public class JmsUtils {
 		initialize(destType);
 		// 消息的提供者（生产者）
 		producer = session.createProducer(dest);
-		// 不持久化消息
-		producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
+		// 持久化消息
+		producer.setDeliveryMode(DeliveryMode.PERSISTENT);
 		// 连接到JMS提供者（服务器）
 		conn.start();
 	}

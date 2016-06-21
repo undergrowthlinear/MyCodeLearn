@@ -3,7 +3,7 @@ package mylearncode.undergrowth.algorithm;
 import java.util.Arrays;
 
 /**
- * 快速排序
+ * 快速排序----一趟排序,分成两份
  * 		通过一趟排序 将数据分为两部分 其中一部分的所有数据比另一份的所有数据都小
  * 然后对这两份数据 进行递归操作 使整个数据变成有序数据
  * @author u1

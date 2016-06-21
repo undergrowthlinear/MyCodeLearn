@@ -9,6 +9,7 @@ import mylearncode.undergrowth.algorithm.ContainsDuplicate.Solution;
 /**
  * 
 * Description: TODO(这里用一句话描述这个类的作用)
+* 按照 这个---->[10,12,13,8,19]
 * @author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
 * Date 2016年6月20日
 * @version 1.0.0

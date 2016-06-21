@@ -1,8 +1,17 @@
 package mylearncode.undergrowth.algorithm;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 
+* Description: TODO(这里用一句话描述这个类的作用)
+* 冒泡----将最小的或者最大的数放在最前面
+* @author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
+* Date 2016年6月21日
+* @version 1.0.0
+ */
 public class MpSort {
 
 	public static void main(String[] args) {
