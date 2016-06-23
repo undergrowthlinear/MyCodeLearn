@@ -23,6 +23,7 @@
 		<module>algorithm-mw</module>
 		<module>mail-mw</module>
 		<module>ms-mw</module>
+		<module>dubbo-mw</module>
 	</modules>
 	<build>
 		<plugins>
