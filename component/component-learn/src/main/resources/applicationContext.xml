@@ -14,7 +14,7 @@
 			   http://www.springframework.org/schema/util 
 			   http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
-	<!-- <import resource="classpath:spring-mybatis.xml" /> -->
+	<import resource="classpath:rmi.xml" />
 
 	<!-- Activates scanning of @Autowired -->
 	<context:annotation-config />
@@ -22,8 +22,8 @@
 	<!--spring component scan -->
 	<context:component-scan base-package="mycodelearn" />
 
-    <context:property-placeholder location="classpath*:/system.properties,classpath*:/jdbc.properties"/>
-
+    <!-- <context:property-placeholder location="classpath*:/system.properties,classpath*:/jdbc.properties"/>
+ -->
 	<!-- <bean id="postMsg" class="com.esms.PostMsg"></bean> -->
 
 	<!--Configuration Repository -->
