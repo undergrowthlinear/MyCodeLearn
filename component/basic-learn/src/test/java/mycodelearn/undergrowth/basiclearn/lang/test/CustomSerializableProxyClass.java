@@ -12,7 +12,7 @@ import java.util.Calendar;
 * 自定义的序列化类
 * @author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
 * Date 2016年6月15日
-* @version 1.0.0
+* @version  1.0.0
  */
 public class CustomSerializableProxyClass implements Serializable {
 

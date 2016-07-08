@@ -5,7 +5,7 @@ package mycodelearn.undergrowth.interview.lc;
 * Description: TODO(这里用一句话描述这个类的作用)
 * @author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
 * Date 2016年6月11日
-* @version 1.0.0
+* @version  1.0.0
  */
 public class LeCang {
 

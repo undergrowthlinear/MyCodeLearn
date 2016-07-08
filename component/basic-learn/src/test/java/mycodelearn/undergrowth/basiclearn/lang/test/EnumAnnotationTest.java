@@ -37,7 +37,7 @@ import org.junit.Test;
 	 *  如果想要使用类型，一定要定义接口
 * @author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
 * Date 2016年6月15日
-* @version 1.0.0
+* @version  1.0.0
  */
 public class EnumAnnotationTest {
 

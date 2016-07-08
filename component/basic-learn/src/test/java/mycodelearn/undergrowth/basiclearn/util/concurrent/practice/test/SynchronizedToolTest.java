@@ -24,7 +24,7 @@ import org.junit.Test;
 * CyclicBarrier--升级版闭锁/可重置状态/等待线程到达栅栏位置,通过栅栏后,可执行特定操作
 * @author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
 * Date 2016年6月18日
-* @version 1.0.0
+* @version  1.0.0
  */
 public class SynchronizedToolTest {
 
@@ -46,7 +46,7 @@ public class SynchronizedToolTest {
 	* Description: TODO(主从循环调用 从先调用50次 主再调用50次 交替100次)
 	* @author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
 	* Date 2016年6月18日
-	* @version 1.0.0
+	* @version  1.0.0
 	 */
 	class MasterSlaveLoop{
 		

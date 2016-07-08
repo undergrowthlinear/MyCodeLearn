@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 * $--属性
 * @author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
 * Date 2016年5月27日
-* @version 1.0.0
+* @version  1.0.0
  */
 @Component
 public class NotifyServiceImpl implements NotifyService {

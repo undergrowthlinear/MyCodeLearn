@@ -139,4 +139,28 @@
 			<url>file:${project.build.directory}/${project.deploy}</url>
 		</repository>
 	</distributionManagement>
+	<url>https://github.com/undergrowthlinear/MyCodeLearn</url>
+	<scm>
+		<connection>scm:https://github.com/undergrowthlinear/MyCodeLearn</connection>
+		<url>https://github.com/undergrowthlinear/MyCodeLearn</url>
+		<developerConnection>scm:https://github.com/undergrowthlinear/MyCodeLearn</developerConnection>
+	</scm>
+	<organization>
+		<url>https://github.com/undergrowthlinear/MyCodeLearn</url>
+		<name>undergrowth</name>
+	</organization>
+	<issueManagement>
+		<url>https://github.com/undergrowthlinear/MyCodeLearn/issues</url>
+		<system>github</system>
+	</issueManagement>
+	<ciManagement>
+		<system>hudson</system>
+		<url>https://github.com/undergrowthlinear/MyCodeLearn</url>
+	</ciManagement>
+	<developers>
+		<developer>
+			<name>undergrowth</name>
+			<email>undergrowth@126.com</email>
+		</developer>
+	</developers>
 </project>

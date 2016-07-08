@@ -37,7 +37,7 @@ import org.junit.Test;
  *               总之：只要是在源程序中出现的类型，都有各自的Class类的实例对象。
  * @author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
  * Date 2016年6月7日
- * @version 1.0.0
+ * @version  1.0.0
  */
 public class ReflectTest {
 

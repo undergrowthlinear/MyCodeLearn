@@ -10,7 +10,7 @@ import java.util.List;
 * 冒泡----将最小的或者最大的数放在最前面
 * @author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
 * Date 2016年6月21日
-* @version 1.0.0
+* @version  1.0.0
  */
 public class MpSort {
 

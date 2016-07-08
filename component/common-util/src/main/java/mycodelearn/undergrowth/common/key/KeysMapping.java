@@ -7,7 +7,7 @@ package mycodelearn.undergrowth.common.key;
 * 	例如Controller的入口、出口
 * @author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
 * Date 2016年6月4日
-* @version 1.0.0
+* @version  1.0.0
 */
 public interface KeysMapping {
 

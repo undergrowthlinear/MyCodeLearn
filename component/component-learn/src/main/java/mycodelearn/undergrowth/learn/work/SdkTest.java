@@ -33,7 +33,7 @@ import com.esms.common.entity.TicketInfo;
  * Description: TODO(测试SDK)
  * @author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
  * date 2015年11月12日
- * @version 1.0.0
+ * @version  1.0.0
  *//*
 public class SdkTest {
 

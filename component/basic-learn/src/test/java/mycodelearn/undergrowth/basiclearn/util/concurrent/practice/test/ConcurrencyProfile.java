@@ -57,9 +57,9 @@ import org.junit.Test;
 * Running(运行)--wait--Block(等待池/wait set)--notify/notifyAll-->Block(锁池/entry set)--获得锁-->Runnable(就绪)
 * Running(运行)--sleep/join--Block(其他等待)--条件达到-->Runnable(就绪)
 * 
-* @Author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
+* @author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
 * @Date 2016年3月15日
-* @Version 1.0.0
+* @version  1.0.0
 */
 public class ConcurrencyProfile {
 

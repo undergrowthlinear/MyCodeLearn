@@ -17,7 +17,7 @@ package mycodelearn.undergrowth.interview.lc;
  
 * @author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
 * Date 2016年6月12日
-* @version 1.0.0
+* @version  1.0.0
  */
 public class OutOfMemoryTest {
 

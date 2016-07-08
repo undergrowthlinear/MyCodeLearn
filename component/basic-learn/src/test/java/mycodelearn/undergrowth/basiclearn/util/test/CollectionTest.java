@@ -18,7 +18,7 @@ import org.junit.Test;
 * Description: TODO(测试集合操作)
 * @author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
 * Date 2016年6月14日
-* @version 1.0.0
+* @version  1.0.0
  */
 public class CollectionTest {
 

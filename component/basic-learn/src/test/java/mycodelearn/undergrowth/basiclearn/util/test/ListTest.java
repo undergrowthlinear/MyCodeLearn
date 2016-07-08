@@ -24,7 +24,7 @@ import org.junit.Test;
  * Stack--堆栈--先入后出
 * @author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
 * Date 2016年6月14日
-* @version 1.0.0
+* @version  1.0.0
  */
 public class ListTest {
 

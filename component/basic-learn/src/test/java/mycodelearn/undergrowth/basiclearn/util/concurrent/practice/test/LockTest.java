@@ -28,7 +28,7 @@ import org.junit.Test;
 * 读写锁允许多个读线程并发的访问被保护的数据,当以读操作为主的数据结构时,可提升性能
 * @author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
 * Date 2016年6月18日
-* @version 1.0.0
+* @version  1.0.0
  */
 public class LockTest {
 	

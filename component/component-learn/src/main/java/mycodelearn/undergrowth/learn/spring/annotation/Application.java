@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * Description: TODO(进行spring注解上下文测试)
  * @author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
  * Date 2016年5月27日
- * @version 1.0.0
+ * @version  1.0.0
  */
 //@Configuration
 //@ComponentScan(basePackages = "mycodelearn.undergrowth.spring")

@@ -12,7 +12,7 @@ import mylearncode.undergrowth.algorithm.ContainsDuplicate.Solution;
 * 按照 这个---->[10,12,13,8,19]
 * @author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
 * Date 2016年6月20日
-* @version 1.0.0
+* @version  1.0.0
  */
 public class InsertSort {
 

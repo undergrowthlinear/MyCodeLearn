@@ -12,7 +12,7 @@ import org.junit.Test;
 * Description: TODO(这里用一句话描述这个类的作用)
 * @author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
 * Date 2016年6月16日
-* @version 1.0.0
+* @version  1.0.0
  */
 public class ExecutorTest {
 
@@ -21,7 +21,7 @@ public class ExecutorTest {
 	* Description: TODO(the caller's thread)
 	* @author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
 	* Date 2016年6月16日
-	* @version 1.0.0
+	* @version  1.0.0
 	 */
 	class DirectExecutor implements Executor {
 		      public void execute(Runnable r) {
@@ -48,7 +48,7 @@ public class ExecutorTest {
 	* Description: TODO(新线程)
 	* @author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
 	* Date 2016年6月16日
-	* @version 1.0.0
+	* @version  1.0.0
 	 */
 	class ThreadPerTaskExecutor implements Executor {
 		public void execute(Runnable r) {
@@ -75,7 +75,7 @@ public class ExecutorTest {
 	* Description: TODO(使用线程池,顺序执行提交的任务)
 	* @author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
 	* Date 2016年6月16日
-	* @version 1.0.0
+	* @version  1.0.0
 	 */
 	class SerialExecutor implements Executor {
 		final Queue<Runnable> tasks = new ArrayDeque<Runnable>();

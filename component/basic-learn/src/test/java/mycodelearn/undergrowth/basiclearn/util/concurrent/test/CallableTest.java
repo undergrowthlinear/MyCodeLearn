@@ -11,7 +11,7 @@ import org.junit.Test;
 * Description: TODO(Callable-->返回结果并且可能抛出异常的任务)
 * @author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
 * Date 2016年6月14日
-* @version 1.0.0
+* @version  1.0.0
  */
 public class CallableTest {
 

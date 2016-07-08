@@ -27,7 +27,7 @@ import org.junit.Test;
 * 线程转储----Thread Dump----查看锁/线程/死锁等信息
 * @author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
 * Date 2016年6月19日
-* @version 1.0.0
+* @version  1.0.0
  */
 public class DeadLockTest {
 

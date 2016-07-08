@@ -19,7 +19,7 @@ import org.junit.Test;
  *               类加载器采用委托机制进行加载类和资源-->在加载类或者资源之前将操作委托给父加载器进行加载
  * @author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
  * Date 2016年6月7日
- * @version 1.0.0
+ * @version  1.0.0
  */
 public class ClassLoaderTest {
 

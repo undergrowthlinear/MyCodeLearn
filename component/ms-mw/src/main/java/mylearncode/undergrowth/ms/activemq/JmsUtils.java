@@ -15,9 +15,9 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 /**
  * 
  * @Description: TODO(Jms工具类)
- * @Author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
+ * @author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
  * @Date 2015年12月25日
- * @Version 1.0.0
+ * @version  1.0.0
  */
 public class JmsUtils {
 	// 连接参数

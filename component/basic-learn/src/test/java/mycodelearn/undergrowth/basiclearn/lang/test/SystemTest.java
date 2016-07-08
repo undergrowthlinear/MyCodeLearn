@@ -19,7 +19,7 @@ import org.junit.Test;
  *               复制数组方法、调用垃圾回收器、java虚拟机、信道、安全管理器
  * @author <a href="zhangwu@wxchina.com">Wu.Zhang</a>
  * Date 2016年6月7日
- * @version 1.0.0
+ * @version  1.0.0
  */
 public class SystemTest {
 

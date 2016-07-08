@@ -12,7 +12,7 @@ package mycodelearn.undergrowth.basiclearn.effective.java.test;
 * Running(运行)--sleep/join--Block(其他等待)--条件达到-->Runnable(就绪)
 * @author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
 * Date 2016年6月22日
-* @version 1.0.0
+* @version  1.0.0
  */
 public class ConcurrentTest {
 	

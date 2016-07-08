@@ -10,7 +10,7 @@ import java.util.concurrent.Semaphore;
 * Description: TODO(通过信号量控制Set的元素个数)
 * @author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
 * Date 2016年6月18日
-* @version 1.0.0
+* @version  1.0.0
  * @param <T>
  */
 public class BoundHashSet<T> {
