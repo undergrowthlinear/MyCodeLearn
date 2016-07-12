@@ -1,4 +1,4 @@
-package mycodelearn.undergrowth.book.mw;
+package mycodelearn.undergrowth.crawler.mw;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -34,5 +34,5 @@ public class AppTest
     public void testApp()
     {
         assertTrue( true );
-    } 
+    }
 }

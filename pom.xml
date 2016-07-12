@@ -132,6 +132,7 @@
 		<java.version>1.7</java.version>
 		<project.deploy>deploy</project.deploy>
 		<project.version>0.0.1-SNAPSHOT</project.version>
+		<junit.version>4.12</junit.version>
 	</properties>
 	<distributionManagement>
 		<repository>
