@@ -49,6 +49,12 @@ public class IndexSearchTest {
 		diResult(topDocs);
 	}
 
+	/**
+	 * 解析查询
+	 * 
+	 * @return
+	 * @throws ParseException
+	 */
 	public Query createQuery() throws ParseException {
 		Analyzer a = new StandardAnalyzer();
 		QueryParser queryParser = new QueryParser(contentField, a);
@@ -56,11 +62,19 @@ public class IndexSearchTest {
 		return query;
 	}
 
+	/**
+	 * 显示结果
+	 * 
+	 * @param topDocs
+	 * @throws IOException
+	 */
 	public void diResult(TopDocs topDocs) throws IOException {
 		ScoreDoc[] hits = topDocs.scoreDocs;
 		Document document = null;
+		System.out.println("total:" + topDocs.totalHits);
 		for (int i = 0; i < hits.length; i++) {
 			document = search.doc(hits[i].doc);
+			System.out.println("document score detail:" + hits[i]);
 			System.out.println("title:" + document.get("title"));
 		}
 	}
