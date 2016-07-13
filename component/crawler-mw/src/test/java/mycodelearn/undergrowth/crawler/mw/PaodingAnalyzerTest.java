@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.StringReader;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -12,6 +13,8 @@ import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 
 import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.Token;
+import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
@@ -27,32 +30,31 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import net.paoding.analysis.analyzer.PaodingAnalyzer;
+
 /**
  * 
  * Description: TODO(这里用一句话描述这个类的作用)
-//1.创建Directory
-//2.创建IndexWriter
-//3.创建Document
-//4.为Document创建Field
-//5.使用IndexWriter将Document写入索引
-//6.关闭InderWriter
+ * 
  * @author <a href="undergrowth@126.com">undergrowth</a>
  * @date 2016年7月12日
  * @version 1.0.0
  */
-public class IndexCreateTest {
+public class PaodingAnalyzerTest {
 
 	private IndexWriter write = null;
 	private String indexDir = "d:\\lucene\\index\\";
 	private String dataDir = "d:\\lucene\\docs";
 
-	@Before
-	public void before() throws IOException {
-		Directory d = FSDirectory.open(Paths.get(indexDir));
-		Analyzer analyzer = new StandardAnalyzer();
-		IndexWriterConfig conf = new IndexWriterConfig(analyzer);
-		conf.setOpenMode(OpenMode.CREATE);
-		write = new IndexWriter(d, conf);
+	
+	
+	@Test
+	public void testPaoding() throws Exception{
+		Analyzer analyzer = new PaodingAnalyzer();
+		String  indexStr = "我的QQ号码是58472399"; 
+        StringReader reader = new StringReader(indexStr); 
+        TokenStream ts = analyzer.tokenStream(indexStr, reader); 
+       System.out.println(ts);
 	}
 
 	@Test
@@ -104,9 +106,6 @@ public class IndexCreateTest {
 		}
 	}
 
-	@After
-	public void after() throws IOException {
-		write.close();
-	}
+	
 
 }

@@ -22,7 +22,15 @@ import org.junit.Test;
 /**
  * 
  * Description: TODO(这里用一句话描述这个类的作用)
- * 
+//1.创建Directory
+//2.创建IndexReader
+//3.使用IndexReader创建IndexSearcher
+//4.创建Query
+//5.使用IndexSearcher搜索Query,返回TopDocs
+//6.显示TopDocs的ScoreDoc
+//7.通过IndexReader/docId获取Document
+//8.通过Document的get获取字段
+ //9.关闭IndexReader
  * @author <a href="undergrowth@126.com">undergrowth</a>
  * @date 2016年7月12日
  * @version 1.0.0
