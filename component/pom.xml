@@ -27,6 +27,7 @@
 		<module>maven-in-action</module>
 		<module>book-mw</module>
     <module>crawler-mw</module>
+    <module>lucene-analyze</module>
   </modules>
 	<build>
 		<plugins>

@@ -1,21 +1,20 @@
 <?xml version="1.0"?>
-<project
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>mycodelearn.undergrowth</groupId>
-		<artifactId>component</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</parent>
-	<groupId>mycodelearn.undergrowth</groupId>
-	<artifactId>crawler-mw</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>crawler-mw</name>
-	<url>http://maven.apache.org</url>
-	<properties>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>mycodelearn.undergrowth</groupId>
+    <artifactId>component</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>mycodelearn.undergrowth</groupId>
+  <artifactId>lucene-analyze</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>lucene-analyze</name>
+  <url>http://maven.apache.org</url>
+ <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<lucene.version>6.1.0</lucene.version>
+		<lucene.version>3.5.0</lucene.version>
 	</properties>
 	<dependencies> 
 		<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-core -->
@@ -24,9 +23,9 @@
 			<artifactId>lucene-core</artifactId>
 			<version>${lucene.version}</version>
 		</dependency>
-		<dependency>
+		<dependency>  
 			<groupId>org.apache.lucene</groupId>
-			<artifactId>lucene-analyzers-common</artifactId>
+			<artifactId>lucene-analyzers</artifactId>
 			<version>${lucene.version}</version>
 		</dependency>
 		<!-- <dependency>
@@ -43,6 +42,16 @@
 			<groupId>org.apache.lucene</groupId>
 			<artifactId>lucene-demo</artifactId>
 			<version>${lucene.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>paoding</groupId>
+			<artifactId>paoding</artifactId>
+			<version>2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.wltea</groupId>
+			<artifactId>ikanalyzer</artifactId>
+			<version>2012.6</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

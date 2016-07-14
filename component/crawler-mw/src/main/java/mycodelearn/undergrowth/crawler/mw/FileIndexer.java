@@ -4,7 +4,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.Reader;
 
-import org.apache.lucene.analysis.cn.smart.SmartChineseAnalyzer;
+import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.TextField;
@@ -28,7 +29,8 @@ public class FileIndexer {
 		// 数据文件目录
 		File dataDir = new File("d:\\lucene\\docs");
 		// 创建一个默认的分词器
-		SmartChineseAnalyzer luceneAnalyzer = new SmartChineseAnalyzer(true);
+		//SmartChineseAnalyzer luceneAnalyzer = new SmartChineseAnalyzer(true);
+		Analyzer luceneAnalyzer=new StandardAnalyzer();
 		// 显示默认的停止字符
 		/*
 		 * Iterator<Object>
