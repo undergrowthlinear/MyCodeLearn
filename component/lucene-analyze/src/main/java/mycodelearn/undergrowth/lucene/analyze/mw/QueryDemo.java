@@ -1,38 +1,31 @@
-package mycodelearn.undergrowth.crawler.mw.sp;
+package mycodelearn.undergrowth.lucene.analyze.mw;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.StringReader;
-import java.nio.file.Paths;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
-import org.apache.lucene.document.IntPoint;
-import org.apache.lucene.document.LongPoint;
-import org.apache.lucene.document.StoredField;
-import org.apache.lucene.document.StringField;
-import org.apache.lucene.document.TextField;
-import org.apache.lucene.index.DirectoryReader;
+import org.apache.lucene.document.NumericField;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.index.IndexWriterConfig.OpenMode;
-import org.apache.lucene.queryparser.classic.ParseException;
-import org.apache.lucene.queryparser.classic.QueryParser;
+import org.apache.lucene.queryParser.ParseException;
+import org.apache.lucene.queryParser.QueryParser;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
+import org.apache.lucene.util.Version;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.wltea.analyzer.lucene.IKAnalyzer;
 
 /**
  * 
@@ -48,31 +41,9 @@ import org.slf4j.LoggerFactory;
  * @date 2016年7月13日
  * @version 1.0.0
  */
-public class IndexTool {
+public class QueryDemo {
 
-	private Logger logger = LoggerFactory.getLogger(IndexTool.class);
-	private String[] fieldNames = { "id", "email", "content", "attach", "date" };
-	private String[] ids = { "1", "2", "3", "4", "5" };
-	private String[] emails = { "undergrowth@126.com", "undergrowth@163.com", "undergrowth@gamil.com",
-			"undergrowth@qq.com", "undergrowth@139.com" };
-	private String[] contents = { "126 email welcome you", "163 email is wangyi product",
-			"gmail email email is google ,it is great", "qq email is tencent,it is free",
-			"139 email is mobile,it charge money" };
-	private int[] attachs = { 5, 7, 2, 9, 3 };
-	private Date[] dates = null;
-
-	public IndexTool() {
-		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-		dates = new Date[attachs.length];
-		for (int i = 0; i < attachs.length; i++) {
-			try {
-				dates[i] = format.parse("2016-7-" + (15 - i));
-			} catch (java.text.ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-	}
+	private Logger logger = LoggerFactory.getLogger(QueryDemo.class);
 
 	public void index(String indexPath, String docPath) {
 		IndexWriter indexWriter = null;
@@ -82,7 +53,7 @@ public class IndexTool {
 			// 2.创建IndexWriter
 			indexWriter = createIndexWriter(directory);
 			// 3.创建Document
-			writeDocument(indexWriter, null);
+			addDocument(docPath, indexWriter);
 			// 6.关闭InderWriter
 
 		} catch (IOException e) {
@@ -106,7 +77,7 @@ public class IndexTool {
 			// 1.创建Directory
 			Directory directory = createDirectory(indexPath);
 			// 2.创建IndexReader
-			reader = DirectoryReader.open(directory);
+			reader = IndexReader.open(directory);
 			// 3.使用IndexReader创建IndexSearcher
 			IndexSearcher searcher = new IndexSearcher(reader);
 			// 4.创建Query
@@ -136,14 +107,14 @@ public class IndexTool {
 		}
 
 	}
-
+	
 	public void search(String indexPath, Query query, int num) {
 		IndexReader reader = null;
 		try {
 			// 1.创建Directory
 			Directory directory = createDirectory(indexPath);
 			// 2.创建IndexReader
-			reader = DirectoryReader.open(directory);
+			reader = IndexReader.open(directory);
 			// 3.使用IndexReader创建IndexSearcher
 			IndexSearcher searcher = new IndexSearcher(reader);
 			// 4.创建Query
@@ -170,44 +141,6 @@ public class IndexTool {
 
 	}
 
-	public void delete(String indexPath, Query query) {
-		IndexWriter indexWriter = null;
-		try {
-			// 1.创建Directory
-			Directory directory = createDirectory(indexPath);
-			// 2.创建IndexWriter
-			indexWriter = createIndexWriter(directory);
-			indexWriter.deleteDocuments(query);
-			// 6.关闭InderWriter
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} finally {
-			try {
-				if (indexWriter != null)
-					indexWriter.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-	}
-
-	public void disReaderInfo(String indexPath) throws IOException {
-		IndexReader reader;
-		reader = DirectoryReader.open(FSDirectory.open(Paths.get(indexPath)));
-		logger.info("maxDoc:" + reader.maxDoc());
-		logger.info("numDeletedDocs:" + reader.numDeletedDocs());
-		logger.info("maxDoc:" + reader.numDocs());
-		try {
-			if (reader != null)
-				reader.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
 	private void disSearchResult(String indexPath, String fieldName, String searchValue, int num,
 			IndexSearcher searcher, ScoreDoc[] scoreDocs) throws IOException {
 		logger.info("indexPath:" + indexPath + "\tfieldName:" + fieldName + "\tsearchValue:" + searchValue + "\tnum:"
@@ -216,60 +149,63 @@ public class IndexTool {
 			// 7.通过IndexReader/docId获取Document
 			Document document = searcher.doc(scoreDocs[i].doc);
 			// 8.通过Document的get获取字段
-			logger.info(fieldNames[0] + ":" + document.get(fieldNames[0]) + "\t" + fieldNames[1] + ":"
-					+ document.get(fieldNames[1]) + "\t" + fieldNames[2] + ":" + document.get(fieldNames[2]) + "\t"
-					+ fieldNames[3] + ":" + document.get(fieldNames[3]) + "\t" + fieldNames[4] + ":"
-					+ document.get(fieldNames[4]));
+			logger.info("name:" + document.get("name") + "\tpath:" + document.get("path") + "\tsize:"
+					+ document.get("size") + "\tcontent:" + document.get("content"));
 		}
 	}
 
 	private Query createQuery(String fieldName, String searchValue) throws ParseException {
 		Analyzer a = createAnalyzer();
-		QueryParser parser = new QueryParser(fieldName, a);
+		QueryParser parser = new QueryParser(Version.LUCENE_35, fieldName, a);
 		Query query = parser.parse(searchValue);
 		logger.info(query.toString());
 		return query;
 	}
 
 	private Directory createDirectory(String indexPath) throws IOException {
-		Directory directory = FSDirectory.open(Paths.get(indexPath));
+		Directory directory = FSDirectory.open(new File(indexPath));
 		return directory;
 	}
 
-	@Deprecated
 	private void addDocument(String docPath, IndexWriter indexWriter) throws FileNotFoundException, IOException {
-
+		File files = new File(docPath);
+		if (files.isDirectory()) {
+			for (File file : files.listFiles()) {
+				writeDocument(indexWriter, file);
+			}
+		} else {
+			writeDocument(indexWriter, files);
+		}
 	}
 
 	private void writeDocument(IndexWriter indexWriter, File file) throws FileNotFoundException, IOException {
 		// 4.为Document创建Field
-		for (int i = 0; i < ids.length; i++) {
-			Document document = addDocumentField(file, i);
-			// 5.使用IndexWriter将Document写入索引
-			indexWriter.addDocument(document);
-		}
+		Document document = addDocumentField(file);
+		// 5.使用IndexWriter将Document写入索引
+		indexWriter.addDocument(document);
 	}
 
 	private IndexWriter createIndexWriter(Directory directory) throws IOException {
 		Analyzer analyzer = createAnalyzer();
-		IndexWriterConfig conf = new IndexWriterConfig(analyzer);
+		IndexWriterConfig conf = new IndexWriterConfig(Version.LUCENE_35, analyzer);
+		conf.setOpenMode(OpenMode.CREATE);
 		IndexWriter indexWriter = new IndexWriter(directory, conf);
 		return indexWriter;
 	}
 
-	private Analyzer createAnalyzer() {
-		Analyzer analyzer = new StandardAnalyzer();
+	public Analyzer createAnalyzer() {
+		//Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_35);
+		Analyzer analyzer = new IKAnalyzer(true);
 		return analyzer;
 	}
 
-	private Document addDocumentField(File file, int i) throws FileNotFoundException {
+	private Document addDocumentField(File file) throws FileNotFoundException {
 		Document document = new Document();
 		// indexed tokenized stored
-		document.add(new StringField(fieldNames[0], ids[i], Field.Store.YES));
-		document.add(new TextField(fieldNames[1], emails[i], Field.Store.YES));
-		document.add(new TextField(fieldNames[2], new StringReader(contents[i])));
-		document.add(new StoredField(fieldNames[3], attachs[i]));
-		document.add(new StoredField(fieldNames[4], dates[i].getTime()));
+		document.add(new Field("content", new FileReader(file)));
+		document.add(new Field("path", file.getAbsolutePath(), Field.Store.YES, Field.Index.ANALYZED));
+		document.add(new Field("size", String.valueOf(file.length()), Field.Store.YES, Field.Index.ANALYZED));
+		document.add(new Field("name", file.getName(), Field.Store.YES, Field.Index.ANALYZED));
 		logger.info("add document:" + document);
 		return document;
 	}

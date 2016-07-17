@@ -36,11 +36,13 @@ import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.index.IndexWriterConfig.OpenMode;
+import org.apache.lucene.index.Term;
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.QueryParser;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
+import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
@@ -61,7 +63,7 @@ public class IKAnalyzerDemo {
 	public static void main(String[] args){
 		//Lucene Document的域名
 		String fieldName = "text";
-		String indexPath="D:\\lucene\\51ctoLucene35\\index";
+		String indexPath="D:\\lucene\\51ctoLucene35\\ikanalyzeDemo\\index";
 		 //检索内容
 		String text = "IK Analyzer是一个结合词典分词和文法分词的中文分词开源工具包。它使用了全新的正向迭代最细粒度切分算法。";
 		
@@ -103,6 +105,8 @@ public class IKAnalyzerDemo {
 			QueryParser qp = new QueryParser(Version.LUCENE_35,fieldName, analyzer);
 			qp.setDefaultOperator(QueryParser.AND_OPERATOR);
 			Query query = qp.parse(keyword);
+			//采用TermQuery
+			//Query query=new TermQuery(new Term(fieldName, keyword));
 			System.out.println("Query = " + query);
 			
 			//搜索相似度最高的5条记录
@@ -122,6 +126,7 @@ public class IKAnalyzerDemo {
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (ParseException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally{
 			if(ireader != null){

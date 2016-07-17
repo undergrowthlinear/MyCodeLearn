@@ -1,11 +1,9 @@
-package mycodelearn.undergrowth.crawler.mw.sp;
+package mycodelearn.undergrowth.lucene.analyze.mw.sp;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.StringReader;
-import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -13,24 +11,22 @@ import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
-import org.apache.lucene.document.IntPoint;
-import org.apache.lucene.document.LongPoint;
-import org.apache.lucene.document.StoredField;
-import org.apache.lucene.document.StringField;
-import org.apache.lucene.document.TextField;
-import org.apache.lucene.index.DirectoryReader;
+import org.apache.lucene.document.NumericField;
+import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.index.IndexWriterConfig.OpenMode;
-import org.apache.lucene.queryparser.classic.ParseException;
-import org.apache.lucene.queryparser.classic.QueryParser;
+import org.apache.lucene.index.Term;
+import org.apache.lucene.queryParser.ParseException;
+import org.apache.lucene.queryParser.QueryParser;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
+import org.apache.lucene.util.Version;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -48,9 +44,9 @@ import org.slf4j.LoggerFactory;
  * @date 2016年7月13日
  * @version 1.0.0
  */
-public class IndexTool {
+public class OriginTool {
 
-	private Logger logger = LoggerFactory.getLogger(IndexTool.class);
+	private Logger logger = LoggerFactory.getLogger(OriginTool.class);
 	private String[] fieldNames = { "id", "email", "content", "attach", "date" };
 	private String[] ids = { "1", "2", "3", "4", "5" };
 	private String[] emails = { "undergrowth@126.com", "undergrowth@163.com", "undergrowth@gamil.com",
@@ -61,7 +57,14 @@ public class IndexTool {
 	private int[] attachs = { 5, 7, 2, 9, 3 };
 	private Date[] dates = null;
 
-	public IndexTool() {
+	private static IndexReader indexReader = null;
+	private static IndexWriter indexWriter = null;
+
+	public OriginTool() {
+		initDatesData();
+	}
+
+	private void initDatesData() {
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		dates = new Date[attachs.length];
 		for (int i = 0; i < attachs.length; i++) {
@@ -75,40 +78,30 @@ public class IndexTool {
 	}
 
 	public void index(String indexPath, String docPath) {
-		IndexWriter indexWriter = null;
 		try {
 			// 1.创建Directory
-			Directory directory = createDirectory(indexPath);
+			Directory directory = getDirectory(indexPath);
 			// 2.创建IndexWriter
-			indexWriter = createIndexWriter(directory);
+			indexWriter = getIndexWriter(directory);
 			// 3.创建Document
 			writeDocument(indexWriter, null);
-			// 6.关闭InderWriter
-
+			// 6.提交InderWriter
+			indexWriter.commit();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} finally {
-			try {
-				if (indexWriter != null)
-					indexWriter.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 		}
 
 	}
 
 	public void search(String indexPath, String fieldName, String searchValue, int num) {
-		IndexReader reader = null;
 		try {
 			// 1.创建Directory
-			Directory directory = createDirectory(indexPath);
+			Directory directory = getDirectory(indexPath);
 			// 2.创建IndexReader
-			reader = DirectoryReader.open(directory);
+			indexReader = getIndexReader(directory);
 			// 3.使用IndexReader创建IndexSearcher
-			IndexSearcher searcher = new IndexSearcher(reader);
+			IndexSearcher searcher = getIndexSearcher(indexReader);
 			// 4.创建Query
 			Query query = createQuery(fieldName, searchValue);
 			// 5.使用IndexSearcher搜索Query,返回TopDocs
@@ -116,96 +109,119 @@ public class IndexTool {
 			// 6.显示TopDocs的ScoreDoc
 			ScoreDoc[] scoreDocs = topDocs.scoreDocs;
 			disSearchResult(indexPath, fieldName, searchValue, num, searcher, scoreDocs);
-			// 9.关闭IndexReader
-
+			// 9.关闭IndexSearcher
+			searcher.close();
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} finally {
-
-			try {
-				if (reader != null)
-					reader.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 		}
-
 	}
 
 	public void search(String indexPath, Query query, int num) {
-		IndexReader reader = null;
 		try {
 			// 1.创建Directory
-			Directory directory = createDirectory(indexPath);
+			Directory directory = getDirectory(indexPath);
 			// 2.创建IndexReader
-			reader = DirectoryReader.open(directory);
+			indexReader = getIndexReader(directory);
 			// 3.使用IndexReader创建IndexSearcher
-			IndexSearcher searcher = new IndexSearcher(reader);
+			IndexSearcher searcher = getIndexSearcher(indexReader);
 			// 4.创建Query
 			// 5.使用IndexSearcher搜索Query,返回TopDocs
 			TopDocs topDocs = searcher.search(query, num);
 			// 6.显示TopDocs的ScoreDoc
 			ScoreDoc[] scoreDocs = topDocs.scoreDocs;
 			disSearchResult(indexPath, query.toString(), null, num, searcher, scoreDocs);
-			// 9.关闭IndexReader
-
+			// 9.关闭IndexSearcher
+			searcher.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} finally {
-
-			try {
-				if (reader != null)
-					reader.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 		}
-
 	}
 
 	public void delete(String indexPath, Query query) {
-		IndexWriter indexWriter = null;
 		try {
+			logger.info("query:"+query);
 			// 1.创建Directory
-			Directory directory = createDirectory(indexPath);
+			Directory directory = getDirectory(indexPath);
 			// 2.创建IndexWriter
-			indexWriter = createIndexWriter(directory);
+			indexWriter = getIndexWriter(directory);
 			indexWriter.deleteDocuments(query);
-			// 6.关闭InderWriter
+			// 6.提交InderWriter
+			indexWriter.commit();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} finally {
-			try {
-				if (indexWriter != null)
-					indexWriter.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 		}
 	}
 
-	public void disReaderInfo(String indexPath) throws IOException {
-		IndexReader reader;
-		reader = DirectoryReader.open(FSDirectory.open(Paths.get(indexPath)));
-		logger.info("maxDoc:" + reader.maxDoc());
-		logger.info("numDeletedDocs:" + reader.numDeletedDocs());
-		logger.info("maxDoc:" + reader.numDocs());
+	public void update(String indexPath, Term term) {
 		try {
-			if (reader != null)
-				reader.close();
+			logger.info("query:"+term);
+			// 1.创建Directory
+			Directory directory = getDirectory(indexPath);
+			// 2.创建IndexWriter
+			indexWriter = getIndexWriter(directory);
+			indexWriter.updateDocument(term, addDocumentField(null, 0));;
+			// 6.提交InderWriter
+			indexWriter.commit();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	public void disReaderInfo(String indexPath) throws IOException {
+		indexReader = getIndexReader(FSDirectory.open(new File(indexPath)));
+		logger.info("maxDoc:" + indexReader.maxDoc());
+		logger.info("numDeletedDocs:" + indexReader.numDeletedDocs());
+		logger.info("numDocs:" + indexReader.numDocs());
+	}
+
+	/**
+	 * 创建IndexSearcher
+	 * 
+	 * @param indexReader
+	 * @return
+	 */
+	private IndexSearcher getIndexSearcher(IndexReader indexReader) {
+		// TODO Auto-generated method stub
+		IndexSearcher indexSearcher = null;
+		try {
+			IndexReader reader = IndexReader.openIfChanged(indexReader);
+			if (reader != null) {
+				indexReader.close();// 关闭旧的InderReader
+				indexReader = reader;
+			}
+			indexSearcher = new IndexSearcher(indexReader);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return indexSearcher;
+	}
+
+	private IndexReader getIndexReader(Directory directory) {
+		// TODO Auto-generated method stub
+		if (indexReader == null) {
+			synchronized (OriginTool.class) {
+				if (indexReader == null) {
+					try {
+						indexReader = IndexReader.open(directory);
+					} catch (CorruptIndexException e) {
+						// TODO Auto-generated catch blosck
+						e.printStackTrace();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			}
+		}
+		return indexReader;
 	}
 
 	private void disSearchResult(String indexPath, String fieldName, String searchValue, int num,
@@ -225,24 +241,20 @@ public class IndexTool {
 
 	private Query createQuery(String fieldName, String searchValue) throws ParseException {
 		Analyzer a = createAnalyzer();
-		QueryParser parser = new QueryParser(fieldName, a);
+		QueryParser parser = new QueryParser(Version.LUCENE_35, fieldName, a);
 		Query query = parser.parse(searchValue);
 		logger.info(query.toString());
 		return query;
 	}
 
-	private Directory createDirectory(String indexPath) throws IOException {
-		Directory directory = FSDirectory.open(Paths.get(indexPath));
+	private Directory getDirectory(String indexPath) throws IOException {
+		Directory directory = FSDirectory.open(new File(indexPath));
 		return directory;
-	}
-
-	@Deprecated
-	private void addDocument(String docPath, IndexWriter indexWriter) throws FileNotFoundException, IOException {
-
 	}
 
 	private void writeDocument(IndexWriter indexWriter, File file) throws FileNotFoundException, IOException {
 		// 4.为Document创建Field
+		indexWriter.deleteAll();
 		for (int i = 0; i < ids.length; i++) {
 			Document document = addDocumentField(file, i);
 			// 5.使用IndexWriter将Document写入索引
@@ -250,26 +262,43 @@ public class IndexTool {
 		}
 	}
 
-	private IndexWriter createIndexWriter(Directory directory) throws IOException {
-		Analyzer analyzer = createAnalyzer();
-		IndexWriterConfig conf = new IndexWriterConfig(analyzer);
-		IndexWriter indexWriter = new IndexWriter(directory, conf);
+	/**
+	 * 单例保存indexWriter
+	 * 
+	 * @param directory
+	 * @return indexWriter
+	 * @throws IOException
+	 */
+	private IndexWriter getIndexWriter(Directory directory) throws IOException {
+		if (indexWriter == null) {
+			synchronized (OriginTool.class) {
+				if (indexWriter == null) {
+					Analyzer analyzer = createAnalyzer();
+					IndexWriterConfig conf = new IndexWriterConfig(Version.LUCENE_35, analyzer);
+					indexWriter = new IndexWriter(directory, conf);
+				}
+			}
+		}
 		return indexWriter;
 	}
 
 	private Analyzer createAnalyzer() {
-		Analyzer analyzer = new StandardAnalyzer();
+		Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_35);
 		return analyzer;
+	}
+	
+	public Analyzer getAnalyzer() {
+		return createAnalyzer();
 	}
 
 	private Document addDocumentField(File file, int i) throws FileNotFoundException {
 		Document document = new Document();
 		// indexed tokenized stored
-		document.add(new StringField(fieldNames[0], ids[i], Field.Store.YES));
-		document.add(new TextField(fieldNames[1], emails[i], Field.Store.YES));
-		document.add(new TextField(fieldNames[2], new StringReader(contents[i])));
-		document.add(new StoredField(fieldNames[3], attachs[i]));
-		document.add(new StoredField(fieldNames[4], dates[i].getTime()));
+		document.add(new Field(fieldNames[0], ids[i], Field.Store.YES, Field.Index.ANALYZED));
+		document.add(new Field(fieldNames[1], emails[i], Field.Store.YES, Field.Index.ANALYZED));
+		document.add(new Field(fieldNames[2], new StringReader(contents[i])));
+		document.add(new NumericField(fieldNames[3], Field.Store.YES, true).setIntValue(attachs[i]));
+		document.add(new NumericField(fieldNames[4], Field.Store.YES, true).setLongValue(dates[i].getTime()));
 		logger.info("add document:" + document);
 		return document;
 	}

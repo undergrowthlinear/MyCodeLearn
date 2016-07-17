@@ -1,5 +1,9 @@
 package mycodelearn.undergrowth.crawler.mw.test.sp;
 
+import java.io.IOException;
+
+import org.apache.lucene.search.PhraseQuery;
+import org.apache.lucene.search.Query;
 import org.junit.Test;
 
 import mycodelearn.undergrowth.crawler.mw.sp.HelloWorld;
@@ -28,6 +32,26 @@ public class IndexToolTest {
 	public void testSearch(){
 		IndexTool indexTool=new IndexTool();
 		indexTool.search(indexPath, "content", "tencent", 100);
+	}
+	
+	@Test
+	public void testSearchQuery(){
+		IndexTool indexTool=new IndexTool();
+		PhraseQuery query=new PhraseQuery("content", "email");
+		indexTool.search(indexPath, query, 100);
+	}
+	
+	@Test
+	public void testDelete(){
+		IndexTool indexTool=new IndexTool();
+		PhraseQuery query=new PhraseQuery("content", "tencent");
+		indexTool.delete(indexPath, query);
+	}
+	
+	@Test
+	public void testDisReaderInfo() throws IOException{
+		IndexTool indexTool=new IndexTool();
+		indexTool.disReaderInfo(indexPath);
 	}
 	
 }
