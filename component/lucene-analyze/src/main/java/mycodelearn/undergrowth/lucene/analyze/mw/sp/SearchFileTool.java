@@ -13,6 +13,7 @@ import org.apache.lucene.queryParser.QueryParser;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
+import org.apache.lucene.search.Sort;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
@@ -44,42 +45,30 @@ public class SearchFileTool {
 	}
 
 	public void search(String indexPath, String fieldName, String searchValue, int num) {
+		search(indexPath, fieldName, searchValue, num, Sort.RELEVANCE);
+	}
+
+	public void search(String indexPath, Query query, int num) {
+		search(indexPath, query, num, Sort.RELEVANCE);
+	}
+	
+	public void search(String indexPath, String fieldName, String searchValue, int num,Sort sort) {
 		try {
-			// 1.创建Directory
-			Directory directory = getDirectory(indexPath);
-			// 2.创建IndexReader
-			indexReader = getIndexReader(directory);
-			// 3.使用IndexReader创建IndexSearcher
-			IndexSearcher searcher = getIndexSearcher(indexReader);
 			// 4.创建Query
 			Query query = createQuery(fieldName, searchValue);
-			// 5.使用IndexSearcher搜索Query,返回TopDocs
-			TopDocs topDocs = searcher.search(query, num);
-			// 6.显示TopDocs的ScoreDoc
-			ScoreDoc[] scoreDocs = topDocs.scoreDocs;
-			disSearchResult(indexPath, fieldName, searchValue, num, searcher, scoreDocs);
-			// 9.关闭IndexSearcher
-			searcher.close();
+			search(indexPath, query, num, sort);
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
-	public void search(String indexPath, Query query, int num) {
+	public void search(String indexPath, Query query, int num,Sort sort) {
 		try {
-			// 1.创建Directory
-			Directory directory = getDirectory(indexPath);
-			// 2.创建IndexReader
-			indexReader = getIndexReader(directory);
-			// 3.使用IndexReader创建IndexSearcher
-			IndexSearcher searcher = getIndexSearcher(indexReader);
+			IndexSearcher searcher = getIndexSearcher(indexPath);
 			// 4.创建Query
 			// 5.使用IndexSearcher搜索Query,返回TopDocs
-			TopDocs topDocs = searcher.search(query, num);
+			TopDocs topDocs = searcher.search(query, num,sort);
 			// 6.显示TopDocs的ScoreDoc
 			ScoreDoc[] scoreDocs = topDocs.scoreDocs;
 			disSearchResult(indexPath, query.toString(), null, num, searcher, scoreDocs);
@@ -93,12 +82,7 @@ public class SearchFileTool {
 
 	public void searchPage(String indexPath, Query query, int indexPage, int pageNum) {
 		try {
-			// 1.创建Directory
-			Directory directory = getDirectory(indexPath);
-			// 2.创建IndexReader
-			indexReader = getIndexReader(directory);
-			// 3.使用IndexReader创建IndexSearcher
-			IndexSearcher searcher = getIndexSearcher(indexReader);
+			IndexSearcher searcher = getIndexSearcher(indexPath);
 			// 4.创建Query
 			// 5.使用IndexSearcher搜索Query,返回TopDocs
 			int num = indexPage * pageNum;
@@ -131,12 +115,7 @@ public class SearchFileTool {
 
 	public void searchPageAfter(String indexPath, Query query, int indexPage, int pageNum) {
 		try {
-			// 1.创建Directory
-			Directory directory = getDirectory(indexPath);
-			// 2.创建IndexReader
-			indexReader = getIndexReader(directory);
-			// 3.使用IndexReader创建IndexSearcher
-			IndexSearcher searcher = getIndexSearcher(indexReader);
+			IndexSearcher searcher = getIndexSearcher(indexPath);
 			// 4.创建Query
 			// 5.使用IndexSearcher搜索Query,返回TopDocs
 			ScoreDoc after = getLastScoreDoc(searcher, query, indexPage, pageNum);
@@ -154,6 +133,16 @@ public class SearchFileTool {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	private IndexSearcher getIndexSearcher(String indexPath) throws IOException {
+		// 1.创建Directory
+		Directory directory = getDirectory(indexPath);
+		// 2.创建IndexReader
+		indexReader = getIndexReader(directory);
+		// 3.使用IndexReader创建IndexSearcher
+		IndexSearcher searcher = getIndexSearcher(indexReader);
+		return searcher;
 	}
 
 	/**
@@ -239,7 +228,7 @@ public class SearchFileTool {
 				if (scoreDoc != null) {
 					Document document = searcher.doc(scoreDoc.doc);
 					// 8.通过Document的get获取字段
-					logger.info(scoreDoc.doc + ":" + data[0] + ":" + document.get(data[0]) + "\t" + data[1] + ":"
+					logger.info(scoreDoc.doc + ":" +"["+scoreDoc.score+"]"+ data[0] + ":" + document.get(data[0]) + "\t" + data[1] + ":"
 							+ document.get(data[1]) + "\t" + data[2] + ":" + document.get(data[2]) + "\t" + data[3]
 							+ ":" + document.get(data[3]) + "\t" + data[4] + ":" + document.get(data[4]) + "\t"
 							+ data[5] + ":" + document.get(data[5]));
