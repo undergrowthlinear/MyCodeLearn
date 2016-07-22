@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashSet;
+import java.util.Random;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
@@ -37,8 +39,10 @@ import org.slf4j.LoggerFactory;
 public class IndexFileTool {
 
 	private Logger logger = LoggerFactory.getLogger(IndexFileTool.class);
-	private String[] data = { "name", "path", "content", "size", "lastTime","length" };
+	private String[] data = { "name", "path", "content", "size", "lastTime","length","id" };
 	private static IndexWriter indexWriter = null;
+	private HashSet<Integer> randomNumSet=new HashSet<>();
+	private Random randomNum=new Random();
 
 	public IndexFileTool() {
 
@@ -148,8 +152,17 @@ public class IndexFileTool {
 		document.add(new NumericField(data[3], Field.Store.YES, true).setIntValue((int) (file.length())));
 		document.add(new NumericField(data[4], Field.Store.YES, true).setLongValue(file.lastModified()));
 		document.add(new Field(data[5], String.valueOf(file.length()), Field.Store.YES, Field.Index.NOT_ANALYZED));
+		document.add(new Field(data[6], String.valueOf(getRandm()), Field.Store.YES, Field.Index.NOT_ANALYZED));
 		logger.info("add document:" + document);
 		return document;
+	}
+
+	private int getRandm() {
+		int ran=randomNum.nextInt(1000);
+		while (!randomNumSet.add(ran)) {
+			ran=randomNum.nextInt(1000);
+		};
+		return ran;
 	}
 
 }

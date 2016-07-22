@@ -10,6 +10,7 @@ import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.QueryParser;
+import org.apache.lucene.search.Filter;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
@@ -38,7 +39,7 @@ import org.slf4j.LoggerFactory;
 public class SearchFileTool {
 
 	private Logger logger = LoggerFactory.getLogger(SearchFileTool.class);
-	private String[] data = { "name", "path", "content", "size", "lastTime", "length" };
+	private String[] data = { "name", "path", "content", "size", "lastTime", "length","id"  };
 	private static IndexReader indexReader = null;
 
 	public SearchFileTool() {
@@ -70,15 +71,34 @@ public class SearchFileTool {
 			// 5.使用IndexSearcher搜索Query,返回TopDocs
 			TopDocs topDocs = searcher.search(query, num,sort);
 			// 6.显示TopDocs的ScoreDoc
-			ScoreDoc[] scoreDocs = topDocs.scoreDocs;
-			disSearchResult(indexPath, query.toString(), null, num, searcher, scoreDocs);
-			// 9.关闭IndexSearcher
-			searcher.close();
+			disResult(indexPath, query, num, searcher, topDocs);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
+
+	private void disResult(String indexPath, Query query, int num, IndexSearcher searcher, TopDocs topDocs)
+			throws IOException {
+		disSearchResult(indexPath, query.toString(), null, num, searcher, topDocs.scoreDocs);
+		// 9.关闭IndexSearcher
+		searcher.close();
+	}
+	
+	public void search(String indexPath, Query query, int num,Filter filter) {
+		try {
+			IndexSearcher searcher = getIndexSearcher(indexPath);
+			// 4.创建Query
+			logger.info("filter:"+filter.toString());
+			// 5.使用IndexSearcher搜索Query,返回TopDocs
+			TopDocs topDocs = searcher.search(query,filter, num);
+			disResult(indexPath, query, num, searcher, topDocs);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 
 	public void searchPage(String indexPath, Query query, int indexPage, int pageNum) {
 		try {
@@ -223,6 +243,7 @@ public class SearchFileTool {
 		logger.info("indexPath:" + indexPath + "\tfieldName:" + fieldName + "\tsearchValue:" + searchValue + "\tnum:"
 				+ num);
 		if (scoreDocs != null && scoreDocs.length > 0) {
+			logger.info("scoreDocs.length:"+scoreDocs.length);
 			for (ScoreDoc scoreDoc : scoreDocs) {
 				// 7.通过IndexReader/docId获取Document
 				if (scoreDoc != null) {
@@ -231,7 +252,7 @@ public class SearchFileTool {
 					logger.info(scoreDoc.doc + ":" +"["+scoreDoc.score+"]"+ data[0] + ":" + document.get(data[0]) + "\t" + data[1] + ":"
 							+ document.get(data[1]) + "\t" + data[2] + ":" + document.get(data[2]) + "\t" + data[3]
 							+ ":" + document.get(data[3]) + "\t" + data[4] + ":" + document.get(data[4]) + "\t"
-							+ data[5] + ":" + document.get(data[5]));
+							+ data[5] + ":" + document.get(data[5])+ "\t"+data[6] + ":" + document.get(data[6]));
 				}
 			}
 		} else {

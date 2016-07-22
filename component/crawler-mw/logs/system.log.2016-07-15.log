@@ -1,0 +1,95 @@
+2016-07-15 21:20:47,597 0     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) content:tencent
+2016-07-15 21:20:47,674 77    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) indexPath:D:\lucene\sp\indextool\index	fieldName:content	searchValue:tencent	num:100
+2016-07-15 21:20:47,701 104   INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:4	email:undergrowth@qq.com	content:null	attach:null
+2016-07-15 21:32:31,730 0     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) maxDoc:0
+2016-07-15 21:32:31,736 6     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) numDeletedDocs:0
+2016-07-15 21:32:31,737 7     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) maxDoc:0
+2016-07-15 21:33:28,862 0     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) content:tencent
+2016-07-15 21:33:28,873 11    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) indexPath:D:\lucene\sp\indextool\index	fieldName:content	searchValue:tencent	num:100
+2016-07-15 21:38:02,370 0     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) maxDoc:0
+2016-07-15 21:38:02,373 3     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) numDeletedDocs:0
+2016-07-15 21:38:02,373 3     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) maxDoc:0
+2016-07-15 21:38:36,530 0     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:1> stored,indexed,tokenized<email:undergrowth@126.com> indexed,tokenized<content:java.io.StringReader@6acdbdf5> IntPoint <attach:5>>
+2016-07-15 21:38:36,733 203   INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:2> stored,indexed,tokenized<email:undergrowth@163.com> indexed,tokenized<content:java.io.StringReader@4fcd19b3> IntPoint <attach:7>>
+2016-07-15 21:38:36,735 205   INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:3> stored,indexed,tokenized<email:undergrowth@gamil.com> indexed,tokenized<content:java.io.StringReader@2fd66ad3> IntPoint <attach:2>>
+2016-07-15 21:38:36,737 207   INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:4> stored,indexed,tokenized<email:undergrowth@qq.com> indexed,tokenized<content:java.io.StringReader@7a36aefa> IntPoint <attach:9>>
+2016-07-15 21:38:36,739 209   INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:5> stored,indexed,tokenized<email:undergrowth@139.com> indexed,tokenized<content:java.io.StringReader@b3d7190> IntPoint <attach:3>>
+2016-07-15 21:39:01,368 0     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) maxDoc:5
+2016-07-15 21:39:01,371 3     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) numDeletedDocs:0
+2016-07-15 21:39:01,372 4     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) maxDoc:5
+2016-07-15 21:40:56,576 0     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) content:tencent
+2016-07-15 21:40:56,601 25    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) indexPath:D:\lucene\sp\indextool\index	fieldName:content	searchValue:tencent	num:100
+2016-07-15 21:40:56,614 38    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:4	email:undergrowth@qq.com	content:null	attach:null
+2016-07-15 21:41:28,539 0     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) maxDoc:0
+2016-07-15 21:41:28,542 3     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) numDeletedDocs:0
+2016-07-15 21:41:28,543 4     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) maxDoc:0
+2016-07-15 21:42:20,625 0     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:1> stored,indexed,tokenized<email:undergrowth@126.com> indexed,tokenized<content:java.io.StringReader@ea1a8d5> IntPoint <attach:5>>
+2016-07-15 21:42:20,690 65    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:2> stored,indexed,tokenized<email:undergrowth@163.com> indexed,tokenized<content:java.io.StringReader@4516af24> IntPoint <attach:7>>
+2016-07-15 21:42:20,692 67    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:3> stored,indexed,tokenized<email:undergrowth@gamil.com> indexed,tokenized<content:java.io.StringReader@543788f3> IntPoint <attach:2>>
+2016-07-15 21:42:20,693 68    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:4> stored,indexed,tokenized<email:undergrowth@qq.com> indexed,tokenized<content:java.io.StringReader@1da51a35> IntPoint <attach:9>>
+2016-07-15 21:42:20,693 68    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:5> stored,indexed,tokenized<email:undergrowth@139.com> indexed,tokenized<content:java.io.StringReader@7e9a5fbe> IntPoint <attach:3>>
+2016-07-15 21:45:27,027 0     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) indexPath:D:\lucene\sp\indextool\index	fieldName:content:"tencent"	searchValue:null	num:100
+2016-07-15 21:45:27,048 21    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:4	email:undergrowth@qq.com	content:null	attach:null
+2016-07-15 21:48:15,998 0     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) maxDoc:5
+2016-07-15 21:48:16,000 2     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) numDeletedDocs:0
+2016-07-15 21:48:16,001 3     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) maxDoc:5
+2016-07-15 21:50:52,924 0     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) maxDoc:5
+2016-07-15 21:50:52,927 3     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) numDeletedDocs:0
+2016-07-15 21:50:52,927 3     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) maxDoc:5
+2016-07-15 21:51:01,357 0     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) maxDoc:0
+2016-07-15 21:51:01,360 3     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) numDeletedDocs:0
+2016-07-15 21:51:01,360 3     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) maxDoc:0
+2016-07-15 22:06:52,884 0     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:1> stored,indexed,tokenized<email:undergrowth@126.com> indexed,tokenized<content:java.io.StringReader@ea1a8d5> IntPoint <attach:5>>
+2016-07-15 22:06:52,946 62    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:2> stored,indexed,tokenized<email:undergrowth@163.com> indexed,tokenized<content:java.io.StringReader@4516af24> IntPoint <attach:7>>
+2016-07-15 22:06:52,947 63    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:3> stored,indexed,tokenized<email:undergrowth@gamil.com> indexed,tokenized<content:java.io.StringReader@543788f3> IntPoint <attach:2>>
+2016-07-15 22:06:52,948 64    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:4> stored,indexed,tokenized<email:undergrowth@qq.com> indexed,tokenized<content:java.io.StringReader@1da51a35> IntPoint <attach:9>>
+2016-07-15 22:06:52,949 65    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:5> stored,indexed,tokenized<email:undergrowth@139.com> indexed,tokenized<content:java.io.StringReader@7e9a5fbe> IntPoint <attach:3>>
+2016-07-15 22:07:03,035 0     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) indexPath:D:\lucene\sp\indextool\index	fieldName:content:"email"	searchValue:null	num:100
+2016-07-15 22:07:03,049 14    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:1	email:undergrowth@126.com	content:null	attach:null
+2016-07-15 22:07:03,050 15    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:2	email:undergrowth@163.com	content:null	attach:null
+2016-07-15 22:07:03,051 16    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:4	email:undergrowth@qq.com	content:null	attach:null
+2016-07-15 22:07:03,051 16    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:5	email:undergrowth@139.com	content:null	attach:null
+2016-07-15 22:08:12,150 1     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:1> stored,indexed,tokenized<email:undergrowth@126.com> indexed,tokenized<content:java.io.StringReader@52feb982> IntPoint <attach:5>>
+2016-07-15 22:08:12,222 73    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:2> stored,indexed,tokenized<email:undergrowth@163.com> indexed,tokenized<content:java.io.StringReader@1da51a35> IntPoint <attach:7>>
+2016-07-15 22:08:12,223 74    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:3> stored,indexed,tokenized<email:undergrowth@gamil.com> indexed,tokenized<content:java.io.StringReader@7e9a5fbe> IntPoint <attach:2>>
+2016-07-15 22:08:12,224 75    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:4> stored,indexed,tokenized<email:undergrowth@qq.com> indexed,tokenized<content:java.io.StringReader@71623278> IntPoint <attach:9>>
+2016-07-15 22:08:12,225 76    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:5> stored,indexed,tokenized<email:undergrowth@139.com> indexed,tokenized<content:java.io.StringReader@5a4041cc> IntPoint <attach:3>>
+2016-07-15 22:08:17,703 0     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) indexPath:D:\lucene\sp\indextool\index	fieldName:content:"email"	searchValue:null	num:100
+2016-07-15 22:08:17,717 14    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:1	email:undergrowth@126.com	content:null	attach:null
+2016-07-15 22:08:17,718 15    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:2	email:undergrowth@163.com	content:null	attach:null
+2016-07-15 22:08:17,719 16    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:3	email:undergrowth@gamil.com	content:null	attach:null
+2016-07-15 22:08:17,719 16    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:4	email:undergrowth@qq.com	content:null	attach:null
+2016-07-15 22:08:17,720 17    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:5	email:undergrowth@139.com	content:null	attach:null
+2016-07-15 22:08:47,552 0     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:1> stored,indexed,tokenized<email:undergrowth@126.com> indexed,tokenized<content:java.io.StringReader@52feb982> IntPoint <attach:5>>
+2016-07-15 22:08:47,612 60    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:2> stored,indexed,tokenized<email:undergrowth@163.com> indexed,tokenized<content:java.io.StringReader@1da51a35> IntPoint <attach:7>>
+2016-07-15 22:08:47,614 62    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:3> stored,indexed,tokenized<email:undergrowth@gamil.com> indexed,tokenized<content:java.io.StringReader@7e9a5fbe> IntPoint <attach:2>>
+2016-07-15 22:08:47,615 63    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:4> stored,indexed,tokenized<email:undergrowth@qq.com> indexed,tokenized<content:java.io.StringReader@71623278> IntPoint <attach:9>>
+2016-07-15 22:08:47,616 64    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:5> stored,indexed,tokenized<email:undergrowth@139.com> indexed,tokenized<content:java.io.StringReader@5a4041cc> IntPoint <attach:3>>
+2016-07-15 22:08:54,720 0     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) indexPath:D:\lucene\sp\indextool\index	fieldName:content:"email"	searchValue:null	num:100
+2016-07-15 22:08:54,734 14    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:3	email:undergrowth@gamil.com	content:null	attach:null
+2016-07-15 22:08:54,734 14    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:1	email:undergrowth@126.com	content:null	attach:null
+2016-07-15 22:08:54,735 15    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:2	email:undergrowth@163.com	content:null	attach:null
+2016-07-15 22:08:54,736 16    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:4	email:undergrowth@qq.com	content:null	attach:null
+2016-07-15 22:08:54,737 17    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:5	email:undergrowth@139.com	content:null	attach:null
+2016-07-15 22:32:08,427 0     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:1> stored,indexed,tokenized<email:undergrowth@126.com> indexed,tokenized<content:java.io.StringReader@80503> IntPoint <attach:5> LongPoint <date:1468512000000>>
+2016-07-15 22:32:08,490 63    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:2> stored,indexed,tokenized<email:undergrowth@163.com> indexed,tokenized<content:java.io.StringReader@61ca2dfa> IntPoint <attach:7> LongPoint <date:1468425600000>>
+2016-07-15 22:32:08,491 64    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:3> stored,indexed,tokenized<email:undergrowth@gamil.com> indexed,tokenized<content:java.io.StringReader@134593bf> IntPoint <attach:2> LongPoint <date:1468339200000>>
+2016-07-15 22:32:08,492 65    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:4> stored,indexed,tokenized<email:undergrowth@qq.com> indexed,tokenized<content:java.io.StringReader@7ba18f1b> IntPoint <attach:9> LongPoint <date:1468252800000>>
+2016-07-15 22:32:08,493 66    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:5> stored,indexed,tokenized<email:undergrowth@139.com> indexed,tokenized<content:java.io.StringReader@1068e947> IntPoint <attach:3> LongPoint <date:1468166400000>>
+2016-07-15 22:32:15,774 0     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) indexPath:D:\lucene\sp\indextool\index	fieldName:content:"email"	searchValue:null	num:100
+2016-07-15 22:32:15,787 13    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:3	email:undergrowth@gamil.com	content:null	attach:null	date:null
+2016-07-15 22:32:15,788 14    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:1	email:undergrowth@126.com	content:null	attach:null	date:null
+2016-07-15 22:32:15,789 15    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:2	email:undergrowth@163.com	content:null	attach:null	date:null
+2016-07-15 22:32:15,789 15    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:4	email:undergrowth@qq.com	content:null	attach:null	date:null
+2016-07-15 22:32:15,790 16    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:5	email:undergrowth@139.com	content:null	attach:null	date:null
+2016-07-15 22:37:00,038 0     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:1> stored,indexed,tokenized<email:undergrowth@126.com> indexed,tokenized<content:java.io.StringReader@1877ab81> stored<attach:5> stored<date:1468512000000>>
+2016-07-15 22:37:00,102 64    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:2> stored,indexed,tokenized<email:undergrowth@163.com> indexed,tokenized<content:java.io.StringReader@7a36aefa> stored<attach:7> stored<date:1468425600000>>
+2016-07-15 22:37:00,104 66    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:3> stored,indexed,tokenized<email:undergrowth@gamil.com> indexed,tokenized<content:java.io.StringReader@b3d7190> stored<attach:2> stored<date:1468339200000>>
+2016-07-15 22:37:00,105 67    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:4> stored,indexed,tokenized<email:undergrowth@qq.com> indexed,tokenized<content:java.io.StringReader@10d59286> stored<attach:9> stored<date:1468252800000>>
+2016-07-15 22:37:00,106 68    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) add document:Document<stored,indexed,omitNorms,indexOptions=DOCS<id:5> stored,indexed,tokenized<email:undergrowth@139.com> indexed,tokenized<content:java.io.StringReader@6fb0d3ed> stored<attach:3> stored<date:1468166400000>>
+2016-07-15 22:37:09,197 0     INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) indexPath:D:\lucene\sp\indextool\index	fieldName:content:"email"	searchValue:null	num:100
+2016-07-15 22:37:09,209 12    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:3	email:undergrowth@gamil.com	content:null	attach:2	date:1468339200000
+2016-07-15 22:37:09,210 13    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:1	email:undergrowth@126.com	content:null	attach:5	date:1468512000000
+2016-07-15 22:37:09,212 15    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:2	email:undergrowth@163.com	content:null	attach:7	date:1468425600000
+2016-07-15 22:37:09,217 20    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:4	email:undergrowth@qq.com	content:null	attach:9	date:1468252800000
+2016-07-15 22:37:09,217 20    INFO  [mycodelearn.undergrowth.crawler.mw.sp.IndexTool] (main:) id:5	email:undergrowth@139.com	content:null	attach:3	date:1468166400000
