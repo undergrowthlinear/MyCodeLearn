@@ -3,6 +3,7 @@ package mycodelearn.undergrowth.redis.redisson;
 /**
  * 
 * Description: TODO(这里用一句话描述这个类的作用)
+* redis-cli 6379
 *  Redis client的辅助工具类
 * 用于连接Redis服务器 创建不同的Redis Server对应的客户端对象
 * redis是一个开源的，C语言编写、bsd协议的，键值对的缓存和存储的、通常被作为NoSql的内存数据库

@@ -67,7 +67,7 @@ public class ZooKeeperOperator extends AbstractZooKeeper {
 	public static void main(String[] args) {
 		try {
 			ZooKeeperOperator zkoperator = new ZooKeeperOperator();
-			zkoperator.connect("192.168.126.130");
+			zkoperator.connect("192.168.126.131");
 
 			byte[] data = new byte[] { 'a', 'b', 'c', 'd' };
 
@@ -81,8 +81,8 @@ public class ZooKeeperOperator extends AbstractZooKeeper {
 			// System.out.println(Arrays.toString(zkoperator.getData("/root/child2")));
 
 			String zktest = "ZooKeeper的Java API测试";
-			zkoperator.create("/root/child5", zktest.getBytes("utf-8"));
-			log.debug("获取设置的信息：" + new String(zkoperator.getData("/root/child5"), "utf-8"));
+			zkoperator.create("/root/child6", zktest.getBytes("utf-8"));
+			log.debug("获取设置的信息：" + new String(zkoperator.getData("/root/child6"), "utf-8"));
 
 			System.out.println("节点孩子信息:");
 			zkoperator.getChild("/root");

@@ -40,7 +40,7 @@ public class RedisUtilsTest {
 	 */
 	@Before
 	public void before() {
-		String ip = "172.16.22.249";
+		String ip = "192.168.126.129";
 		String port = "6379";
 		redisson = RedisUtils.getInstance().getRedisson(ip, port);
 	}
