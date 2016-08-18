@@ -1,0 +1,1 @@
+2016-08-04 22:45:56,648 0     WARN  [org.apache.curator.CuratorZookeeperClient] (main:) session timeout [5000] is less than connection timeout [15000]

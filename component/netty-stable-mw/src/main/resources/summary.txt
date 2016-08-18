@@ -1,0 +1,49 @@
+ * 使用BIO方式(同步阻塞IO)
+ * 使用ServerSocket绑定IP地址，启动端口，使用Socket进行握手连接，连接成功后，双方通过输入输出流进行同步阻塞式通信
+ * 每当有客户端的请求后，即启动一个线程进行处理
+ 
+ 使用PAIO(同步阻塞IO)
+ * 使用线程池进行处理客户端的请求
+ * 因为在进行read或者write的时候 都是阻塞IO的 所以还是同步阻塞IO  只是线程的资源交由线程池进行控制
+ 
+ 使用java.nio包的NIO方式(异步非阻塞IO)
+ * 使用NIO方式 异步IO
+ * 使用多路复用器关联通道 当通道中有事件时 即通知处理 不用阻塞IO
+ 
+ 使用AIO方式(异步非阻塞IO) 
+ * 使用AIO方式，异步非阻塞IO
+ * 相当于NIO的升级版 编码思路上相比于NIO而言更加的简单明了
+ 
+ * 使用netty框架进行编程
+ * 步骤
+ * 1、构建事件处理池
+ * 2、使用引导程序关联事件处理池、通道、事件处理器
+ * 3、绑定端口服务
+ * 4、等待操作完成
+ * 5、关闭事件处理池
+ 
+ netty是NIO的反应器模式，基于事件驱动
+ 在管道流上注册处理器，处理不同的通道事件
+ ChannelPipeline
+ ChannelHandler
+ ChannelEvent
+ 
+ 
+ 流程：
+在ChannelPipeline中注册ChannelHandler放入到ChannelHandlerContext中，在ChannelPipeline中根据ChannelHandlerContext的next构成处理器链
+在ChannelHandler处理完上下行事件后，会通过ChannelHandlerContext /ChannelPipeline将上下行事件发出来，供ChannelPipeline的其他处理器进行处理
+ 
+ 
+All I/O operations in Netty are asynchronous
+ 
+ 
+Netty服务端三步骤:
+1、建立启动类(ServerBootstrap)，使用通道工厂(ChannelFactory)/通道管道工厂(ChannelPipelineFactory)进行创建
+2、在使用ChannelPipelineFactory创建ChannelPipeline的时候，将处理器绑定到通道管道上
+3、设置子通道连接参数、启动服务
+ 
+ 
+Netty客户端三步骤:
+1、建立启动类(ClientBootstrap)，使用通道工厂(ChannelFactory)/通道管道工厂(ChannelPipelineFactory)进行创建
+2、在使用ChannelPipelineFactory创建ChannelPipeline的时候，将处理器绑定到通道管道上
+3、设置通道连接参数

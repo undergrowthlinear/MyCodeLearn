@@ -557,3 +557,22 @@
 2016-08-04 16:36:54,941 859   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) serialize----{ "_id" : { "$oid" : "57a2f6ed06195f2ad4157e13"} , "title" : "MongoDB98" , "description" : "database98" , "likes" : 198 , "by" : "Fly98"}
 2016-08-04 16:36:54,942 860   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57a2f6ed06195f2ad4157e14" }, "title" : "MongoDB99", "description" : "database99", "likes" : 199, "by" : "Fly99" }
 2016-08-04 16:36:54,942 860   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) serialize----{ "_id" : { "$oid" : "57a2f6ed06195f2ad4157e14"} , "title" : "MongoDB99" , "description" : "database99" , "likes" : 199 , "by" : "Fly99"}
+2016-08-04 17:09:05,190 0     INFO  [mycodelearn.undergrowth.redis.jedis.JedisLearnTest] (main:) connect to 192.168.126.129:6379 successfuly,PONG
+2016-08-04 17:14:23,223 0     INFO  [mycodelearn.undergrowth.redis.jedis.JedisLearnTest] (main:) connect to 192.168.126.129:6379 successfuly,PONG
+2016-08-04 17:15:52,724 1     INFO  [mycodelearn.undergrowth.redis.jedis.JedisLearnTest] (main:) connect to 192.168.126.129:6379 successfuly,PONG
+2016-08-04 17:17:22,913 0     INFO  [mycodelearn.undergrowth.redis.jedis.JedisLearnTest] (main:) connect to 192.168.126.129:6379 successfuly,PONG
+2016-08-04 17:17:37,885 0     INFO  [mycodelearn.undergrowth.redis.jedis.JedisLearnTest] (main:) connect to 192.168.126.129:6379 successfuly,PONG
+2016-08-04 17:27:00,822 0     INFO  [mycodelearn.undergrowth.redis.jedis.JedisLearnTest] (main:) connect to 192.168.126.129:6379 successfuly,PONG
+2016-08-04 17:27:44,599 0     INFO  [mycodelearn.undergrowth.redis.jedis.JedisLearnTest] (main:) connect to 192.168.126.129:6379 successfuly,PONG
+2016-08-04 17:27:48,617 0     INFO  [mycodelearn.undergrowth.redis.jedis.JedisLearnTest] (main:) connect to 192.168.126.129:6379 successfuly,PONG
+2016-08-04 17:27:48,632 15    INFO  [mycodelearn.undergrowth.redis.jedis.JedisLearnTest] (main:) growth5
+2016-08-04 17:27:48,633 16    INFO  [mycodelearn.undergrowth.redis.jedis.JedisLearnTest] (main:) growth4
+2016-08-04 17:27:48,633 16    INFO  [mycodelearn.undergrowth.redis.jedis.JedisLearnTest] (main:) growth3
+2016-08-04 17:27:48,635 18    INFO  [mycodelearn.undergrowth.redis.jedis.JedisLearnTest] (main:) growth2
+2016-08-04 17:27:48,636 19    INFO  [mycodelearn.undergrowth.redis.jedis.JedisLearnTest] (main:) growth1
+2016-08-04 17:36:55,028 0     INFO  [mycodelearn.undergrowth.redis.jedis.JedisLearnTest] (main:) connect to 192.168.126.129:6379 successfuly,PONG
+2016-08-04 17:37:02,096 0     INFO  [mycodelearn.undergrowth.redis.jedis.JedisLearnTest] (main:) connect to 192.168.126.129:6379 successfuly,PONG
+2016-08-04 17:43:45,092 0     INFO  [mycodelearn.undergrowth.redis.jedis.JedisLearnTest] (main:) connect to 192.168.126.129:6379 successfuly,PONG
+2016-08-04 17:43:50,505 0     INFO  [mycodelearn.undergrowth.redis.jedis.JedisLearnTest] (main:) connect to 192.168.126.129:6379 successfuly,PONG
+2016-08-04 17:51:33,895 0     INFO  [mycodelearn.undergrowth.redis.jedis.JedisLearnTest] (main:) connect to 192.168.126.129:6379 successfuly,PONG
+2016-08-04 17:51:39,339 0     INFO  [mycodelearn.undergrowth.redis.jedis.JedisLearnTest] (main:) connect to 192.168.126.129:6379 successfuly,PONG

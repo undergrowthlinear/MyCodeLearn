@@ -1,0 +1,20 @@
+2016-08-18 17:22:47,298 0     INFO  [org.eclipse.jetty.util.log] (main:) Logging to org.slf4j.impl.Log4jLoggerAdapter(org.eclipse.jetty.util.log) via org.eclipse.jetty.util.log.Slf4jLog
+2016-08-18 17:22:47,303 5     DEBUG [org.eclipse.jetty.util.log] (main:) Container org.eclipse.jetty.server.Server@307f6b8c + SelectChannelConnector@0.0.0.0:8080 as connector
+2016-08-18 17:22:47,310 12    DEBUG [org.eclipse.jetty.util.log] (main:) Container org.eclipse.jetty.server.Server@307f6b8c + HelloWorld@6f195bc3 as handler
+2016-08-18 17:22:47,310 12    DEBUG [org.eclipse.jetty.util.log] (main:) Starting org.eclipse.jetty.server.Server@307f6b8c
+2016-08-18 17:22:47,311 13    INFO  [org.eclipse.jetty.util.log] (main:) jetty-7.1.0.RC1
+2016-08-18 17:22:47,340 42    DEBUG [org.eclipse.jetty.util.log] (main:) Container org.eclipse.jetty.server.Server@307f6b8c + qtp1181869371{8<=0<=0/254,-1} as threadpool
+2016-08-18 17:22:47,341 43    DEBUG [org.eclipse.jetty.util.log] (main:) Starting qtp1181869371{8<=0<=0/254,-1}
+2016-08-18 17:22:47,346 48    DEBUG [org.eclipse.jetty.util.log] (main:) STARTED qtp1181869371{8<=0<=8/254,0}
+2016-08-18 17:22:47,346 48    DEBUG [org.eclipse.jetty.util.log] (main:) Starting HelloWorld@6f195bc3
+2016-08-18 17:22:47,347 49    DEBUG [org.eclipse.jetty.util.log] (main:) starting HelloWorld@6f195bc3
+2016-08-18 17:22:47,348 50    DEBUG [org.eclipse.jetty.util.log] (main:) STARTED HelloWorld@6f195bc3
+2016-08-18 17:22:47,365 67    DEBUG [org.eclipse.jetty.util.log] (main:) starting org.eclipse.jetty.server.Server@307f6b8c
+2016-08-18 17:22:47,366 68    DEBUG [org.eclipse.jetty.util.log] (main:) Starting SelectChannelConnector@0.0.0.0:8080
+2016-08-18 17:22:47,370 72    DEBUG [org.eclipse.jetty.util.log] (main:) Starting org.eclipse.jetty.server.nio.SelectChannelConnector$1@28ac3dc3
+2016-08-18 17:22:47,457 159   DEBUG [org.eclipse.jetty.util.log] (main:) STARTED org.eclipse.jetty.server.nio.SelectChannelConnector$1@28ac3dc3
+2016-08-18 17:22:47,459 161   INFO  [org.eclipse.jetty.util.log] (main:) Started SelectChannelConnector@0.0.0.0:8080
+2016-08-18 17:22:47,459 161   DEBUG [org.eclipse.jetty.util.log] (main:) STARTED SelectChannelConnector@0.0.0.0:8080
+2016-08-18 17:22:47,461 163   DEBUG [org.eclipse.jetty.util.log] (main:) STARTED org.eclipse.jetty.server.Server@307f6b8c
+2016-08-18 17:23:12,644 25346 DEBUG [org.eclipse.jetty.util.log] (qtp1181869371-14 - /:) REQUEST / on org.eclipse.jetty.server.nio.SelectChannelConnector$2@4ca2aea5
+2016-08-18 17:25:32,199 164901 DEBUG [org.eclipse.jetty.util.log] (qtp1181869371-14 - /:) RESPONSE /  200

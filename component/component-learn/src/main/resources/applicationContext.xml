@@ -14,7 +14,7 @@
 			   http://www.springframework.org/schema/util 
 			   http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
-	<import resource="classpath:rmi.xml" />
+	<import resource="classpath:hessian.xml" />
 
 	<!-- Activates scanning of @Autowired -->
 	<context:annotation-config />

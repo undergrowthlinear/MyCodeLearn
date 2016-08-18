@@ -28,6 +28,9 @@
 		<module>book-mw</module>
     <module>crawler-mw</module>
     <module>lucene-analyze</module>
+    <module>netty-stable-mw</module>
+    <module>jetty-mw</module>
+    <module>jetty-web-mw</module>
   </modules>
 	<build>
 		<plugins>
