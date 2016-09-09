@@ -215,7 +215,7 @@ public class QueryIndexSearcherFileToolTest {
 			SearchFileTool indexSearcher = new SearchFileTool();
 			QueryParser parser = new QueryParser(Version.LUCENE_35, "content", indexSearcher.getAnalyzer());
 			//多个词组查询
-			Query query = parser.parse("- name:con* + apache");
+			Query query = parser.parse("+(+ name:con*) -(+ content:apache + content:java)");
 			indexSearcher.search(indexPath, query, 500);
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
@@ -262,7 +262,8 @@ public class QueryIndexSearcherFileToolTest {
 			QueryParser parser = new QueryParser(Version.LUCENE_35, "content", indexSearcher.getAnalyzer());
 			//Query query = parser.parse("\"Apache Commons Exec\"");
 			//模糊查询
-			Query query = parser.parse("Apach~");
+			//Query query = parser.parse("Apach~");
+			Query query = parser.parse("testModelName");
 			indexSearcher.search(indexPath, query, 500);
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block

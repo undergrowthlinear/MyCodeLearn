@@ -25,7 +25,7 @@ import java.net.URI;
  */
 public final class HttpSnoopClient {
 
-	static final String URL = System.getProperty("url", "http://127.0.0.1:8080/");
+	static final String URL = System.getProperty("url", "http://127.0.0.1:18081/");
 
 	public static void main(String[] args) throws Exception {
 		URI uri = new URI(URL);

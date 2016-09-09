@@ -31,6 +31,7 @@
     <module>netty-stable-mw</module>
     <module>jetty-mw</module>
     <module>jetty-web-mw</module>
+    <module>redis-spring</module>
   </modules>
 	<build>
 		<plugins>

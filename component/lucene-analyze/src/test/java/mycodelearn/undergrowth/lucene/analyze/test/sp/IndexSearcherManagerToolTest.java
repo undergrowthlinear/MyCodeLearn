@@ -40,13 +40,13 @@ public class IndexSearcherManagerToolTest {
 	@Test
 	public void testDelete() {
 		PhraseQuery query = new PhraseQuery();
-		query.add(new Term("id", "147"));
+		query.add(new Term("id", "12"));
 		indexTool.getNrtManagerFileTool().delete(indexPath, query);
 	}
 
 	@Test
 	public void testUpdate() {
-		Term term = new Term("content", "tencent");
+		Term term = new Term("id", "26");
 		indexTool.getNrtManagerFileTool().update(indexPath, term, docPath + "\\" + "con1.txt");
 	}
 
@@ -54,9 +54,14 @@ public class IndexSearcherManagerToolTest {
 	public void testSearch() {
 		for (int i = 0; i < 5; i++) {
 			indexTool.getSearcherManagerFileTool().search(indexPath, "content", "Apache", 100);
-			testDelete();
+			if (i == 0) {
+				testUpdate();
+			}
+			if (i == 3) {
+				testDelete();
+			}
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(5000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -71,7 +76,7 @@ public class IndexSearcherManagerToolTest {
 			QueryParser parser = new QueryParser(Version.LUCENE_35, "content",
 					indexTool.getSearcherManagerFileTool().getAnalyzer());
 			Query query = parser.parse("Apache");
-			indexTool.getSearcherManagerFileTool().search(indexPath, query, 20);
+			indexTool.getSearcherManagerFileTool().search(indexPath, query, 100);
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

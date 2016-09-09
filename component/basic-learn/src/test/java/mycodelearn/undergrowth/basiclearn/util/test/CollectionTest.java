@@ -1,9 +1,10 @@
 package mycodelearn.undergrowth.basiclearn.util.test;
 
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -15,10 +16,10 @@ import org.junit.Test;
 
 /**
  * 
-* Description: TODO(测试集合操作)
-* @author <a href="zhangwu@wxchina.coom">Wu.Zhang</a>
-* Date 2016年6月14日
-* @version  1.0.0
+ * Description: TODO(测试集合操作)
+ * 
+ * @author <a href="zhangwu@wxchina.coom">Wu.Zhang</a> Date 2016年6月14日
+ * @version 1.0.0
  */
 public class CollectionTest {
 
@@ -159,5 +160,58 @@ public class CollectionTest {
 		iterator(map.values());
 	}
 
-}
+	@Test
+	public void testCompar() {
+		List<Person> persons = new ArrayList<>();
+		for (int i = 0; i < 10; i++)
+			persons.add(new Person("under" + i, i));
+		iterator(persons);
+		Collections.sort(persons);
+		iterator(persons);
+	}
 
+	class Person implements Comparable<Person> {
+		private String name;
+		private int age;
+
+		public Person(String name, int age) {
+			super();
+			this.name = name;
+			this.age = age;
+		}
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public int getAge() {
+			return age;
+		}
+
+		public void setAge(int age) {
+			this.age = age;
+		}
+
+		@Override
+		public int compareTo(Person o) {
+			// TODO Auto-generated method stub
+			if (o.age > this.age)
+				return 1;
+			if (o.age < this.age)
+				return -1;
+			return 0;
+		}
+
+		@Override
+		public String toString() {
+			return "Person [name=" + name + ", age=" + age + "]";
+		}
+
+		
+	}
+
+}

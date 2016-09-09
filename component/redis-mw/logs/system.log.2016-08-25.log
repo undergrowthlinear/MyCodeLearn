@@ -1,0 +1,836 @@
+2016-08-25 09:04:16,151 1     INFO  [org.mongodb.driver.cluster] (main:) Cluster created with settings {hosts=[192.168.126.129:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-25 09:04:16,182 32    INFO  [org.mongodb.driver.cluster] (main:) Adding discovered server 192.168.126.129:27017 to client view of cluster
+2016-08-25 09:04:16,704 554   DEBUG [org.mongodb.driver.cluster] (main:) Updating cluster description to  {type=UNKNOWN, servers=[{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]
+2016-08-25 09:04:16,751 601   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) Connect to test database successfully
+2016-08-25 09:04:16,884 734   INFO  [org.mongodb.driver.cluster] (main:) No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2016-08-25 09:04:17,762 1612  INFO  [org.mongodb.driver.connection] (cluster-ClusterId{value='57be441053fb2121383e81cd', description='null'}-192.168.126.129:27017:) Opened connection [connectionId{localValue:1, serverValue:115}] to 192.168.126.129:27017
+2016-08-25 09:04:17,763 1613  DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be441053fb2121383e81cd', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:04:17,765 1615  INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be441053fb2121383e81cd', description='null'}-192.168.126.129:27017:) Monitor thread successfully connected to server with description ServerDescription{address=192.168.126.129:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=1260856}
+2016-08-25 09:04:17,811 1661  INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be441053fb2121383e81cd', description='null'}-192.168.126.129:27017:) Discovered cluster type of STANDALONE
+2016-08-25 09:04:17,824 1674  DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be441053fb2121383e81cd', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.3 ms, state=CONNECTED}]
+2016-08-25 09:04:17,896 1746  INFO  [org.mongodb.driver.connection] (main:) Opened connection [connectionId{localValue:2, serverValue:116}] to 192.168.126.129:27017
+2016-08-25 09:04:18,002 1852  DEBUG [org.mongodb.driver.protocol.command] (main:) Sending command {find : BsonString{value='testBasicModel'}} to database test on connection [connectionId{localValue:2, serverValue:116}] to server 192.168.126.129:27017
+2016-08-25 09:04:18,034 1884  DEBUG [org.mongodb.driver.protocol.command] (main:) Command execution completed
+2016-08-25 09:04:18,043 1893  INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5245" } }
+2016-08-25 09:04:18,046 1896  INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5246" }, "name" : "aass", "address" : [{ "all" : "广东省广州市番禺区大石" }, { "pro" : "广东省" }], "phone" : [{ "mobile" : "123456782" }, { "fix" : "012354" }], "desc" : "the desc no need", "flags" : [{ "indexFlag" : "0" }, { "moveFlag" : "0" }], "areaCode" : "gz" }
+2016-08-25 09:10:07,414 0     INFO  [org.mongodb.driver.cluster] (main:) Cluster created with settings {hosts=[192.168.126.129:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-25 09:10:07,417 3     INFO  [org.mongodb.driver.cluster] (main:) Adding discovered server 192.168.126.129:27017 to client view of cluster
+2016-08-25 09:10:07,490 76    DEBUG [org.mongodb.driver.cluster] (main:) Updating cluster description to  {type=UNKNOWN, servers=[{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]
+2016-08-25 09:10:07,498 84    INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) Connect to test database successfully
+2016-08-25 09:10:07,519 105   INFO  [org.mongodb.driver.cluster] (main:) No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2016-08-25 09:10:07,826 412   INFO  [org.mongodb.driver.connection] (cluster-ClusterId{value='57be456f53fb213934afea94', description='null'}-192.168.126.129:27017:) Opened connection [connectionId{localValue:1, serverValue:117}] to 192.168.126.129:27017
+2016-08-25 09:10:07,826 412   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be456f53fb213934afea94', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:10:07,830 416   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be456f53fb213934afea94', description='null'}-192.168.126.129:27017:) Monitor thread successfully connected to server with description ServerDescription{address=192.168.126.129:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=2367757}
+2016-08-25 09:10:07,831 417   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be456f53fb213934afea94', description='null'}-192.168.126.129:27017:) Discovered cluster type of STANDALONE
+2016-08-25 09:10:07,834 420   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be456f53fb213934afea94', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.4 ms, state=CONNECTED}]
+2016-08-25 09:10:07,871 457   INFO  [org.mongodb.driver.connection] (main:) Opened connection [connectionId{localValue:2, serverValue:118}] to 192.168.126.129:27017
+2016-08-25 09:10:07,883 469   DEBUG [org.mongodb.driver.protocol.command] (main:) Sending command {find : BsonString{value='testBasicModel'}} to database test on connection [connectionId{localValue:2, serverValue:118}] to server 192.168.126.129:27017
+2016-08-25 09:10:07,898 484   DEBUG [org.mongodb.driver.protocol.command] (main:) Command execution completed
+2016-08-25 09:10:07,903 489   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5245" } }
+2016-08-25 09:10:07,904 490   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:null
+2016-08-25 09:10:07,905 491   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 09:10:07,906 492   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 09:10:07,906 492   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:null
+2016-08-25 09:10:07,909 495   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5246" }, "name" : "aass", "address" : [{ "all" : "广东省广州市番禺区大石" }, { "pro" : "广东省" }], "phone" : [{ "mobile" : "123456782" }, { "fix" : "012354" }], "desc" : "the desc no need", "flags" : [{ "indexFlag" : "0" }, { "moveFlag" : "0" }], "areaCode" : "gz" }
+2016-08-25 09:10:07,909 495   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:aass
+2016-08-25 09:10:07,910 496   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 09:10:07,910 496   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 09:10:07,910 496   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:gz
+2016-08-25 09:10:40,139 0     INFO  [org.mongodb.driver.cluster] (main:) Cluster created with settings {hosts=[192.168.126.129:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-25 09:10:40,142 3     INFO  [org.mongodb.driver.cluster] (main:) Adding discovered server 192.168.126.129:27017 to client view of cluster
+2016-08-25 09:10:40,210 71    DEBUG [org.mongodb.driver.cluster] (main:) Updating cluster description to  {type=UNKNOWN, servers=[{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]
+2016-08-25 09:10:40,216 77    INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) Connect to test database successfully
+2016-08-25 09:10:40,237 98    INFO  [org.mongodb.driver.cluster] (main:) No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2016-08-25 09:10:40,491 352   INFO  [org.mongodb.driver.connection] (cluster-ClusterId{value='57be459053fb21374437d288', description='null'}-192.168.126.129:27017:) Opened connection [connectionId{localValue:1, serverValue:119}] to 192.168.126.129:27017
+2016-08-25 09:10:40,493 354   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be459053fb21374437d288', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:10:40,496 357   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be459053fb21374437d288', description='null'}-192.168.126.129:27017:) Monitor thread successfully connected to server with description ServerDescription{address=192.168.126.129:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=1124270}
+2016-08-25 09:10:40,498 359   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be459053fb21374437d288', description='null'}-192.168.126.129:27017:) Discovered cluster type of STANDALONE
+2016-08-25 09:10:40,502 363   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be459053fb21374437d288', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.1 ms, state=CONNECTED}]
+2016-08-25 09:10:40,541 402   INFO  [org.mongodb.driver.connection] (main:) Opened connection [connectionId{localValue:2, serverValue:120}] to 192.168.126.129:27017
+2016-08-25 09:10:40,551 412   DEBUG [org.mongodb.driver.protocol.command] (main:) Sending command {find : BsonString{value='testBasicModel'}} to database test on connection [connectionId{localValue:2, serverValue:120}] to server 192.168.126.129:27017
+2016-08-25 09:10:40,558 419   DEBUG [org.mongodb.driver.protocol.command] (main:) Command execution completed
+2016-08-25 09:10:40,564 425   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5245" } }
+2016-08-25 09:10:40,564 425   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:null
+2016-08-25 09:10:40,566 427   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 09:10:40,566 427   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 09:10:40,566 427   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:null
+2016-08-25 09:10:40,566 427   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57bd6cff6bfacaf00e3a5245
+2016-08-25 09:10:40,568 429   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5246" }, "name" : "aass", "address" : [{ "all" : "广东省广州市番禺区大石" }, { "pro" : "广东省" }], "phone" : [{ "mobile" : "123456782" }, { "fix" : "012354" }], "desc" : "the desc no need", "flags" : [{ "indexFlag" : "0" }, { "moveFlag" : "0" }], "areaCode" : "gz" }
+2016-08-25 09:10:40,569 430   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:aass
+2016-08-25 09:10:40,569 430   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 09:10:40,570 431   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 09:10:40,570 431   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:gz
+2016-08-25 09:10:40,570 431   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57bd6cff6bfacaf00e3a5246
+2016-08-25 09:13:19,788 0     INFO  [org.mongodb.driver.cluster] (main:) Cluster created with settings {hosts=[192.168.126.129:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-25 09:13:19,791 3     INFO  [org.mongodb.driver.cluster] (main:) Adding discovered server 192.168.126.129:27017 to client view of cluster
+2016-08-25 09:13:19,855 67    DEBUG [org.mongodb.driver.cluster] (main:) Updating cluster description to  {type=UNKNOWN, servers=[{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]
+2016-08-25 09:13:19,861 73    INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) Connect to test database successfully
+2016-08-25 09:13:19,887 99    INFO  [org.mongodb.driver.cluster] (main:) No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2016-08-25 09:13:20,267 479   INFO  [org.mongodb.driver.connection] (cluster-ClusterId{value='57be462f53fb211b7ce517e9', description='null'}-192.168.126.129:27017:) Opened connection [connectionId{localValue:1, serverValue:121}] to 192.168.126.129:27017
+2016-08-25 09:13:20,267 479   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be462f53fb211b7ce517e9', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:13:20,270 482   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be462f53fb211b7ce517e9', description='null'}-192.168.126.129:27017:) Monitor thread successfully connected to server with description ServerDescription{address=192.168.126.129:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=2300649}
+2016-08-25 09:13:20,272 484   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be462f53fb211b7ce517e9', description='null'}-192.168.126.129:27017:) Discovered cluster type of STANDALONE
+2016-08-25 09:13:20,274 486   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be462f53fb211b7ce517e9', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.3 ms, state=CONNECTED}]
+2016-08-25 09:13:20,330 542   INFO  [org.mongodb.driver.connection] (main:) Opened connection [connectionId{localValue:2, serverValue:122}] to 192.168.126.129:27017
+2016-08-25 09:13:20,362 574   DEBUG [org.mongodb.driver.protocol.command] (main:) Sending command {find : BsonString{value='testBasicModel'}} to database test on connection [connectionId{localValue:2, serverValue:122}] to server 192.168.126.129:27017
+2016-08-25 09:13:20,370 582   DEBUG [org.mongodb.driver.protocol.command] (main:) Command execution completed
+2016-08-25 09:13:20,378 590   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5245" } }
+2016-08-25 09:13:20,378 590   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id]
+2016-08-25 09:13:20,380 592   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57bd6cff6bfacaf00e3a5245]
+2016-08-25 09:13:20,380 592   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:null
+2016-08-25 09:13:20,380 592   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 09:13:20,381 593   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 09:13:20,381 593   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:null
+2016-08-25 09:13:20,381 593   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57bd6cff6bfacaf00e3a5245
+2016-08-25 09:13:20,383 595   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5246" }, "name" : "aass", "address" : [{ "all" : "广东省广州市番禺区大石" }, { "pro" : "广东省" }], "phone" : [{ "mobile" : "123456782" }, { "fix" : "012354" }], "desc" : "the desc no need", "flags" : [{ "indexFlag" : "0" }, { "moveFlag" : "0" }], "areaCode" : "gz" }
+2016-08-25 09:13:20,384 596   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id, name, address, phone, desc, flags, areaCode]
+2016-08-25 09:13:20,385 597   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57bd6cff6bfacaf00e3a5246, aass, [Document{{all=广东省广州市番禺区大石}}, Document{{pro=广东省}}], [Document{{mobile=123456782}}, Document{{fix=012354}}], the desc no need, [Document{{indexFlag=0}}, Document{{moveFlag=0}}], gz]
+2016-08-25 09:13:20,385 597   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:aass
+2016-08-25 09:13:20,386 598   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 09:13:20,386 598   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 09:13:20,386 598   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:gz
+2016-08-25 09:13:20,387 599   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57bd6cff6bfacaf00e3a5246
+2016-08-25 09:20:47,962 1     INFO  [org.mongodb.driver.cluster] (main:) Cluster created with settings {hosts=[192.168.126.129:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-25 09:20:47,964 3     INFO  [org.mongodb.driver.cluster] (main:) Adding discovered server 192.168.126.129:27017 to client view of cluster
+2016-08-25 09:20:48,040 79    DEBUG [org.mongodb.driver.cluster] (main:) Updating cluster description to  {type=UNKNOWN, servers=[{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]
+2016-08-25 09:20:48,046 85    INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) Connect to test database successfully
+2016-08-25 09:20:48,077 116   INFO  [org.mongodb.driver.cluster] (main:) No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2016-08-25 09:20:48,343 382   INFO  [org.mongodb.driver.connection] (cluster-ClusterId{value='57be47ef53fb2110d4f27d0c', description='null'}-192.168.126.129:27017:) Opened connection [connectionId{localValue:1, serverValue:123}] to 192.168.126.129:27017
+2016-08-25 09:20:48,343 382   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be47ef53fb2110d4f27d0c', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:20:48,347 386   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be47ef53fb2110d4f27d0c', description='null'}-192.168.126.129:27017:) Monitor thread successfully connected to server with description ServerDescription{address=192.168.126.129:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=2520134}
+2016-08-25 09:20:48,348 387   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be47ef53fb2110d4f27d0c', description='null'}-192.168.126.129:27017:) Discovered cluster type of STANDALONE
+2016-08-25 09:20:48,350 389   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be47ef53fb2110d4f27d0c', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.5 ms, state=CONNECTED}]
+2016-08-25 09:20:48,386 425   INFO  [org.mongodb.driver.connection] (main:) Opened connection [connectionId{localValue:2, serverValue:124}] to 192.168.126.129:27017
+2016-08-25 09:20:48,395 434   DEBUG [org.mongodb.driver.protocol.command] (main:) Sending command {find : BsonString{value='testBasicModel'}} to database test on connection [connectionId{localValue:2, serverValue:124}] to server 192.168.126.129:27017
+2016-08-25 09:20:48,404 443   DEBUG [org.mongodb.driver.protocol.command] (main:) Command execution completed
+2016-08-25 09:20:48,411 450   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5245" } }
+2016-08-25 09:20:48,411 450   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id]
+2016-08-25 09:20:48,413 452   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57bd6cff6bfacaf00e3a5245]
+2016-08-25 09:20:48,413 452   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:null
+2016-08-25 09:20:48,414 453   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 09:20:48,414 453   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 09:20:48,414 453   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:null
+2016-08-25 09:20:48,414 453   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:null
+2016-08-25 09:20:48,417 456   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5246" }, "name" : "aass", "address" : [{ "all" : "广东省广州市番禺区大石" }, { "pro" : "广东省" }], "phone" : [{ "mobile" : "123456782" }, { "fix" : "012354" }], "desc" : "the desc no need", "flags" : [{ "indexFlag" : "0" }, { "moveFlag" : "0" }], "areaCode" : "gz" }
+2016-08-25 09:20:48,418 457   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id, name, address, phone, desc, flags, areaCode]
+2016-08-25 09:20:48,418 457   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57bd6cff6bfacaf00e3a5246, aass, [Document{{all=广东省广州市番禺区大石}}, Document{{pro=广东省}}], [Document{{mobile=123456782}}, Document{{fix=012354}}], the desc no need, [Document{{indexFlag=0}}, Document{{moveFlag=0}}], gz]
+2016-08-25 09:20:48,419 458   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:null
+2016-08-25 09:20:48,419 458   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 09:20:48,420 459   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 09:20:48,420 459   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:null
+2016-08-25 09:20:48,420 459   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:null
+2016-08-25 09:21:23,938 0     INFO  [org.mongodb.driver.cluster] (main:) Cluster created with settings {hosts=[192.168.126.129:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-25 09:21:23,943 5     INFO  [org.mongodb.driver.cluster] (main:) Adding discovered server 192.168.126.129:27017 to client view of cluster
+2016-08-25 09:21:24,035 97    DEBUG [org.mongodb.driver.cluster] (main:) Updating cluster description to  {type=UNKNOWN, servers=[{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]
+2016-08-25 09:21:24,043 105   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) Connect to test database successfully
+2016-08-25 09:21:24,068 130   INFO  [org.mongodb.driver.cluster] (main:) No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2016-08-25 09:21:24,365 427   INFO  [org.mongodb.driver.connection] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Opened connection [connectionId{localValue:1, serverValue:125}] to 192.168.126.129:27017
+2016-08-25 09:21:24,366 428   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:21:24,370 432   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Monitor thread successfully connected to server with description ServerDescription{address=192.168.126.129:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=1487053}
+2016-08-25 09:21:24,372 434   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Discovered cluster type of STANDALONE
+2016-08-25 09:21:24,375 437   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.5 ms, state=CONNECTED}]
+2016-08-25 09:21:24,419 481   INFO  [org.mongodb.driver.connection] (main:) Opened connection [connectionId{localValue:2, serverValue:126}] to 192.168.126.129:27017
+2016-08-25 09:21:24,430 492   DEBUG [org.mongodb.driver.protocol.command] (main:) Sending command {find : BsonString{value='testBasicModel'}} to database test on connection [connectionId{localValue:2, serverValue:126}] to server 192.168.126.129:27017
+2016-08-25 09:21:24,439 501   DEBUG [org.mongodb.driver.protocol.command] (main:) Command execution completed
+2016-08-25 09:21:24,447 509   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5245" } }
+2016-08-25 09:21:24,448 510   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id]
+2016-08-25 09:21:24,449 511   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57bd6cff6bfacaf00e3a5245]
+2016-08-25 09:21:34,385 10447 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:21:34,428 10490 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.5 ms, state=CONNECTED}]
+2016-08-25 09:21:44,430 20492 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:21:44,431 20493 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.4 ms, state=CONNECTED}]
+2016-08-25 09:21:54,432 30494 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:21:54,436 30498 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.6 ms, state=CONNECTED}]
+2016-08-25 09:22:04,439 40501 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:22:04,443 40505 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.8 ms, state=CONNECTED}]
+2016-08-25 09:22:14,445 50507 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:22:14,449 50511 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.0 ms, state=CONNECTED}]
+2016-08-25 09:22:24,452 60514 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:22:24,457 60519 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.1 ms, state=CONNECTED}]
+2016-08-25 09:22:34,459 70521 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:22:34,464 70526 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.2 ms, state=CONNECTED}]
+2016-08-25 09:22:44,465 80527 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:22:44,466 80528 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.9 ms, state=CONNECTED}]
+2016-08-25 09:22:54,468 90530 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:22:54,473 90535 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.2 ms, state=CONNECTED}]
+2016-08-25 09:23:04,477 100539 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:23:04,480 100542 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.1 ms, state=CONNECTED}]
+2016-08-25 09:23:14,481 110543 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:23:14,487 110549 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.1 ms, state=CONNECTED}]
+2016-08-25 09:23:14,849 110911 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:null
+2016-08-25 09:23:21,127 117189 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 09:23:22,886 118948 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 09:23:23,423 119485 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:null
+2016-08-25 09:23:24,047 120109 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57bd6cff6bfacaf00e3a5245
+2016-08-25 09:23:24,052 120114 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5246" }, "name" : "aass", "address" : [{ "all" : "广东省广州市番禺区大石" }, { "pro" : "广东省" }], "phone" : [{ "mobile" : "123456782" }, { "fix" : "012354" }], "desc" : "the desc no need", "flags" : [{ "indexFlag" : "0" }, { "moveFlag" : "0" }], "areaCode" : "gz" }
+2016-08-25 09:23:24,053 120115 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id, name, address, phone, desc, flags, areaCode]
+2016-08-25 09:23:24,055 120117 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57bd6cff6bfacaf00e3a5246, aass, [Document{{all=广东省广州市番禺区大石}}, Document{{pro=广东省}}], [Document{{mobile=123456782}}, Document{{fix=012354}}], the desc no need, [Document{{indexFlag=0}}, Document{{moveFlag=0}}], gz]
+2016-08-25 09:23:24,489 120551 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:23:24,493 120555 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.2 ms, state=CONNECTED}]
+2016-08-25 09:23:34,496 130558 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:23:34,497 130559 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.0 ms, state=CONNECTED}]
+2016-08-25 09:23:36,530 132592 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:aass
+2016-08-25 09:23:44,498 140560 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:23:44,503 140565 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.1 ms, state=CONNECTED}]
+2016-08-25 09:23:54,505 150567 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:23:54,509 150571 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.2 ms, state=CONNECTED}]
+2016-08-25 09:24:04,512 160574 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:24:04,516 160578 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.2 ms, state=CONNECTED}]
+2016-08-25 09:24:14,517 170579 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:24:14,521 170583 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.2 ms, state=CONNECTED}]
+2016-08-25 09:24:24,523 180585 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:24:24,529 180591 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.4 ms, state=CONNECTED}]
+2016-08-25 09:24:34,539 190601 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:24:34,549 190611 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.8 ms, state=CONNECTED}]
+2016-08-25 09:24:44,550 200612 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:24:44,552 200614 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.6 ms, state=CONNECTED}]
+2016-08-25 09:24:54,554 210616 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:24:54,558 210620 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.5 ms, state=CONNECTED}]
+2016-08-25 09:25:04,561 220623 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:25:04,567 220629 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.7 ms, state=CONNECTED}]
+2016-08-25 09:25:14,570 230632 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:25:14,575 230637 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.6 ms, state=CONNECTED}]
+2016-08-25 09:25:24,576 240638 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:25:24,584 240646 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.8 ms, state=CONNECTED}]
+2016-08-25 09:25:34,586 250648 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:25:34,588 250650 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.5 ms, state=CONNECTED}]
+2016-08-25 09:25:44,589 260651 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:25:44,590 260652 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.2 ms, state=CONNECTED}]
+2016-08-25 09:25:54,592 270654 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:25:54,596 270658 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.1 ms, state=CONNECTED}]
+2016-08-25 09:26:04,597 280659 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:26:04,601 280663 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.1 ms, state=CONNECTED}]
+2016-08-25 09:26:14,603 290665 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:26:14,608 290670 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.2 ms, state=CONNECTED}]
+2016-08-25 09:26:24,610 300672 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:26:24,613 300675 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.1 ms, state=CONNECTED}]
+2016-08-25 09:26:34,614 310676 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:26:34,619 310681 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.2 ms, state=CONNECTED}]
+2016-08-25 09:26:44,620 320682 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:26:44,624 320686 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.2 ms, state=CONNECTED}]
+2016-08-25 09:26:54,628 330690 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:26:54,630 330692 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.0 ms, state=CONNECTED}]
+2016-08-25 09:27:04,632 340694 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:27:04,636 340698 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.1 ms, state=CONNECTED}]
+2016-08-25 09:27:14,638 350700 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:27:14,645 350707 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.5 ms, state=CONNECTED}]
+2016-08-25 09:27:24,647 360709 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:27:24,650 360712 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.4 ms, state=CONNECTED}]
+2016-08-25 09:27:34,651 370713 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:27:34,655 370717 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.4 ms, state=CONNECTED}]
+2016-08-25 09:27:44,657 380719 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:27:44,660 380722 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.3 ms, state=CONNECTED}]
+2016-08-25 09:27:54,662 390724 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:27:54,666 390728 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.3 ms, state=CONNECTED}]
+2016-08-25 09:28:04,668 400730 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:28:04,671 400733 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.2 ms, state=CONNECTED}]
+2016-08-25 09:28:14,674 410736 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:28:14,675 410737 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.9 ms, state=CONNECTED}]
+2016-08-25 09:28:24,678 420740 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:28:24,682 420744 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.0 ms, state=CONNECTED}]
+2016-08-25 09:28:34,684 430746 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:28:34,689 430751 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.1 ms, state=CONNECTED}]
+2016-08-25 09:28:44,691 440753 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:28:44,694 440756 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.0 ms, state=CONNECTED}]
+2016-08-25 09:28:54,696 450758 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:28:54,700 450762 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.0 ms, state=CONNECTED}]
+2016-08-25 09:29:04,701 460763 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:29:04,703 460765 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.8 ms, state=CONNECTED}]
+2016-08-25 09:29:14,706 470768 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:29:14,712 470774 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.2 ms, state=CONNECTED}]
+2016-08-25 09:29:24,713 480775 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:29:24,717 480779 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.2 ms, state=CONNECTED}]
+2016-08-25 09:29:34,719 490781 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:29:34,720 490782 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.9 ms, state=CONNECTED}]
+2016-08-25 09:29:44,722 500784 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:29:44,725 500787 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.9 ms, state=CONNECTED}]
+2016-08-25 09:29:54,726 510788 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:29:54,732 510794 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.1 ms, state=CONNECTED}]
+2016-08-25 09:30:00,408 516470 DEBUG [org.mongodb.driver.protocol.command] (main:) Sending command {find : BsonString{value='testBasicModel'}} to database test on connection [connectionId{localValue:2, serverValue:126}] to server 192.168.126.129:27017
+2016-08-25 09:30:00,411 516473 DEBUG [org.mongodb.driver.protocol.command] (main:) Command execution completed
+2016-08-25 09:30:00,412 516474 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5245" } }
+2016-08-25 09:30:00,412 516474 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id]
+2016-08-25 09:30:00,413 516475 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57bd6cff6bfacaf00e3a5245]
+2016-08-25 09:30:00,413 516475 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:null
+2016-08-25 09:30:04,734 520796 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:30:04,738 520800 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be481353fb211a1c686e88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.1 ms, state=CONNECTED}]
+2016-08-25 09:31:16,372 0     INFO  [org.mongodb.driver.cluster] (main:) Cluster created with settings {hosts=[192.168.126.129:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-25 09:31:16,378 6     INFO  [org.mongodb.driver.cluster] (main:) Adding discovered server 192.168.126.129:27017 to client view of cluster
+2016-08-25 09:31:16,447 75    DEBUG [org.mongodb.driver.cluster] (main:) Updating cluster description to  {type=UNKNOWN, servers=[{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]
+2016-08-25 09:31:16,457 85    INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) Connect to test database successfully
+2016-08-25 09:31:16,489 117   INFO  [org.mongodb.driver.cluster] (main:) No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2016-08-25 09:31:16,817 445   INFO  [org.mongodb.driver.connection] (cluster-ClusterId{value='57be4a6453fb212cf8dd97a1', description='null'}-192.168.126.129:27017:) Opened connection [connectionId{localValue:1, serverValue:127}] to 192.168.126.129:27017
+2016-08-25 09:31:16,832 460   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4a6453fb212cf8dd97a1', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:31:16,846 474   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4a6453fb212cf8dd97a1', description='null'}-192.168.126.129:27017:) Monitor thread successfully connected to server with description ServerDescription{address=192.168.126.129:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=1390732}
+2016-08-25 09:31:16,848 476   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4a6453fb212cf8dd97a1', description='null'}-192.168.126.129:27017:) Discovered cluster type of STANDALONE
+2016-08-25 09:31:16,859 487   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4a6453fb212cf8dd97a1', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.4 ms, state=CONNECTED}]
+2016-08-25 09:31:16,900 528   INFO  [org.mongodb.driver.connection] (main:) Opened connection [connectionId{localValue:2, serverValue:128}] to 192.168.126.129:27017
+2016-08-25 09:31:16,912 540   DEBUG [org.mongodb.driver.protocol.command] (main:) Sending command {find : BsonString{value='testBasicModel'}} to database test on connection [connectionId{localValue:2, serverValue:128}] to server 192.168.126.129:27017
+2016-08-25 09:31:16,920 548   DEBUG [org.mongodb.driver.protocol.command] (main:) Command execution completed
+2016-08-25 09:31:16,928 556   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5245" } }
+2016-08-25 09:31:16,928 556   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id]
+2016-08-25 09:31:16,930 558   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57bd6cff6bfacaf00e3a5245]
+2016-08-25 09:31:16,930 558   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:null
+2016-08-25 09:31:26,870 10498 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4a6453fb212cf8dd97a1', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:31:26,877 10505 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4a6453fb212cf8dd97a1', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.7 ms, state=CONNECTED}]
+2016-08-25 09:31:36,880 20508 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4a6453fb212cf8dd97a1', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:31:36,881 20509 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4a6453fb212cf8dd97a1', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.6 ms, state=CONNECTED}]
+2016-08-25 09:32:16,965 1     INFO  [org.mongodb.driver.cluster] (main:) Cluster created with settings {hosts=[192.168.126.129:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-25 09:32:16,969 5     INFO  [org.mongodb.driver.cluster] (main:) Adding discovered server 192.168.126.129:27017 to client view of cluster
+2016-08-25 09:32:17,041 77    DEBUG [org.mongodb.driver.cluster] (main:) Updating cluster description to  {type=UNKNOWN, servers=[{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]
+2016-08-25 09:32:17,051 87    INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) Connect to test database successfully
+2016-08-25 09:32:17,079 115   INFO  [org.mongodb.driver.cluster] (main:) No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2016-08-25 09:32:17,379 415   INFO  [org.mongodb.driver.connection] (cluster-ClusterId{value='57be4aa053fb212fe841971d', description='null'}-192.168.126.129:27017:) Opened connection [connectionId{localValue:1, serverValue:129}] to 192.168.126.129:27017
+2016-08-25 09:32:17,379 415   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4aa053fb212fe841971d', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:32:17,383 419   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4aa053fb212fe841971d', description='null'}-192.168.126.129:27017:) Monitor thread successfully connected to server with description ServerDescription{address=192.168.126.129:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=2888443}
+2016-08-25 09:32:17,384 420   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4aa053fb212fe841971d', description='null'}-192.168.126.129:27017:) Discovered cluster type of STANDALONE
+2016-08-25 09:32:17,386 422   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4aa053fb212fe841971d', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.9 ms, state=CONNECTED}]
+2016-08-25 09:32:17,421 457   INFO  [org.mongodb.driver.connection] (main:) Opened connection [connectionId{localValue:2, serverValue:130}] to 192.168.126.129:27017
+2016-08-25 09:32:17,432 468   DEBUG [org.mongodb.driver.protocol.command] (main:) Sending command {find : BsonString{value='testBasicModel'}} to database test on connection [connectionId{localValue:2, serverValue:130}] to server 192.168.126.129:27017
+2016-08-25 09:32:17,441 477   DEBUG [org.mongodb.driver.protocol.command] (main:) Command execution completed
+2016-08-25 09:32:17,449 485   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5245" } }
+2016-08-25 09:32:17,449 485   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id]
+2016-08-25 09:32:17,451 487   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57bd6cff6bfacaf00e3a5245]
+2016-08-25 09:32:17,452 488   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:null
+2016-08-25 09:32:27,388 10424 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4aa053fb212fe841971d', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:32:27,390 10426 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4aa053fb212fe841971d', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.5 ms, state=CONNECTED}]
+2016-08-25 09:32:37,393 20429 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4aa053fb212fe841971d', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:32:37,397 20433 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4aa053fb212fe841971d', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.5 ms, state=CONNECTED}]
+2016-08-25 09:32:47,399 30435 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4aa053fb212fe841971d', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:32:47,404 30440 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4aa053fb212fe841971d', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.5 ms, state=CONNECTED}]
+2016-08-25 09:32:57,406 40442 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4aa053fb212fe841971d', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:32:57,410 40446 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4aa053fb212fe841971d', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.4 ms, state=CONNECTED}]
+2016-08-25 09:33:07,412 50448 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4aa053fb212fe841971d', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:33:07,419 50455 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4aa053fb212fe841971d', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.7 ms, state=CONNECTED}]
+2016-08-25 09:33:10,920 53956 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 09:33:12,432 55468 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 09:33:12,433 55469 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:null
+2016-08-25 09:33:12,433 55469 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57bd6cff6bfacaf00e3a5245
+2016-08-25 09:33:12,436 55472 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5246" }, "name" : "aass", "address" : [{ "all" : "广东省广州市番禺区大石" }, { "pro" : "广东省" }], "phone" : [{ "mobile" : "123456782" }, { "fix" : "012354" }], "desc" : "the desc no need", "flags" : [{ "indexFlag" : "0" }, { "moveFlag" : "0" }], "areaCode" : "gz" }
+2016-08-25 09:33:12,437 55473 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id, name, address, phone, desc, flags, areaCode]
+2016-08-25 09:33:12,437 55473 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57bd6cff6bfacaf00e3a5246, aass, [Document{{all=广东省广州市番禺区大石}}, Document{{pro=广东省}}], [Document{{mobile=123456782}}, Document{{fix=012354}}], the desc no need, [Document{{indexFlag=0}}, Document{{moveFlag=0}}], gz]
+2016-08-25 09:33:12,438 55474 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:aass
+2016-08-25 09:33:16,352 59388 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class java.util.ArrayList
+2016-08-25 09:33:16,352 59388 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:[Document{{all=广东省广州市番禺区大石}}, Document{{pro=广东省}}]
+2016-08-25 09:33:17,420 60456 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4aa053fb212fe841971d', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:33:17,422 60458 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4aa053fb212fe841971d', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.5 ms, state=CONNECTED}]
+2016-08-25 09:33:27,424 70460 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4aa053fb212fe841971d', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:33:27,425 70461 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4aa053fb212fe841971d', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.2 ms, state=CONNECTED}]
+2016-08-25 09:33:37,427 80463 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4aa053fb212fe841971d', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:33:37,429 80465 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4aa053fb212fe841971d', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.0 ms, state=CONNECTED}]
+2016-08-25 09:33:42,544 85580 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class java.util.ArrayList
+2016-08-25 09:33:42,545 85581 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:[Document{{mobile=123456782}}, Document{{fix=012354}}]
+2016-08-25 09:33:42,545 85581 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:gz
+2016-08-25 09:33:42,545 85581 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57bd6cff6bfacaf00e3a5246
+2016-08-25 09:38:45,403 0     INFO  [org.mongodb.driver.cluster] (main:) Cluster created with settings {hosts=[192.168.126.129:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-25 09:38:45,408 5     INFO  [org.mongodb.driver.cluster] (main:) Adding discovered server 192.168.126.129:27017 to client view of cluster
+2016-08-25 09:38:45,499 96    DEBUG [org.mongodb.driver.cluster] (main:) Updating cluster description to  {type=UNKNOWN, servers=[{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]
+2016-08-25 09:38:45,512 109   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) Connect to test database successfully
+2016-08-25 09:38:45,548 145   INFO  [org.mongodb.driver.cluster] (main:) No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2016-08-25 09:38:45,860 457   INFO  [org.mongodb.driver.connection] (cluster-ClusterId{value='57be4c2553fb2105040d04c4', description='null'}-192.168.126.129:27017:) Opened connection [connectionId{localValue:1, serverValue:131}] to 192.168.126.129:27017
+2016-08-25 09:38:45,864 461   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4c2553fb2105040d04c4', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:38:45,868 465   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4c2553fb2105040d04c4', description='null'}-192.168.126.129:27017:) Monitor thread successfully connected to server with description ServerDescription{address=192.168.126.129:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=1637850}
+2016-08-25 09:38:45,873 470   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4c2553fb2105040d04c4', description='null'}-192.168.126.129:27017:) Discovered cluster type of STANDALONE
+2016-08-25 09:38:45,875 472   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be4c2553fb2105040d04c4', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.6 ms, state=CONNECTED}]
+2016-08-25 09:38:45,933 530   INFO  [org.mongodb.driver.connection] (main:) Opened connection [connectionId{localValue:2, serverValue:132}] to 192.168.126.129:27017
+2016-08-25 09:38:45,951 548   DEBUG [org.mongodb.driver.protocol.command] (main:) Sending command {find : BsonString{value='testBasicModel'}} to database test on connection [connectionId{localValue:2, serverValue:132}] to server 192.168.126.129:27017
+2016-08-25 09:38:45,968 565   DEBUG [org.mongodb.driver.protocol.command] (main:) Command execution completed
+2016-08-25 09:38:45,984 581   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5245" } }
+2016-08-25 09:38:45,984 581   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id]
+2016-08-25 09:38:45,985 582   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57bd6cff6bfacaf00e3a5245]
+2016-08-25 09:38:45,986 583   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:null
+2016-08-25 09:38:45,986 583   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 09:38:45,986 583   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 09:38:45,986 583   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:null
+2016-08-25 09:38:45,986 583   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57bd6cff6bfacaf00e3a5245
+2016-08-25 09:38:45,990 587   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5246" }, "name" : "aass", "address" : [{ "all" : "广东省广州市番禺区大石" }, { "pro" : "广东省" }], "phone" : [{ "mobile" : "123456782" }, { "fix" : "012354" }], "desc" : "the desc no need", "flags" : [{ "indexFlag" : "0" }, { "moveFlag" : "0" }], "areaCode" : "gz" }
+2016-08-25 09:38:45,991 588   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id, name, address, phone, desc, flags, areaCode]
+2016-08-25 09:38:45,992 589   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57bd6cff6bfacaf00e3a5246, aass, [Document{{all=广东省广州市番禺区大石}}, Document{{pro=广东省}}], [Document{{mobile=123456782}}, Document{{fix=012354}}], the desc no need, [Document{{indexFlag=0}}, Document{{moveFlag=0}}], gz]
+2016-08-25 09:38:45,993 590   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:aass
+2016-08-25 09:38:45,993 590   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class java.util.ArrayList
+2016-08-25 09:38:45,994 591   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) value instanceof java.util.ArrayList:true
+2016-08-25 09:38:45,994 591   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) false
+2016-08-25 09:58:45,044 0     INFO  [org.mongodb.driver.cluster] (main:) Cluster created with settings {hosts=[192.168.126.129:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-25 09:58:45,047 3     INFO  [org.mongodb.driver.cluster] (main:) Adding discovered server 192.168.126.129:27017 to client view of cluster
+2016-08-25 09:58:45,115 71    DEBUG [org.mongodb.driver.cluster] (main:) Updating cluster description to  {type=UNKNOWN, servers=[{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]
+2016-08-25 09:58:45,122 78    INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) Connect to test database successfully
+2016-08-25 09:58:45,148 104   INFO  [org.mongodb.driver.cluster] (main:) No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2016-08-25 09:58:45,421 377   INFO  [org.mongodb.driver.connection] (cluster-ClusterId{value='57be50d553fb213f8c313d99', description='null'}-192.168.126.129:27017:) Opened connection [connectionId{localValue:1, serverValue:133}] to 192.168.126.129:27017
+2016-08-25 09:58:45,421 377   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be50d553fb213f8c313d99', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:58:45,426 382   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be50d553fb213f8c313d99', description='null'}-192.168.126.129:27017:) Monitor thread successfully connected to server with description ServerDescription{address=192.168.126.129:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=3870994}
+2016-08-25 09:58:45,428 384   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be50d553fb213f8c313d99', description='null'}-192.168.126.129:27017:) Discovered cluster type of STANDALONE
+2016-08-25 09:58:45,430 386   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be50d553fb213f8c313d99', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=3.9 ms, state=CONNECTED}]
+2016-08-25 09:58:45,473 429   INFO  [org.mongodb.driver.connection] (main:) Opened connection [connectionId{localValue:2, serverValue:134}] to 192.168.126.129:27017
+2016-08-25 09:58:45,492 448   DEBUG [org.mongodb.driver.protocol.command] (main:) Sending command {find : BsonString{value='testBasicModel'}} to database test on connection [connectionId{localValue:2, serverValue:134}] to server 192.168.126.129:27017
+2016-08-25 09:58:45,500 456   DEBUG [org.mongodb.driver.protocol.command] (main:) Command execution completed
+2016-08-25 09:58:45,505 461   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5245" } }
+2016-08-25 09:58:45,505 461   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id]
+2016-08-25 09:58:45,506 462   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57bd6cff6bfacaf00e3a5245]
+2016-08-25 09:58:45,506 462   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:null
+2016-08-25 09:58:45,506 462   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 09:58:45,507 463   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 09:58:45,507 463   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:null
+2016-08-25 09:58:45,507 463   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57bd6cff6bfacaf00e3a5245
+2016-08-25 09:58:45,510 466   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5246" }, "name" : "aass", "address" : [{ "all" : "广东省广州市番禺区大石" }, { "pro" : "广东省" }], "phone" : [{ "mobile" : "123456782" }, { "fix" : "012354" }], "desc" : "the desc no need", "flags" : [{ "indexFlag" : "0" }, { "moveFlag" : "0" }], "areaCode" : "gz" }
+2016-08-25 09:58:45,511 467   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id, name, address, phone, desc, flags, areaCode]
+2016-08-25 09:58:45,511 467   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57bd6cff6bfacaf00e3a5246, aass, [Document{{all=广东省广州市番禺区大石}}, Document{{pro=广东省}}], [Document{{mobile=123456782}}, Document{{fix=012354}}], the desc no need, [Document{{indexFlag=0}}, Document{{moveFlag=0}}], gz]
+2016-08-25 09:58:45,511 467   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:aass
+2016-08-25 09:58:45,512 468   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class java.util.ArrayList
+2016-08-25 09:58:45,512 468   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) value instanceof java.util.ArrayList:true
+2016-08-25 09:58:45,512 468   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) false
+2016-08-25 09:58:45,513 469   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:广东省广州市番禺区大石
+2016-08-25 09:58:45,513 469   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class java.util.ArrayList
+2016-08-25 09:58:45,514 470   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) value instanceof java.util.ArrayList:true
+2016-08-25 09:58:45,514 470   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) false
+2016-08-25 09:58:45,514 470   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 09:58:45,514 470   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:gz
+2016-08-25 09:58:45,515 471   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57bd6cff6bfacaf00e3a5246
+2016-08-25 09:59:28,196 0     INFO  [org.mongodb.driver.cluster] (main:) Cluster created with settings {hosts=[192.168.126.129:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-25 09:59:28,202 6     INFO  [org.mongodb.driver.cluster] (main:) Adding discovered server 192.168.126.129:27017 to client view of cluster
+2016-08-25 09:59:28,277 81    DEBUG [org.mongodb.driver.cluster] (main:) Updating cluster description to  {type=UNKNOWN, servers=[{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]
+2016-08-25 09:59:28,286 90    INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) Connect to test database successfully
+2016-08-25 09:59:28,313 117   INFO  [org.mongodb.driver.cluster] (main:) No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2016-08-25 09:59:28,626 430   INFO  [org.mongodb.driver.connection] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Opened connection [connectionId{localValue:1, serverValue:135}] to 192.168.126.129:27017
+2016-08-25 09:59:28,628 432   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:59:28,631 435   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Monitor thread successfully connected to server with description ServerDescription{address=192.168.126.129:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=1607848}
+2016-08-25 09:59:28,633 437   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Discovered cluster type of STANDALONE
+2016-08-25 09:59:28,636 440   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.6 ms, state=CONNECTED}]
+2016-08-25 09:59:28,668 472   INFO  [org.mongodb.driver.connection] (main:) Opened connection [connectionId{localValue:2, serverValue:136}] to 192.168.126.129:27017
+2016-08-25 09:59:28,678 482   DEBUG [org.mongodb.driver.protocol.command] (main:) Sending command {find : BsonString{value='testBasicModel'}} to database test on connection [connectionId{localValue:2, serverValue:136}] to server 192.168.126.129:27017
+2016-08-25 09:59:28,690 494   DEBUG [org.mongodb.driver.protocol.command] (main:) Command execution completed
+2016-08-25 09:59:28,699 503   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5245" } }
+2016-08-25 09:59:28,700 504   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id]
+2016-08-25 09:59:28,701 505   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57bd6cff6bfacaf00e3a5245]
+2016-08-25 09:59:28,702 506   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:null
+2016-08-25 09:59:28,702 506   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 09:59:28,703 507   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 09:59:28,703 507   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:null
+2016-08-25 09:59:28,704 508   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57bd6cff6bfacaf00e3a5245
+2016-08-25 09:59:28,708 512   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5246" }, "name" : "aass", "address" : [{ "all" : "广东省广州市番禺区大石" }, { "pro" : "广东省" }], "phone" : [{ "mobile" : "123456782" }, { "fix" : "012354" }], "desc" : "the desc no need", "flags" : [{ "indexFlag" : "0" }, { "moveFlag" : "0" }], "areaCode" : "gz" }
+2016-08-25 09:59:28,708 512   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id, name, address, phone, desc, flags, areaCode]
+2016-08-25 09:59:28,709 513   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57bd6cff6bfacaf00e3a5246, aass, [Document{{all=广东省广州市番禺区大石}}, Document{{pro=广东省}}], [Document{{mobile=123456782}}, Document{{fix=012354}}], the desc no need, [Document{{indexFlag=0}}, Document{{moveFlag=0}}], gz]
+2016-08-25 09:59:28,709 513   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:aass
+2016-08-25 09:59:33,675 5479  INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class java.util.ArrayList
+2016-08-25 09:59:37,568 9372  INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) value instanceof java.util.ArrayList:true
+2016-08-25 09:59:38,121 9925  INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) false
+2016-08-25 09:59:38,638 10442 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:59:38,644 10448 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.8 ms, state=CONNECTED}]
+2016-08-25 09:59:48,646 20450 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:59:48,647 20451 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.7 ms, state=CONNECTED}]
+2016-08-25 09:59:58,648 30452 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 09:59:58,653 30457 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.8 ms, state=CONNECTED}]
+2016-08-25 10:00:08,655 40459 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 10:00:08,660 40464 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.0 ms, state=CONNECTED}]
+2016-08-25 10:00:18,663 50467 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 10:00:18,674 50478 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=3.2 ms, state=CONNECTED}]
+2016-08-25 10:00:21,757 53561 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:广东省广州市番禺区大石
+2016-08-25 10:00:28,675 60479 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 10:00:28,679 60483 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=3.1 ms, state=CONNECTED}]
+2016-08-25 10:00:38,681 70485 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 10:00:38,684 70488 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.7 ms, state=CONNECTED}]
+2016-08-25 10:00:48,687 80491 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 10:00:48,693 80497 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.7 ms, state=CONNECTED}]
+2016-08-25 10:00:52,997 84801 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class java.util.ArrayList
+2016-08-25 10:00:55,130 86934 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) value instanceof java.util.ArrayList:true
+2016-08-25 10:00:57,039 88843 INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) false
+2016-08-25 10:00:58,697 90501 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 10:00:58,699 90503 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.4 ms, state=CONNECTED}]
+2016-08-25 10:01:08,701 100505 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 10:01:08,705 100509 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.4 ms, state=CONNECTED}]
+2016-08-25 10:01:18,707 110511 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 10:01:18,711 110515 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.4 ms, state=CONNECTED}]
+2016-08-25 10:01:28,713 120517 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 10:01:28,719 120523 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.6 ms, state=CONNECTED}]
+2016-08-25 10:01:38,720 130524 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 10:01:38,724 130528 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.6 ms, state=CONNECTED}]
+2016-08-25 10:01:48,727 140531 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 10:01:48,735 140539 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=3.3 ms, state=CONNECTED}]
+2016-08-25 10:01:58,736 150540 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 10:01:58,740 150544 DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be510053fb21279c993506', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=3.1 ms, state=CONNECTED}]
+2016-08-25 10:03:47,441 0     INFO  [org.mongodb.driver.cluster] (main:) Cluster created with settings {hosts=[192.168.126.129:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-25 10:03:47,444 3     INFO  [org.mongodb.driver.cluster] (main:) Adding discovered server 192.168.126.129:27017 to client view of cluster
+2016-08-25 10:03:47,516 75    DEBUG [org.mongodb.driver.cluster] (main:) Updating cluster description to  {type=UNKNOWN, servers=[{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]
+2016-08-25 10:03:47,523 82    INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) Connect to test database successfully
+2016-08-25 10:03:47,544 103   INFO  [org.mongodb.driver.cluster] (main:) No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2016-08-25 10:03:47,814 373   INFO  [org.mongodb.driver.connection] (cluster-ClusterId{value='57be520353fb2137f8b7ba88', description='null'}-192.168.126.129:27017:) Opened connection [connectionId{localValue:1, serverValue:137}] to 192.168.126.129:27017
+2016-08-25 10:03:47,815 374   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be520353fb2137f8b7ba88', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 10:03:47,819 378   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be520353fb2137f8b7ba88', description='null'}-192.168.126.129:27017:) Monitor thread successfully connected to server with description ServerDescription{address=192.168.126.129:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=3013186}
+2016-08-25 10:03:47,820 379   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be520353fb2137f8b7ba88', description='null'}-192.168.126.129:27017:) Discovered cluster type of STANDALONE
+2016-08-25 10:03:47,822 381   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be520353fb2137f8b7ba88', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=3.0 ms, state=CONNECTED}]
+2016-08-25 10:03:47,854 413   INFO  [org.mongodb.driver.connection] (main:) Opened connection [connectionId{localValue:2, serverValue:138}] to 192.168.126.129:27017
+2016-08-25 10:03:47,863 422   DEBUG [org.mongodb.driver.protocol.command] (main:) Sending command {find : BsonString{value='testBasicModel'}} to database test on connection [connectionId{localValue:2, serverValue:138}] to server 192.168.126.129:27017
+2016-08-25 10:03:47,871 430   DEBUG [org.mongodb.driver.protocol.command] (main:) Command execution completed
+2016-08-25 10:03:47,880 439   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5245" } }
+2016-08-25 10:03:47,880 439   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id]
+2016-08-25 10:03:47,882 441   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57bd6cff6bfacaf00e3a5245]
+2016-08-25 10:03:47,882 441   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:null
+2016-08-25 10:03:47,882 441   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 10:03:47,883 442   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 10:03:47,883 442   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:null
+2016-08-25 10:03:47,883 442   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57bd6cff6bfacaf00e3a5245
+2016-08-25 10:03:47,886 445   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5246" }, "name" : "aass", "address" : [{ "all" : "广东省广州市番禺区大石" }, { "pro" : "广东省" }], "phone" : [{ "mobile" : "123456782" }, { "fix" : "012354" }], "desc" : "the desc no need", "flags" : [{ "indexFlag" : "0" }, { "moveFlag" : "0" }], "areaCode" : "gz" }
+2016-08-25 10:03:47,886 445   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id, name, address, phone, desc, flags, areaCode]
+2016-08-25 10:03:47,887 446   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57bd6cff6bfacaf00e3a5246, aass, [Document{{all=广东省广州市番禺区大石}}, Document{{pro=广东省}}], [Document{{mobile=123456782}}, Document{{fix=012354}}], the desc no need, [Document{{indexFlag=0}}, Document{{moveFlag=0}}], gz]
+2016-08-25 10:03:47,887 446   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:aass
+2016-08-25 10:03:47,888 447   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class java.util.ArrayList
+2016-08-25 10:03:47,888 447   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) value instanceof java.util.ArrayList:true
+2016-08-25 10:03:47,888 447   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) false
+2016-08-25 10:03:47,889 448   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 10:03:47,889 448   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class java.util.ArrayList
+2016-08-25 10:03:47,889 448   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) value instanceof java.util.ArrayList:true
+2016-08-25 10:03:47,890 449   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) false
+2016-08-25 10:03:47,890 449   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 10:03:47,890 449   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:gz
+2016-08-25 10:03:47,890 449   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57bd6cff6bfacaf00e3a5246
+2016-08-25 10:04:41,620 0     INFO  [org.mongodb.driver.cluster] (main:) Cluster created with settings {hosts=[192.168.126.129:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-25 10:04:41,622 2     INFO  [org.mongodb.driver.cluster] (main:) Adding discovered server 192.168.126.129:27017 to client view of cluster
+2016-08-25 10:04:41,707 87    DEBUG [org.mongodb.driver.cluster] (main:) Updating cluster description to  {type=UNKNOWN, servers=[{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]
+2016-08-25 10:04:41,719 99    INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) Connect to test database successfully
+2016-08-25 10:04:41,760 140   INFO  [org.mongodb.driver.cluster] (main:) No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2016-08-25 10:04:42,060 440   INFO  [org.mongodb.driver.connection] (cluster-ClusterId{value='57be523953fb213a98598f4b', description='null'}-192.168.126.129:27017:) Opened connection [connectionId{localValue:1, serverValue:139}] to 192.168.126.129:27017
+2016-08-25 10:04:42,062 442   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be523953fb213a98598f4b', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 10:04:42,065 445   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be523953fb213a98598f4b', description='null'}-192.168.126.129:27017:) Monitor thread successfully connected to server with description ServerDescription{address=192.168.126.129:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=1245461}
+2016-08-25 10:04:42,067 447   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be523953fb213a98598f4b', description='null'}-192.168.126.129:27017:) Discovered cluster type of STANDALONE
+2016-08-25 10:04:42,070 450   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be523953fb213a98598f4b', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.2 ms, state=CONNECTED}]
+2016-08-25 10:04:42,107 487   INFO  [org.mongodb.driver.connection] (main:) Opened connection [connectionId{localValue:2, serverValue:140}] to 192.168.126.129:27017
+2016-08-25 10:04:42,121 501   DEBUG [org.mongodb.driver.protocol.command] (main:) Sending command {find : BsonString{value='testBasicModel'}} to database test on connection [connectionId{localValue:2, serverValue:140}] to server 192.168.126.129:27017
+2016-08-25 10:04:42,132 512   DEBUG [org.mongodb.driver.protocol.command] (main:) Command execution completed
+2016-08-25 10:04:42,142 522   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5245" } }
+2016-08-25 10:04:42,142 522   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id]
+2016-08-25 10:04:42,144 524   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57bd6cff6bfacaf00e3a5245]
+2016-08-25 10:04:42,144 524   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:null
+2016-08-25 10:04:42,144 524   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 10:04:42,145 525   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 10:04:42,145 525   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:null
+2016-08-25 10:04:42,145 525   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57bd6cff6bfacaf00e3a5245
+2016-08-25 10:04:42,147 527   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57bd6cff6bfacaf00e3a5246" }, "name" : "aass", "address" : [{ "all" : "广东省广州市番禺区大石" }, { "pro" : "广东省" }], "phone" : [{ "mobile" : "123456782" }, { "fix" : "012354" }], "desc" : "the desc no need", "flags" : [{ "indexFlag" : "0" }, { "moveFlag" : "0" }], "areaCode" : "gz" }
+2016-08-25 10:04:42,148 528   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id, name, address, phone, desc, flags, areaCode]
+2016-08-25 10:04:42,148 528   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57bd6cff6bfacaf00e3a5246, aass, [Document{{all=广东省广州市番禺区大石}}, Document{{pro=广东省}}], [Document{{mobile=123456782}}, Document{{fix=012354}}], the desc no need, [Document{{indexFlag=0}}, Document{{moveFlag=0}}], gz]
+2016-08-25 10:04:42,148 528   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:aass
+2016-08-25 10:04:42,149 529   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class java.util.ArrayList
+2016-08-25 10:04:42,149 529   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) value instanceof java.util.ArrayList:true
+2016-08-25 10:04:42,149 529   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) false
+2016-08-25 10:04:42,150 530   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:广东省广州市番禺区大石
+2016-08-25 10:04:42,151 531   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class java.util.ArrayList
+2016-08-25 10:04:42,151 531   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) value instanceof java.util.ArrayList:true
+2016-08-25 10:04:42,152 532   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) false
+2016-08-25 10:04:42,152 532   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:012354
+2016-08-25 10:04:42,152 532   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:gz
+2016-08-25 10:04:42,153 533   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57bd6cff6bfacaf00e3a5246
+2016-08-25 10:13:58,069 0     INFO  [org.mongodb.driver.cluster] (main:) Cluster created with settings {hosts=[192.168.126.129:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-25 10:13:58,073 4     INFO  [org.mongodb.driver.cluster] (main:) Adding discovered server 192.168.126.129:27017 to client view of cluster
+2016-08-25 10:13:58,136 67    DEBUG [org.mongodb.driver.cluster] (main:) Updating cluster description to  {type=UNKNOWN, servers=[{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]
+2016-08-25 10:13:58,144 75    INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) Connect to test database successfully
+2016-08-25 10:13:58,185 116   INFO  [org.mongodb.driver.cluster] (main:) No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2016-08-25 10:13:58,444 375   INFO  [org.mongodb.driver.connection] (cluster-ClusterId{value='57be546653fb211a58aa42ae', description='null'}-192.168.126.129:27017:) Opened connection [connectionId{localValue:1, serverValue:151}] to 192.168.126.129:27017
+2016-08-25 10:13:58,445 376   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be546653fb211a58aa42ae', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 10:13:58,450 381   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be546653fb211a58aa42ae', description='null'}-192.168.126.129:27017:) Monitor thread successfully connected to server with description ServerDescription{address=192.168.126.129:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=1629955}
+2016-08-25 10:13:58,451 382   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be546653fb211a58aa42ae', description='null'}-192.168.126.129:27017:) Discovered cluster type of STANDALONE
+2016-08-25 10:13:58,452 383   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be546653fb211a58aa42ae', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.6 ms, state=CONNECTED}]
+2016-08-25 10:13:58,497 428   INFO  [org.mongodb.driver.connection] (main:) Opened connection [connectionId{localValue:2, serverValue:152}] to 192.168.126.129:27017
+2016-08-25 10:13:58,503 434   DEBUG [org.mongodb.driver.protocol.command] (main:) Sending command {create : BsonString{value='testBasicModel'}} to database test on connection [connectionId{localValue:2, serverValue:152}] to server 192.168.126.129:27017
+2016-08-25 10:14:14,703 0     INFO  [org.mongodb.driver.cluster] (main:) Cluster created with settings {hosts=[192.168.126.129:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-25 10:14:14,706 3     INFO  [org.mongodb.driver.cluster] (main:) Adding discovered server 192.168.126.129:27017 to client view of cluster
+2016-08-25 10:14:14,764 61    DEBUG [org.mongodb.driver.cluster] (main:) Updating cluster description to  {type=UNKNOWN, servers=[{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]
+2016-08-25 10:14:14,772 69    INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) Connect to test database successfully
+2016-08-25 10:14:14,797 94    INFO  [org.mongodb.driver.cluster] (main:) No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2016-08-25 10:14:15,090 387   INFO  [org.mongodb.driver.connection] (cluster-ClusterId{value='57be547653fb213df8361726', description='null'}-192.168.126.129:27017:) Opened connection [connectionId{localValue:1, serverValue:153}] to 192.168.126.129:27017
+2016-08-25 10:14:15,090 387   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be547653fb213df8361726', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 10:14:15,095 392   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be547653fb213df8361726', description='null'}-192.168.126.129:27017:) Monitor thread successfully connected to server with description ServerDescription{address=192.168.126.129:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=3836256}
+2016-08-25 10:14:15,097 394   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be547653fb213df8361726', description='null'}-192.168.126.129:27017:) Discovered cluster type of STANDALONE
+2016-08-25 10:14:15,098 395   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be547653fb213df8361726', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=3.8 ms, state=CONNECTED}]
+2016-08-25 10:14:15,139 436   INFO  [org.mongodb.driver.connection] (main:) Opened connection [connectionId{localValue:2, serverValue:154}] to 192.168.126.129:27017
+2016-08-25 10:14:15,148 445   DEBUG [org.mongodb.driver.protocol.command] (main:) Sending command {find : BsonString{value='testBasicModel'}} to database test on connection [connectionId{localValue:2, serverValue:154}] to server 192.168.126.129:27017
+2016-08-25 10:14:15,153 450   DEBUG [org.mongodb.driver.protocol.command] (main:) Command execution completed
+2016-08-25 10:14:15,158 455   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57be539aa5302cec2b068f69" } }
+2016-08-25 10:14:15,158 455   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id]
+2016-08-25 10:14:15,159 456   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57be539aa5302cec2b068f69]
+2016-08-25 10:14:15,159 456   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:null
+2016-08-25 10:14:15,159 456   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 10:14:15,160 457   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 10:14:15,160 457   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:null
+2016-08-25 10:14:15,160 457   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57be539aa5302cec2b068f69
+2016-08-25 10:14:15,160 457   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) knowMore.know2:null
+2016-08-25 10:14:15,163 460   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57be539aa5302cec2b068f6a" }, "name" : "aass", "address" : [{ "all" : "广东省广州市番禺区大石" }, { "pro" : "广东省" }], "phone" : [{ "mobile" : "123456782" }, { "fix" : "012354" }], "desc" : "the desc no need", "flags" : [{ "indexFlag" : "0" }, { "moveFlag" : "0" }], "areaCode" : "gz", "knowMore" : { "know1" : "more1", "know2" : "more2" } }
+2016-08-25 10:14:15,163 460   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id, name, address, phone, desc, flags, areaCode, knowMore]
+2016-08-25 10:14:15,163 460   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57be539aa5302cec2b068f6a, aass, [Document{{all=广东省广州市番禺区大石}}, Document{{pro=广东省}}], [Document{{mobile=123456782}}, Document{{fix=012354}}], the desc no need, [Document{{indexFlag=0}}, Document{{moveFlag=0}}], gz, Document{{know1=more1, know2=more2}}]
+2016-08-25 10:14:15,164 461   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:aass
+2016-08-25 10:14:15,164 461   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class java.util.ArrayList
+2016-08-25 10:14:15,165 462   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) value instanceof java.util.ArrayList:true
+2016-08-25 10:14:15,165 462   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) false
+2016-08-25 10:14:15,165 462   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:广东省广州市番禺区大石
+2016-08-25 10:14:15,165 462   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class java.util.ArrayList
+2016-08-25 10:14:15,166 463   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) value instanceof java.util.ArrayList:true
+2016-08-25 10:14:15,166 463   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) false
+2016-08-25 10:14:15,166 463   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:012354
+2016-08-25 10:14:15,167 464   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:gz
+2016-08-25 10:14:15,167 464   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57be539aa5302cec2b068f6a
+2016-08-25 10:14:15,167 464   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class org.bson.Document
+2016-08-25 10:14:15,168 465   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) value instanceof java.util.ArrayList:false
+2016-08-25 10:14:15,168 465   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) true
+2016-08-25 10:14:15,168 465   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class java.lang.String
+2016-08-25 10:14:15,168 465   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) value instanceof java.util.ArrayList:false
+2016-08-25 10:14:15,169 466   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) false
+2016-08-25 10:14:15,169 466   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) knowMore.know2:more2
+2016-08-25 10:14:50,401 0     INFO  [org.mongodb.driver.cluster] (main:) Cluster created with settings {hosts=[192.168.126.129:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-25 10:14:50,404 3     INFO  [org.mongodb.driver.cluster] (main:) Adding discovered server 192.168.126.129:27017 to client view of cluster
+2016-08-25 10:14:50,469 68    DEBUG [org.mongodb.driver.cluster] (main:) Updating cluster description to  {type=UNKNOWN, servers=[{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]
+2016-08-25 10:14:50,474 73    INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) Connect to test database successfully
+2016-08-25 10:14:50,499 98    INFO  [org.mongodb.driver.cluster] (main:) No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2016-08-25 10:14:50,776 375   INFO  [org.mongodb.driver.connection] (cluster-ClusterId{value='57be549a53fb211dbc09d2bb', description='null'}-192.168.126.129:27017:) Opened connection [connectionId{localValue:1, serverValue:155}] to 192.168.126.129:27017
+2016-08-25 10:14:50,777 376   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be549a53fb211dbc09d2bb', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 10:14:50,780 379   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be549a53fb211dbc09d2bb', description='null'}-192.168.126.129:27017:) Monitor thread successfully connected to server with description ServerDescription{address=192.168.126.129:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=2379205}
+2016-08-25 10:14:50,781 380   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be549a53fb211dbc09d2bb', description='null'}-192.168.126.129:27017:) Discovered cluster type of STANDALONE
+2016-08-25 10:14:50,783 382   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be549a53fb211dbc09d2bb', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.4 ms, state=CONNECTED}]
+2016-08-25 10:14:50,815 414   INFO  [org.mongodb.driver.connection] (main:) Opened connection [connectionId{localValue:2, serverValue:156}] to 192.168.126.129:27017
+2016-08-25 10:14:50,823 422   DEBUG [org.mongodb.driver.protocol.command] (main:) Sending command {find : BsonString{value='testBasicModel'}} to database test on connection [connectionId{localValue:2, serverValue:156}] to server 192.168.126.129:27017
+2016-08-25 10:14:50,831 430   DEBUG [org.mongodb.driver.protocol.command] (main:) Command execution completed
+2016-08-25 10:14:50,838 437   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57be539aa5302cec2b068f69" } }
+2016-08-25 10:14:50,838 437   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id]
+2016-08-25 10:14:50,840 439   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57be539aa5302cec2b068f69]
+2016-08-25 10:14:50,840 439   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:null
+2016-08-25 10:14:50,841 440   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 10:14:50,841 440   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 10:14:50,841 440   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:null
+2016-08-25 10:14:50,842 441   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57be539aa5302cec2b068f69
+2016-08-25 10:14:50,842 441   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) knowMore.know2:null
+2016-08-25 10:14:50,845 444   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57be539aa5302cec2b068f6a" }, "name" : "aass", "address" : [{ "all" : "广东省广州市番禺区大石" }, { "pro" : "广东省" }], "phone" : [{ "mobile" : "123456782" }, { "fix" : "012354" }], "desc" : "the desc no need", "flags" : [{ "indexFlag" : "0" }, { "moveFlag" : "0" }], "areaCode" : "gz", "knowMore" : { "know1" : "more1", "know2" : "more2" } }
+2016-08-25 10:14:50,846 445   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id, name, address, phone, desc, flags, areaCode, knowMore]
+2016-08-25 10:14:50,846 445   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57be539aa5302cec2b068f6a, aass, [Document{{all=广东省广州市番禺区大石}}, Document{{pro=广东省}}], [Document{{mobile=123456782}}, Document{{fix=012354}}], the desc no need, [Document{{indexFlag=0}}, Document{{moveFlag=0}}], gz, Document{{know1=more1, know2=more2}}]
+2016-08-25 10:14:50,846 445   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:aass
+2016-08-25 10:14:50,847 446   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class java.util.ArrayList
+2016-08-25 10:14:50,847 446   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) value instanceof java.util.ArrayList:true
+2016-08-25 10:14:50,847 446   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) false
+2016-08-25 10:14:50,847 446   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:广东省广州市番禺区大石
+2016-08-25 10:14:50,848 447   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class java.util.ArrayList
+2016-08-25 10:14:50,848 447   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) value instanceof java.util.ArrayList:true
+2016-08-25 10:14:50,848 447   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) false
+2016-08-25 10:14:50,849 448   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:012354
+2016-08-25 10:14:50,849 448   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:gz
+2016-08-25 10:14:50,849 448   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57be539aa5302cec2b068f6a
+2016-08-25 10:14:50,850 449   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class org.bson.Document
+2016-08-25 10:14:50,850 449   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) value instanceof java.util.ArrayList:false
+2016-08-25 10:14:50,850 449   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) true
+2016-08-25 10:14:50,850 449   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class java.lang.String
+2016-08-25 10:14:50,851 450   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) value instanceof java.util.ArrayList:false
+2016-08-25 10:14:50,851 450   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) false
+2016-08-25 10:14:50,851 450   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) knowMore.know2:more2
+2016-08-25 10:17:24,618 0     INFO  [org.mongodb.driver.cluster] (main:) Cluster created with settings {hosts=[192.168.126.129:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-25 10:17:24,621 3     INFO  [org.mongodb.driver.cluster] (main:) Adding discovered server 192.168.126.129:27017 to client view of cluster
+2016-08-25 10:17:24,691 73    DEBUG [org.mongodb.driver.cluster] (main:) Updating cluster description to  {type=UNKNOWN, servers=[{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]
+2016-08-25 10:17:24,698 80    INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) Connect to test database successfully
+2016-08-25 10:17:24,729 111   INFO  [org.mongodb.driver.cluster] (main:) No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2016-08-25 10:17:25,016 398   INFO  [org.mongodb.driver.connection] (cluster-ClusterId{value='57be553453fb2103e0a6ac22', description='null'}-192.168.126.129:27017:) Opened connection [connectionId{localValue:1, serverValue:157}] to 192.168.126.129:27017
+2016-08-25 10:17:25,016 398   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be553453fb2103e0a6ac22', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 10:17:25,019 401   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be553453fb2103e0a6ac22', description='null'}-192.168.126.129:27017:) Monitor thread successfully connected to server with description ServerDescription{address=192.168.126.129:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=2405260}
+2016-08-25 10:17:25,023 405   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be553453fb2103e0a6ac22', description='null'}-192.168.126.129:27017:) Discovered cluster type of STANDALONE
+2016-08-25 10:17:25,026 408   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be553453fb2103e0a6ac22', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.4 ms, state=CONNECTED}]
+2016-08-25 10:17:25,066 448   INFO  [org.mongodb.driver.connection] (main:) Opened connection [connectionId{localValue:2, serverValue:158}] to 192.168.126.129:27017
+2016-08-25 10:17:25,078 460   DEBUG [org.mongodb.driver.protocol.command] (main:) Sending command {find : BsonString{value='testBasicModel'}} to database test on connection [connectionId{localValue:2, serverValue:158}] to server 192.168.126.129:27017
+2016-08-25 10:17:25,087 469   DEBUG [org.mongodb.driver.protocol.command] (main:) Command execution completed
+2016-08-25 10:17:25,094 476   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57be539aa5302cec2b068f69" } }
+2016-08-25 10:17:25,094 476   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id]
+2016-08-25 10:17:25,096 478   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57be539aa5302cec2b068f69]
+2016-08-25 10:17:25,096 478   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:null
+2016-08-25 10:17:25,096 478   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 10:17:25,097 479   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 10:17:25,097 479   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:null
+2016-08-25 10:17:25,097 479   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57be539aa5302cec2b068f69
+2016-08-25 10:17:25,097 479   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) knowMore.know2:null
+2016-08-25 10:17:25,100 482   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57be539aa5302cec2b068f6a" }, "name" : "aass", "address" : [{ "all" : "广东省广州市番禺区大石" }, { "pro" : "广东省" }], "phone" : [{ "mobile" : "123456782" }, { "fix" : "012354" }], "desc" : "the desc no need", "flags" : [{ "indexFlag" : "0" }, { "moveFlag" : "0" }], "areaCode" : "gz", "knowMore" : { "know1" : "more1", "know2" : "more2" } }
+2016-08-25 10:17:25,101 483   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id, name, address, phone, desc, flags, areaCode, knowMore]
+2016-08-25 10:17:25,101 483   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57be539aa5302cec2b068f6a, aass, [Document{{all=广东省广州市番禺区大石}}, Document{{pro=广东省}}], [Document{{mobile=123456782}}, Document{{fix=012354}}], the desc no need, [Document{{indexFlag=0}}, Document{{moveFlag=0}}], gz, Document{{know1=more1, know2=more2}}]
+2016-08-25 10:17:25,102 484   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:aass
+2016-08-25 10:17:25,102 484   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class java.util.ArrayList
+2016-08-25 10:17:25,102 484   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) value instanceof java.util.ArrayList:true
+2016-08-25 10:17:25,103 485   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) false
+2016-08-25 10:17:25,104 486   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:广东省广州市番禺区大石
+2016-08-25 10:17:25,104 486   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class java.util.ArrayList
+2016-08-25 10:17:25,104 486   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) value instanceof java.util.ArrayList:true
+2016-08-25 10:17:25,105 487   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) false
+2016-08-25 10:17:25,105 487   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:012354
+2016-08-25 10:17:25,105 487   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:gz
+2016-08-25 10:17:25,106 488   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57be539aa5302cec2b068f6a
+2016-08-25 10:17:25,106 488   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class org.bson.Document
+2016-08-25 10:17:25,106 488   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) value instanceof java.util.ArrayList:false
+2016-08-25 10:17:25,108 490   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) true
+2016-08-25 10:17:25,108 490   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) class java.lang.String
+2016-08-25 10:17:25,109 491   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) value instanceof java.util.ArrayList:false
+2016-08-25 10:17:25,109 491   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) false
+2016-08-25 10:17:25,109 491   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) knowMore.know2:more2
+2016-08-25 10:20:05,411 0     INFO  [org.mongodb.driver.cluster] (main:) Cluster created with settings {hosts=[192.168.126.129:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-25 10:20:05,414 3     INFO  [org.mongodb.driver.cluster] (main:) Adding discovered server 192.168.126.129:27017 to client view of cluster
+2016-08-25 10:20:05,485 74    DEBUG [org.mongodb.driver.cluster] (main:) Updating cluster description to  {type=UNKNOWN, servers=[{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]
+2016-08-25 10:20:05,493 82    INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) Connect to test database successfully
+2016-08-25 10:20:05,515 104   INFO  [org.mongodb.driver.cluster] (main:) No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2016-08-25 10:20:05,781 370   INFO  [org.mongodb.driver.connection] (cluster-ClusterId{value='57be55d53a15ab1238bd20d4', description='null'}-192.168.126.129:27017:) Opened connection [connectionId{localValue:1, serverValue:159}] to 192.168.126.129:27017
+2016-08-25 10:20:05,781 370   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be55d53a15ab1238bd20d4', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 10:20:05,785 374   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be55d53a15ab1238bd20d4', description='null'}-192.168.126.129:27017:) Monitor thread successfully connected to server with description ServerDescription{address=192.168.126.129:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=2451841}
+2016-08-25 10:20:05,786 375   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be55d53a15ab1238bd20d4', description='null'}-192.168.126.129:27017:) Discovered cluster type of STANDALONE
+2016-08-25 10:20:05,788 377   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be55d53a15ab1238bd20d4', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.5 ms, state=CONNECTED}]
+2016-08-25 10:20:05,817 406   INFO  [org.mongodb.driver.connection] (main:) Opened connection [connectionId{localValue:2, serverValue:160}] to 192.168.126.129:27017
+2016-08-25 10:20:05,826 415   DEBUG [org.mongodb.driver.protocol.command] (main:) Sending command {find : BsonString{value='testBasicModel'}} to database test on connection [connectionId{localValue:2, serverValue:160}] to server 192.168.126.129:27017
+2016-08-25 10:20:05,836 425   DEBUG [org.mongodb.driver.protocol.command] (main:) Command execution completed
+2016-08-25 10:20:05,845 434   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57be539aa5302cec2b068f69" } }
+2016-08-25 10:20:05,846 435   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id]
+2016-08-25 10:20:05,848 437   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57be539aa5302cec2b068f69]
+2016-08-25 10:20:05,848 437   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:null
+2016-08-25 10:20:05,849 438   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 10:20:05,849 438   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 10:20:05,849 438   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:null
+2016-08-25 10:20:05,850 439   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57be539aa5302cec2b068f69
+2016-08-25 10:20:05,850 439   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) knowMore.know2:null
+2016-08-25 10:20:05,855 444   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57be539aa5302cec2b068f6a" }, "name" : "aass", "address" : [{ "all" : "广东省广州市番禺区大石" }, { "pro" : "广东省" }], "phone" : [{ "mobile" : "123456782" }, { "fix" : "012354" }], "desc" : "the desc no need", "flags" : [{ "indexFlag" : "0" }, { "moveFlag" : "0" }], "areaCode" : "gz", "knowMore" : { "know1" : "more1", "know2" : "more2" } }
+2016-08-25 10:20:05,856 445   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id, name, address, phone, desc, flags, areaCode, knowMore]
+2016-08-25 10:20:05,856 445   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57be539aa5302cec2b068f6a, aass, [Document{{all=广东省广州市番禺区大石}}, Document{{pro=广东省}}], [Document{{mobile=123456782}}, Document{{fix=012354}}], the desc no need, [Document{{indexFlag=0}}, Document{{moveFlag=0}}], gz, Document{{know1=more1, know2=more2}}]
+2016-08-25 10:20:05,857 446   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:aass
+2016-08-25 10:20:05,857 446   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address:[Document{{all=广东省广州市番禺区大石}}, Document{{pro=广东省}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:20:05,858 447   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:广东省广州市番禺区大石
+2016-08-25 10:20:05,858 447   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone:[Document{{mobile=123456782}}, Document{{fix=012354}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:20:05,858 447   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:012354
+2016-08-25 10:20:05,859 448   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:gz
+2016-08-25 10:20:05,859 448   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57be539aa5302cec2b068f6a
+2016-08-25 10:20:05,859 448   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) knowMore:Document{{know1=more1, know2=more2}}	class org.bson.Document	value instanceof java.util.ArrayList:false	true
+2016-08-25 10:20:05,860 449   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) know2:more2	class java.lang.String	value instanceof java.util.ArrayList:false	false
+2016-08-25 10:20:05,860 449   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) knowMore.know2:more2
+2016-08-25 10:29:45,563 0     INFO  [org.mongodb.driver.cluster] (main:) Cluster created with settings {hosts=[192.168.126.129:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-25 10:29:45,566 3     INFO  [org.mongodb.driver.cluster] (main:) Adding discovered server 192.168.126.129:27017 to client view of cluster
+2016-08-25 10:29:45,634 71    DEBUG [org.mongodb.driver.cluster] (main:) Updating cluster description to  {type=UNKNOWN, servers=[{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]
+2016-08-25 10:29:45,641 78    INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) Connect to test database successfully
+2016-08-25 10:29:45,659 96    INFO  [org.mongodb.driver.cluster] (main:) No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2016-08-25 10:29:45,935 372   INFO  [org.mongodb.driver.connection] (cluster-ClusterId{value='57be58193a15ab28ac2eeea4', description='null'}-192.168.126.129:27017:) Opened connection [connectionId{localValue:1, serverValue:167}] to 192.168.126.129:27017
+2016-08-25 10:29:45,937 374   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be58193a15ab28ac2eeea4', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 10:29:45,941 378   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be58193a15ab28ac2eeea4', description='null'}-192.168.126.129:27017:) Monitor thread successfully connected to server with description ServerDescription{address=192.168.126.129:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=1483500}
+2016-08-25 10:29:45,943 380   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be58193a15ab28ac2eeea4', description='null'}-192.168.126.129:27017:) Discovered cluster type of STANDALONE
+2016-08-25 10:29:45,945 382   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be58193a15ab28ac2eeea4', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.5 ms, state=CONNECTED}]
+2016-08-25 10:29:45,981 418   INFO  [org.mongodb.driver.connection] (main:) Opened connection [connectionId{localValue:2, serverValue:168}] to 192.168.126.129:27017
+2016-08-25 10:29:45,989 426   DEBUG [org.mongodb.driver.protocol.command] (main:) Sending command {find : BsonString{value='testBasicModel'}} to database test on connection [connectionId{localValue:2, serverValue:168}] to server 192.168.126.129:27017
+2016-08-25 10:29:45,999 436   DEBUG [org.mongodb.driver.protocol.command] (main:) Command execution completed
+2016-08-25 10:29:46,005 442   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57be57dba5302cec2b068f6d" } }
+2016-08-25 10:29:46,005 442   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id]
+2016-08-25 10:29:46,007 444   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57be57dba5302cec2b068f6d]
+2016-08-25 10:29:46,007 444   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:null
+2016-08-25 10:29:46,008 445   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 10:29:46,008 445   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 10:29:46,009 446   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:null
+2016-08-25 10:29:46,009 446   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57be57dba5302cec2b068f6d
+2016-08-25 10:29:46,009 446   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) knowMore.know2:null
+2016-08-25 10:29:46,009 446   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic.size.h:null
+2016-08-25 10:29:46,010 447   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic.title.t1:null
+2016-08-25 10:29:46,010 447   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic.title.h:null
+2016-08-25 10:29:46,013 450   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57be57dba5302cec2b068f6e" }, "name" : "aass", "address" : [{ "all" : "广东省广州市番禺区大石" }, { "pro" : "广东省" }], "phone" : [{ "mobile" : "123456782" }, { "fix" : "012354" }], "desc" : "the desc no need", "flags" : [{ "indexFlag" : "0" }, { "moveFlag" : "0" }], "areaCode" : "gz", "knowMore" : { "know1" : "more1", "know2" : "more2" }, "pic" : [{ "title" : [{ "t1" : "t1" }, { "t2" : "t2" }] }, { "size" : [{ "w" : "12" }, { "h" : "34" }] }] }
+2016-08-25 10:29:46,013 450   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id, name, address, phone, desc, flags, areaCode, knowMore, pic]
+2016-08-25 10:29:46,014 451   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57be57dba5302cec2b068f6e, aass, [Document{{all=广东省广州市番禺区大石}}, Document{{pro=广东省}}], [Document{{mobile=123456782}}, Document{{fix=012354}}], the desc no need, [Document{{indexFlag=0}}, Document{{moveFlag=0}}], gz, Document{{know1=more1, know2=more2}}, [Document{{title=[Document{{t1=t1}}, Document{{t2=t2}}]}}, Document{{size=[Document{{w=12}}, Document{{h=34}}]}}]]
+2016-08-25 10:29:46,014 451   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:aass
+2016-08-25 10:29:46,015 452   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address:[Document{{all=广东省广州市番禺区大石}}, Document{{pro=广东省}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:29:46,015 452   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:广东省广州市番禺区大石
+2016-08-25 10:29:46,015 452   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone:[Document{{mobile=123456782}}, Document{{fix=012354}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:29:46,016 453   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:012354
+2016-08-25 10:29:46,016 453   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:gz
+2016-08-25 10:29:46,016 453   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57be57dba5302cec2b068f6e
+2016-08-25 10:29:46,016 453   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) knowMore:Document{{know1=more1, know2=more2}}	class org.bson.Document	value instanceof java.util.ArrayList:false	true
+2016-08-25 10:29:46,017 454   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) know2:more2	class java.lang.String	value instanceof java.util.ArrayList:false	false
+2016-08-25 10:29:46,017 454   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) knowMore.know2:more2
+2016-08-25 10:29:46,017 454   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic:[Document{{title=[Document{{t1=t1}}, Document{{t2=t2}}]}}, Document{{size=[Document{{w=12}}, Document{{h=34}}]}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:29:46,018 455   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) size:[Document{{w=12}}, Document{{h=34}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:29:46,018 455   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic.size.h:34
+2016-08-25 10:29:46,018 455   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic:[Document{{title=[Document{{t1=t1}}, Document{{t2=t2}}]}}, Document{{size=[Document{{w=12}}, Document{{h=34}}]}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:29:46,019 456   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) title:[Document{{t1=t1}}, Document{{t2=t2}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:29:46,019 456   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic.title.t1:t1
+2016-08-25 10:29:46,019 456   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic:[Document{{title=[Document{{t1=t1}}, Document{{t2=t2}}]}}, Document{{size=[Document{{w=12}}, Document{{h=34}}]}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:29:46,019 456   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) title:[Document{{t1=t1}}, Document{{t2=t2}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:29:46,020 457   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic.title.h:null
+2016-08-25 10:33:54,664 0     INFO  [org.mongodb.driver.cluster] (main:) Cluster created with settings {hosts=[192.168.126.129:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-25 10:33:54,667 3     INFO  [org.mongodb.driver.cluster] (main:) Adding discovered server 192.168.126.129:27017 to client view of cluster
+2016-08-25 10:33:54,731 67    DEBUG [org.mongodb.driver.cluster] (main:) Updating cluster description to  {type=UNKNOWN, servers=[{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]
+2016-08-25 10:33:54,738 74    INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) Connect to test database successfully
+2016-08-25 10:33:54,779 115   INFO  [org.mongodb.driver.cluster] (main:) No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2016-08-25 10:33:55,081 417   INFO  [org.mongodb.driver.connection] (cluster-ClusterId{value='57be591253fb2118dc87f7fd', description='null'}-192.168.126.129:27017:) Opened connection [connectionId{localValue:1, serverValue:169}] to 192.168.126.129:27017
+2016-08-25 10:33:55,082 418   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be591253fb2118dc87f7fd', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 10:33:55,086 422   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be591253fb2118dc87f7fd', description='null'}-192.168.126.129:27017:) Monitor thread successfully connected to server with description ServerDescription{address=192.168.126.129:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=2482631}
+2016-08-25 10:33:55,087 423   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be591253fb2118dc87f7fd', description='null'}-192.168.126.129:27017:) Discovered cluster type of STANDALONE
+2016-08-25 10:33:55,089 425   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be591253fb2118dc87f7fd', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=2.5 ms, state=CONNECTED}]
+2016-08-25 10:33:55,126 462   INFO  [org.mongodb.driver.connection] (main:) Opened connection [connectionId{localValue:2, serverValue:170}] to 192.168.126.129:27017
+2016-08-25 10:33:55,137 473   DEBUG [org.mongodb.driver.protocol.command] (main:) Sending command {find : BsonString{value='testBasicModel'}} to database test on connection [connectionId{localValue:2, serverValue:170}] to server 192.168.126.129:27017
+2016-08-25 10:33:55,146 482   DEBUG [org.mongodb.driver.protocol.command] (main:) Command execution completed
+2016-08-25 10:33:55,155 491   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57be57dba5302cec2b068f6d" } }
+2016-08-25 10:33:55,155 491   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id]
+2016-08-25 10:33:55,156 492   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57be57dba5302cec2b068f6d]
+2016-08-25 10:33:55,157 493   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:null
+2016-08-25 10:33:55,157 493   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 10:33:55,157 493   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 10:33:55,158 494   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:null
+2016-08-25 10:33:55,158 494   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57be57dba5302cec2b068f6d
+2016-08-25 10:33:55,158 494   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) knowMore.know2:null
+2016-08-25 10:33:55,160 496   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic.size.h:null
+2016-08-25 10:33:55,161 497   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic.title.t1:null
+2016-08-25 10:33:55,161 497   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic.title.h:null
+2016-08-25 10:33:55,164 500   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57be57dba5302cec2b068f6e" }, "name" : "aass", "address" : [{ "all" : "广东省广州市番禺区大石" }, { "pro" : "广东省" }], "phone" : [{ "mobile" : "123456782" }, { "fix" : "012354" }], "desc" : "the desc no need", "flags" : [{ "indexFlag" : "0" }, { "moveFlag" : "0" }], "areaCode" : "gz", "knowMore" : { "know1" : "more1", "know2" : "more2" }, "pic" : [{ "title" : [{ "t1" : "t1" }, { "t2" : "t2" }] }, { "size" : [{ "w" : "12" }, { "h" : "34" }] }] }
+2016-08-25 10:33:55,165 501   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id, name, address, phone, desc, flags, areaCode, knowMore, pic]
+2016-08-25 10:33:55,165 501   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57be57dba5302cec2b068f6e, aass, [Document{{all=广东省广州市番禺区大石}}, Document{{pro=广东省}}], [Document{{mobile=123456782}}, Document{{fix=012354}}], the desc no need, [Document{{indexFlag=0}}, Document{{moveFlag=0}}], gz, Document{{know1=more1, know2=more2}}, [Document{{title=[Document{{t1=t1}}, Document{{t2=t2}}]}}, Document{{size=[Document{{w=12}}, Document{{h=34}}]}}]]
+2016-08-25 10:33:55,165 501   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:aass
+2016-08-25 10:33:55,166 502   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address:[Document{{all=广东省广州市番禺区大石}}, Document{{pro=广东省}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:33:55,167 503   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:广东省广州市番禺区大石
+2016-08-25 10:33:55,167 503   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone:[Document{{mobile=123456782}}, Document{{fix=012354}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:33:55,168 504   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:012354
+2016-08-25 10:33:55,168 504   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:gz
+2016-08-25 10:33:55,169 505   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57be57dba5302cec2b068f6e
+2016-08-25 10:33:55,169 505   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) knowMore:Document{{know1=more1, know2=more2}}	class org.bson.Document	value instanceof java.util.ArrayList:false	true
+2016-08-25 10:33:55,169 505   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) know2:more2	class java.lang.String	value instanceof java.util.ArrayList:false	false
+2016-08-25 10:33:55,170 506   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) knowMore.know2:more2
+2016-08-25 10:33:55,170 506   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic:[Document{{title=[Document{{t1=t1}}, Document{{t2=t2}}]}}, Document{{size=[Document{{w=12}}, Document{{h=34}}]}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:33:55,171 507   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) size:[Document{{w=12}}, Document{{h=34}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:33:55,171 507   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic.size.h:34
+2016-08-25 10:33:55,171 507   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic:[Document{{title=[Document{{t1=t1}}, Document{{t2=t2}}]}}, Document{{size=[Document{{w=12}}, Document{{h=34}}]}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:33:55,172 508   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) title:[Document{{t1=t1}}, Document{{t2=t2}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:33:55,172 508   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic.title.t1:t1
+2016-08-25 10:33:55,172 508   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic:[Document{{title=[Document{{t1=t1}}, Document{{t2=t2}}]}}, Document{{size=[Document{{w=12}}, Document{{h=34}}]}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:33:55,173 509   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) title:[Document{{t1=t1}}, Document{{t2=t2}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:33:55,173 509   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic.title.h:null
+2016-08-25 10:34:59,142 0     INFO  [org.mongodb.driver.cluster] (main:) Cluster created with settings {hosts=[192.168.126.129:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2016-08-25 10:34:59,144 2     INFO  [org.mongodb.driver.cluster] (main:) Adding discovered server 192.168.126.129:27017 to client view of cluster
+2016-08-25 10:34:59,206 64    DEBUG [org.mongodb.driver.cluster] (main:) Updating cluster description to  {type=UNKNOWN, servers=[{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]
+2016-08-25 10:34:59,214 72    INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) Connect to test database successfully
+2016-08-25 10:34:59,267 125   INFO  [org.mongodb.driver.cluster] (main:) No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=192.168.126.129:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2016-08-25 10:34:59,642 500   INFO  [org.mongodb.driver.connection] (cluster-ClusterId{value='57be595353fb210460b0c97f', description='null'}-192.168.126.129:27017:) Opened connection [connectionId{localValue:1, serverValue:171}] to 192.168.126.129:27017
+2016-08-25 10:34:59,645 503   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be595353fb210460b0c97f', description='null'}-192.168.126.129:27017:) Checking status of 192.168.126.129:27017
+2016-08-25 10:34:59,650 508   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be595353fb210460b0c97f', description='null'}-192.168.126.129:27017:) Monitor thread successfully connected to server with description ServerDescription{address=192.168.126.129:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=1329149}
+2016-08-25 10:34:59,651 509   INFO  [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be595353fb210460b0c97f', description='null'}-192.168.126.129:27017:) Discovered cluster type of STANDALONE
+2016-08-25 10:34:59,653 511   DEBUG [org.mongodb.driver.cluster] (cluster-ClusterId{value='57be595353fb210460b0c97f', description='null'}-192.168.126.129:27017:) Updating cluster description to  {type=STANDALONE, servers=[{address=192.168.126.129:27017, type=STANDALONE, roundTripTime=1.3 ms, state=CONNECTED}]
+2016-08-25 10:34:59,690 548   INFO  [org.mongodb.driver.connection] (main:) Opened connection [connectionId{localValue:2, serverValue:172}] to 192.168.126.129:27017
+2016-08-25 10:34:59,703 561   DEBUG [org.mongodb.driver.protocol.command] (main:) Sending command {find : BsonString{value='testBasicModel'}} to database test on connection [connectionId{localValue:2, serverValue:172}] to server 192.168.126.129:27017
+2016-08-25 10:34:59,716 574   DEBUG [org.mongodb.driver.protocol.command] (main:) Command execution completed
+2016-08-25 10:34:59,722 580   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57be57dba5302cec2b068f6d" } }
+2016-08-25 10:34:59,723 581   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id]
+2016-08-25 10:34:59,724 582   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57be57dba5302cec2b068f6d]
+2016-08-25 10:34:59,724 582   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:null
+2016-08-25 10:34:59,724 582   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:null
+2016-08-25 10:34:59,725 583   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:null
+2016-08-25 10:34:59,725 583   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:null
+2016-08-25 10:34:59,725 583   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57be57dba5302cec2b068f6d
+2016-08-25 10:34:59,725 583   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) knowMore.know2:null
+2016-08-25 10:34:59,726 584   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic.size.h:null
+2016-08-25 10:34:59,726 584   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic.title.t1:null
+2016-08-25 10:34:59,726 584   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic.title.h:null
+2016-08-25 10:34:59,732 590   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) { "_id" : { "$oid" : "57be57dba5302cec2b068f6e" }, "name" : "aass", "address" : [{ "all" : "广东省广州市番禺区大石" }, { "pro" : "广东省" }], "phone" : [{ "mobile" : "123456782" }, { "fix" : "012354" }], "desc" : "the desc no need", "flags" : [{ "indexFlag" : "0" }, { "moveFlag" : "0" }], "areaCode" : "gz", "knowMore" : { "know1" : "more1", "know2" : "more2" }, "pic" : [{ "title" : [{ "t1" : "t1" }, { "t2" : "t2" }] }, { "size" : [{ "w" : "12" }, { "h" : "34" }] }] }
+2016-08-25 10:34:59,733 591   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [_id, name, address, phone, desc, flags, areaCode, knowMore, pic]
+2016-08-25 10:34:59,733 591   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) [57be57dba5302cec2b068f6e, aass, [Document{{all=广东省广州市番禺区大石}}, Document{{pro=广东省}}], [Document{{mobile=123456782}}, Document{{fix=012354}}], the desc no need, [Document{{indexFlag=0}}, Document{{moveFlag=0}}], gz, Document{{know1=more1, know2=more2}}, [Document{{title=[Document{{t1=t1}}, Document{{t2=t2}}]}}, Document{{size=[Document{{w=12}}, Document{{h=34}}]}}]]
+2016-08-25 10:34:59,735 593   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) name:aass
+2016-08-25 10:34:59,736 594   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address:[Document{{all=广东省广州市番禺区大石}}, Document{{pro=广东省}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:34:59,738 596   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) address.all:广东省广州市番禺区大石
+2016-08-25 10:34:59,738 596   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone:[Document{{mobile=123456782}}, Document{{fix=012354}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:34:59,739 597   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) phone.fix:012354
+2016-08-25 10:34:59,739 597   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) areaCode:gz
+2016-08-25 10:34:59,741 599   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) _id:57be57dba5302cec2b068f6e
+2016-08-25 10:34:59,741 599   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) knowMore:Document{{know1=more1, know2=more2}}	class org.bson.Document	value instanceof java.util.ArrayList:false	true
+2016-08-25 10:34:59,742 600   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) know2:more2	class java.lang.String	value instanceof java.util.ArrayList:false	false
+2016-08-25 10:34:59,743 601   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) knowMore.know2:more2
+2016-08-25 10:34:59,744 602   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic:[Document{{title=[Document{{t1=t1}}, Document{{t2=t2}}]}}, Document{{size=[Document{{w=12}}, Document{{h=34}}]}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:34:59,744 602   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) size:[Document{{w=12}}, Document{{h=34}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:34:59,745 603   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic.size.h:34
+2016-08-25 10:34:59,746 604   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic:[Document{{title=[Document{{t1=t1}}, Document{{t2=t2}}]}}, Document{{size=[Document{{w=12}}, Document{{h=34}}]}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:34:59,747 605   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) title:[Document{{t1=t1}}, Document{{t2=t2}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:34:59,747 605   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic.title.t1:t1
+2016-08-25 10:34:59,748 606   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic:[Document{{title=[Document{{t1=t1}}, Document{{t2=t2}}]}}, Document{{size=[Document{{w=12}}, Document{{h=34}}]}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:34:59,748 606   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) title:[Document{{t1=t1}}, Document{{t2=t2}}]	class java.util.ArrayList	value instanceof java.util.ArrayList:true	false
+2016-08-25 10:34:59,748 606   INFO  [mycodelearn.undergrowth.mongodb.MongoDbLearn] (main:) pic.title.h:null

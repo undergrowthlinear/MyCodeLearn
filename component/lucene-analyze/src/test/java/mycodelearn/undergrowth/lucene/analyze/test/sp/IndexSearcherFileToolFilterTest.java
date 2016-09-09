@@ -100,10 +100,10 @@ public class IndexSearcherFileToolFilterTest {
 			QueryParser parser = new QueryParser(Version.LUCENE_35, "content", indexSearcher.getAnalyzer());
 			Query query = parser.parse("Apache");
 			List<String> accessList=new ArrayList<>();
-			accessList.addAll(Arrays.asList("33","272"));
+			accessList.addAll(Arrays.asList("172","555"));
 			FilterAccessor filterAccessor=new FilterAccessorImpl(accessList,"id");
-			//filterAccessor.set();
-			filterAccessor.clear();
+			filterAccessor.set();
+			//filterAccessor.clear();
 			Filter filter=new MyIdFilter(filterAccessor);
 			indexSearcher.search(indexPath, query, 500, filter);;
 		} catch (ParseException e) {

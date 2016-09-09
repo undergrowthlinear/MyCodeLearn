@@ -69,7 +69,7 @@ public class MmsegAnalyzerDemo {
 		String fieldName = "text";
 		String indexPath="D:\\lucene\\51ctoLucene35\\mmsegAnalyzerDemo\\index";
 		 //检索内容
-		String text = "mmsegAnalyzerDemo是一个结合词典分词和文法分词的中文分词开源工具包。它使用了全新的正向迭代最细粒度切分算法。";
+		String text = "设置障碍电信规划设计院";
 		
 		//实例化IKAnalyzer分词器
 		Analyzer analyzer = new MMSegAnalyzer();
