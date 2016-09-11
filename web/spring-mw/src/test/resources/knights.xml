@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+               http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
+			   http://www.springframework.org/schema/context
+			   http://www.springframework.org/schema/context/spring-context-4.0.xsd 
+               http://www.springframework.org/schema/tx
+               http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+               http://www.springframework.org/schema/aop
+               http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+			   http://www.springframework.org/schema/util 
+			   http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+	<bean id="knight"
+		class="mylearncode.undergrowth.spring.mw.springinaction.springcore.BraveKnight">
+		<constructor-arg ref="quest"></constructor-arg>
+	</bean>
+
+	<bean id="quest"
+		class="mylearncode.undergrowth.spring.mw.springinaction.springcore.SlayDragonQuest"></bean>
+
+	<bean id="minstrel"
+		class="mylearncode.undergrowth.spring.mw.springinaction.springcore.Minstrel"></bean>
+
+	<aop:config>
+		<aop:aspect ref="minstrel">
+			<aop:pointcut expression="execution(* *.embarkOnQuest(..))"
+				id="embark" />
+			<aop:before method="singBeforeQuest" pointcut-ref="embark" />
+			<aop:after method="singAfterQuest" pointcut-ref="embark" />
+		</aop:aspect>
+	</aop:config>
+
+</beans>

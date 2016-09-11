@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+               http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
+			   http://www.springframework.org/schema/context
+			   http://www.springframework.org/schema/context/spring-context-4.0.xsd 
+               http://www.springframework.org/schema/tx
+               http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+               http://www.springframework.org/schema/aop
+               http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+			   http://www.springframework.org/schema/util 
+			   http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+	<bean id="injectObjectParam"
+		class="mylearncode.undergrowth.spring.mw.springinaction.springcore.InjectObjectParam">
+		<constructor-arg index="0" value="广东省广州市">
+		</constructor-arg>
+		<constructor-arg index="1" value="20.8"></constructor-arg>
+	</bean>
+
+	<bean id="injectObject"
+		class="mylearncode.undergrowth.spring.mw.springinaction.springcore.InjectObject">
+		<property name="name" value="undergrowth"></property>
+		<property name="age" value="15"></property>
+		<property name="right" value="true"></property>
+		<property name="param" ref="injectObjectParam"></property>
+		<property name="list">
+			<list>
+				<value>测试List1</value>
+				<value>测试List1</value>
+				<value>测试List2</value>
+				<value>测试List3</value>
+			</list>
+		</property>
+		<property name="set">
+			<set>
+				<value>测试List1</value>
+				<value>测试List1</value>
+				<value>测试List2</value>
+				<value>测试List3</value>
+			</set>
+		</property>
+		<property name="map">
+			<map>
+				<entry key="param1" value-ref="injectObjectParam"></entry>
+				<entry key="param2" value-ref="injectObjectParam"></entry>
+			</map>
+		</property>
+		<property name="properties">
+			<props>
+				<prop key="pro1">pro1</prop>
+				<prop key="pro2">
+					pro2
+				</prop>
+			</props>
+		</property>
+	</bean>
+
+
+
+</beans>
