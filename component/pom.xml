@@ -32,6 +32,7 @@
     <module>jetty-mw</module>
     <module>jetty-web-mw</module>
     <module>redis-spring</module>
+    <module>bteevolutionprovider</module>
   </modules>
 	<build>
 		<plugins>

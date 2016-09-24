@@ -22,6 +22,8 @@
 		<property name="name" value="undergrowth"></property>
 	</bean>
 
+	<bean
+		class="mylearncode.undergrowth.spring.mw.listener.SpringApplicationListener"></bean>
 
 	<!-- <bean id="checkBeanPostProcessorData" class="mylearncode.undergrowth.spring.mw.springinaction.springcore.CheckBeanPostProcessorData"> 
 		<property name="name" value="undergrowth"></property> </bean> -->

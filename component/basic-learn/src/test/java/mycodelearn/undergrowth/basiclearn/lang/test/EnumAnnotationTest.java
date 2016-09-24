@@ -134,6 +134,7 @@ public class EnumAnnotationTest {
 	@Retention(RetentionPolicy.RUNTIME)
 	@Target(ElementType.METHOD)
 	private @interface TestSome {
+		String values() default "";
 	}
 
 	@Test
@@ -168,7 +169,7 @@ public class EnumAnnotationTest {
 	}
 
 	public static class AnnotationTest {
-		@TestSome
+		@TestSome()
 		public static void hello() {
 			System.out.println(AnnotationTest.class.getName() + "\t hello world annotation");
 		}

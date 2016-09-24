@@ -12,6 +12,7 @@
 	<modules>
 		<module>web-learn</module>
     <module>spring-mw</module>
+    <module>bteevollutionconsumer</module>
   </modules>
 	<build>
 		<plugins>

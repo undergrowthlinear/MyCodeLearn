@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mycodelearn.undergrowth.bteevolutionprovidersqlmapper.mapper.UnderTestMapper">
+  <resultMap id="BaseResultMap" type="mycodelearn.undergrowth.bteevolutionprovidersqlmapper.model.UnderTest">
+    <id column="ID" jdbcType="DECIMAL" property="id" />
+    <result column="UNAME" jdbcType="VARCHAR" property="uname" />
+    <result column="USEX" jdbcType="VARCHAR" property="usex" />
+    <result column="UAGE" jdbcType="DECIMAL" property="uage" />
+    <result column="UBIRTHDAY" jdbcType="TIMESTAMP" property="ubirthday" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    ID, UNAME, USEX, UAGE, UBIRTHDAY
+  </sql>
+  <select id="selectByExample" parameterType="mycodelearn.undergrowth.bteevolutionprovidersqlmapper.model.UnderTestExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from UNDER_TEST
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.math.BigDecimal" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from UNDER_TEST
+    where ID = #{id,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.math.BigDecimal">
+    delete from UNDER_TEST
+    where ID = #{id,jdbcType=DECIMAL}
+  </delete>
+  <delete id="deleteByExample" parameterType="mycodelearn.undergrowth.bteevolutionprovidersqlmapper.model.UnderTestExample">
+    delete from UNDER_TEST
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="mycodelearn.undergrowth.bteevolutionprovidersqlmapper.model.UnderTest">
+    insert into UNDER_TEST (ID, UNAME, USEX, 
+      UAGE, UBIRTHDAY)
+    values (#{id,jdbcType=DECIMAL}, #{uname,jdbcType=VARCHAR}, #{usex,jdbcType=VARCHAR}, 
+      #{uage,jdbcType=DECIMAL}, #{ubirthday,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="mycodelearn.undergrowth.bteevolutionprovidersqlmapper.model.UnderTest">
+    insert into UNDER_TEST
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="uname != null">
+        UNAME,
+      </if>
+      <if test="usex != null">
+        USEX,
+      </if>
+      <if test="uage != null">
+        UAGE,
+      </if>
+      <if test="ubirthday != null">
+        UBIRTHDAY,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=DECIMAL},
+      </if>
+      <if test="uname != null">
+        #{uname,jdbcType=VARCHAR},
+      </if>
+      <if test="usex != null">
+        #{usex,jdbcType=VARCHAR},
+      </if>
+      <if test="uage != null">
+        #{uage,jdbcType=DECIMAL},
+      </if>
+      <if test="ubirthday != null">
+        #{ubirthday,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="mycodelearn.undergrowth.bteevolutionprovidersqlmapper.model.UnderTestExample" resultType="java.lang.Integer">
+    select count(*) from UNDER_TEST
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update UNDER_TEST
+    <set>
+      <if test="record.id != null">
+        ID = #{record.id,jdbcType=DECIMAL},
+      </if>
+      <if test="record.uname != null">
+        UNAME = #{record.uname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.usex != null">
+        USEX = #{record.usex,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uage != null">
+        UAGE = #{record.uage,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ubirthday != null">
+        UBIRTHDAY = #{record.ubirthday,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update UNDER_TEST
+    set ID = #{record.id,jdbcType=DECIMAL},
+      UNAME = #{record.uname,jdbcType=VARCHAR},
+      USEX = #{record.usex,jdbcType=VARCHAR},
+      UAGE = #{record.uage,jdbcType=DECIMAL},
+      UBIRTHDAY = #{record.ubirthday,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="mycodelearn.undergrowth.bteevolutionprovidersqlmapper.model.UnderTest">
+    update UNDER_TEST
+    <set>
+      <if test="uname != null">
+        UNAME = #{uname,jdbcType=VARCHAR},
+      </if>
+      <if test="usex != null">
+        USEX = #{usex,jdbcType=VARCHAR},
+      </if>
+      <if test="uage != null">
+        UAGE = #{uage,jdbcType=DECIMAL},
+      </if>
+      <if test="ubirthday != null">
+        UBIRTHDAY = #{ubirthday,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="mycodelearn.undergrowth.bteevolutionprovidersqlmapper.model.UnderTest">
+    update UNDER_TEST
+    set UNAME = #{uname,jdbcType=VARCHAR},
+      USEX = #{usex,jdbcType=VARCHAR},
+      UAGE = #{uage,jdbcType=DECIMAL},
+      UBIRTHDAY = #{ubirthday,jdbcType=TIMESTAMP}
+    where ID = #{id,jdbcType=DECIMAL}
+  </update>
+</mapper>

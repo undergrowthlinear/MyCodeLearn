@@ -20,5 +20,10 @@
 			<artifactId>kryo</artifactId>
 			<version>4.0.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient-win</artifactId>
+			<version>4.4-beta2-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 </project>

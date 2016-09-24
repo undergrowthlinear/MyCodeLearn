@@ -16,7 +16,6 @@ import com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistryFactory;
 
 public class Provider2Test {
 
-	private static String provideString = "dubbo://172.16.28.84:20880/mycodelearn.undergrowth.dubbo.test.DemoService?anyhost=true&application=hello-world-app&dubbo=2.5.3&dynamic=true&group=test&interface=mycodelearn.undergrowth.dubbo.test.DemoService&methods=sayHello&pid=26148&retries=5&revision=1.0&side=provider&timestamp=1473057679833&version=1.0";
 
 	public static void main(String[] args) throws Exception {
 		final ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(

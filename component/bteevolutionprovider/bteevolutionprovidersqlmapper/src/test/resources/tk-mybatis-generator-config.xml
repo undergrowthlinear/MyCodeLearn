@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+	<properties resource="app.properties" />
+
+	<!-- Class Driver Path -->
+	<classPathEntry location="${driver.path}" />
+
+	<context id="context" targetRuntime="MyBatis3">
+		<plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+			<property name="mappers" value="tk.mybatis.mapper.common.Mapper" />
+			<!-- caseSensitive默认false，当数据库表名区分大小写时，可以将该属性设置为true -->
+			<property name="caseSensitive" value="true" />
+		</plugin>
+
+		<jdbcConnection driverClass="${jdbc.driver}"
+			connectionURL="${jdbc.url}" userId="${jdbc.username}" password="${jdbc.password}" />
+
+		<!-- java类型解析器 可选配置 -->
+		<!-- <javaTypeResolver type=""> type属性： 这可用于指定一个用户提供的Java类型解析器。这个类必须实现接口org.mybatis.generator.api。 
+			JavaTypeResolver,必须有一个公共的默认构造函数。属性还可以接受特殊的值默认在这种情况下,将使用默认的实现(这同样的效果不指定类型)。 
+			该标签支持的属性： forceBigDecimals：默认是false 是否强制使用BigDecimal来表示所有的十进制和数值字段。 •如果规模很大，长度大于18,将使用BigDecimal类型。 
+			•如果其长度为10到18,则Java类型解析器将java.lang.Long来代替了。 •如果长度为5到9,然后Java类型解析器将替换为一个Java.lang.integer。 
+			•如果其长度小于5,则Java类型解析器将以java.lang.Short替代。 -->
+		<javaTypeResolver>
+			<!-- This property is used to specify whether MyBatis Generator should 
+				force the use of java.math.BigDecimal for DECIMAL and NUMERIC fields, rather 
+				than substituting integral types when possible -->
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="${java.targetPackage}"
+			targetProject="${targetProject}">
+			<!-- This property is used to select whether MyBatis Generator will generate 
+				different Java packages for the objects based on the catalog and schema of 
+				the introspected table -->
+			<property name="enableSubPackages" value="true" />
+			<!-- This property is used to select whether MyBatis Generator adds code 
+				to trim the white space from character fields returned from the database -->
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="${sql.targetPackage}"
+			targetProject="${targetProject}">
+			<!-- This property is used to select whether MyBatis Generator will generate 
+				different Java packages for the objects based on the catalog and schema of 
+				the introspected table -->
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator targetPackage="${sql.targetPackage}"
+			targetProject="${targetProject}" type="XMLMAPPER">
+			<!-- This property is used to select whether MyBatis Generator will generate 
+				different Java packages for the objects based on the catalog and schema of 
+				the introspected table -->
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<!-- <table tableName="city" enableCountByExample="true" enableDeleteByExample="true" 
+			enableSelectByExample="true" enableUpdateByExample="true"/> -->
+		<!-- <table tableName="news_center" enableCountByExample="true" enableDeleteByExample="true" 
+			enableSelectByExample="true" enableUpdateByExample="true"/> -->
+		<table tableName="under_test" enableCountByExample="true"
+			enableDeleteByExample="true" enableSelectByExample="true"
+			enableUpdateByExample="true" />
+		<!-- <table tableName="log_login" enableCountByExample="true" enableDeleteByExample="true" 
+			enableSelectByExample="true" enableUpdateByExample="true"/> <table tableName="log_operation" 
+			enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true" 
+			enableUpdateByExample="true"/> -->
+	</context>
+</generatorConfiguration>

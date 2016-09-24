@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<context id="Mysql" targetRuntime="MyBatis3Simple"
+		defaultModelType="flat">
+
+		<plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+			<property name="mappers" value="tk.mybatis.mapper.common.Mapper" />
+			<!-- caseSensitive默认false，当数据库表名区分大小写时，可以将该属性设置为true -->
+			<property name="caseSensitive" value="true" />
+		</plugin>
+
+		<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
+			connectionURL="jdbc:oracle:thin:@//localhost:1521/orcl" userId="u1"
+			password="u1">
+		</jdbcConnection>
+
+		<javaModelGenerator
+			targetPackage="mycodelearn.undergrowth.bteevolutionprovidersqlmapper.tk.model"
+			targetProject="F:\\code\\MyCodeLearn\\MyCodeLearn\\component\\bteevolutionprovider\\bteevolutionprovidersqlmapper\\src\\test\\resources" />
+
+		<sqlMapGenerator
+			targetPackage="mycodelearn.undergrowth.bteevolutionprovidersqlmapper.tk.mapper"
+			targetProject="F:\\code\\MyCodeLearn\\MyCodeLearn\\component\\bteevolutionprovider\\bteevolutionprovidersqlmapper\\src\\test\\resources" />
+
+		<javaClientGenerator
+			targetPackage="mycodelearn.undergrowth.bteevolutionprovidersqlmapper.tk.mapper"
+			targetProject="F:\\code\\MyCodeLearn\\MyCodeLearn\\component\\bteevolutionprovider\\bteevolutionprovidersqlmapper\\src\\test\\resources"
+			type="XMLMAPPER" />
+
+		<table tableName="under_test">
+		</table>
+	</context>
+</generatorConfiguration>

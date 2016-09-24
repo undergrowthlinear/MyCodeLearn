@@ -21,6 +21,7 @@
 	<!--spring component scan -->
 	<context:component-scan base-package="mycodelearn" />
 
+   <context:property-placeholder location="classpath:dubbo.properties"/>
     
 	
 

@@ -9,19 +9,26 @@ import com.alibaba.dubbo.common.URL;
 import com.alibaba.dubbo.config.RegistryConfig;
 import com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry;
 import com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistryFactory;
+import com.thoughtworks.xstream.alias.ClassMapper.Null;
 
 public class Provider1Test {
-
-	private static String provideString = "dubbo://172.16.28.84:20880/mycodelearn.undergrowth.dubbo.test.DemoService?anyhost=true&application=hello-world-app&dubbo=2.5.3&dynamic=true&group=test&interface=mycodelearn.undergrowth.dubbo.test.DemoService&methods=sayHello&pid=26148&retries=5&revision=1.0&side=provider&timestamp=1473057679833&version=1.0";
 
 	public static void main(String[] args) throws Exception {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[] { "provider1.xml" });
 		context.start();
 		RegistryConfig registryConfig = (RegistryConfig) context.getBean("zKRegistry");
-		ZookeeperRegistry zoo = (ZookeeperRegistry) new ZookeeperRegistryFactory()
-				.getRegistry(URL.valueOf(registryConfig.getAddress()));
+		ZookeeperRegistry zoo = null;
+		//获取地址列表
+		String[] addressList = registryConfig.getAddress().split(",");
+		for (String address : addressList) { //获取容器中的注册器
+			zoo = (ZookeeperRegistry) new ZookeeperRegistryFactory()
+					.getRegistry(URL.valueOf(registryConfig.getProtocol() + "://" + address));
+			if (zoo != null) {
+				break;
+			}
+		}
 		Set<URL> regsNum = zoo.getRegistered();
-		Set<URL> regsNums=new HashSet<>();
+		Set<URL> regsNums = new HashSet<>();
 		for (URL url : regsNum) {
 			regsNums.add(url);
 		}
