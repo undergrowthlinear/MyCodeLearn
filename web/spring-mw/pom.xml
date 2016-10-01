@@ -15,6 +15,7 @@
 	<properties>
 		<mockito.version>2.0.2-beta</mockito.version>
 		<aspectj.version>1.8.9</aspectj.version>
+		<jettyVersion>7.1.0.RC1</jettyVersion>
 	</properties>
 	<build>
 		<finalName>spring-mw</finalName>

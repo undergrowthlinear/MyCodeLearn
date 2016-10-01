@@ -36,4 +36,16 @@
 			<version>${xstream.version}</version>
 		</dependency>
 	</dependencies>
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>nexus release repository</name>
+			<url>http://127.0.0.1:8081/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshot</id>
+			<name>nexus snapshot repository</name>
+			<url>http://127.0.0.1:8081/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>

@@ -44,4 +44,8 @@ public interface KeysMapping {
 	//public
 	public static final String PUBLIC_JSON_VIEW="/public/jsonData";
 	
+	
+	//bootstrap
+	public static final String JBOOTSTRAP_INDEX="/bootstrap";
+	public static final String JBOOTSTRAP_INDEX_VIEW="/bootstrap/index";
 }
